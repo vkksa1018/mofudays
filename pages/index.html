@@ -10,20 +10,86 @@
     <%- include('./layout/header'); -%>
 
     <h1 class="index-title">我是首頁</h1>
-
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@example.com"
+      />
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="checkDefault"
+      />
+      <label class="form-check-label" for="checkDefault">
+        Default checkbox
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="checkChecked"
+        checked
+      />
+      <label class="form-check-label" for="checkChecked">
+        Checked checkbox
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="checkDisabled"
+        disabled
+      />
+      <label class="form-check-label" for="checkDisabled">
+        Disabled checkbox
+      </label>
+    </div>
+    <div class="dropdown">
+      <button
+        class="btn border"
+        type="button"
+        id="dropdownMenuButton1"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
     <div class="card" style="width: 18rem">
       <img src="../assets/images/dog.jpg" class="card-img-top" alt="cat" />
       <div class="card-body">
         <h5 class="card-title">卡片元件</h5>
         <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit,
+          iusto odio assumenda alias id nobis earum!
         </p>
       </div>
     </div>
 
     <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
       打開 modal
     </button>
 
@@ -39,11 +105,22 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="modal-body">內容</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              關閉
+            </button>
             <button type="button" class="btn btn-primary">確定</button>
           </div>
         </div>
