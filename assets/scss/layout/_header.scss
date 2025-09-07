@@ -1,4 +1,64 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.navbar{
+  margin-top: 32px;
 }
+
+.nav-logo{
+  width:129px;
+  height: 28px;
+
+}
+
+.nav-avatar{
+  width: 44px;
+  height: 44px;
+}
+
+header .nav-link{
+  color: $brown-500;
+}
+
+header .nav-link .nav-icon{
+  width: 24px;
+  height: 24px;
+  color:$primary-500;
+}
+
+header .dropdown-menu {
+  --bs-dropdown-min-width: auto;
+  position: relative;
+
+}
+
+header .dropdown-menu li::after {
+  content: "";
+  display: block;
+  width: 65%;                     
+  height: 2px;    
+  background:lighten($primary-500, 30%);
+  margin: 0 auto;            
+  border-radius: 2px;
+}
+
+/* 最後一個不要線 */
+header .dropdown-menu li:last-child::after {
+  display: none;
+}
+
+/* 隱藏 Bootstrap 的 ::after，改用自己的圖示 */
+header .dropdown-toggle::after{ display:none; }
+
+.caret-icon{
+  width: 1em; height: 1em;  
+  margin-left: 14px;
+  vertical-align: -.1em;
+  transition: transform .2s ease;
+}
+
+header .dropdown-item:hover,
+.dropdown-item:focus {
+  color: $primary-500;  
+  background-color: transparent;
+  font-weight: 700;
+}
+
+

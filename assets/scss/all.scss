@@ -1,8 +1,12 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
 @import "../../node_modules/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 
 @import './layout/header.scss';
+@import './layout/header-logout.scss';
+@import './layout/announcement';
 @import './layout/footer.scss';
 
 @import './pages/index.scss';
+

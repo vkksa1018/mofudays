@@ -1,4 +1,98 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-info{
+  background-color: $primary-500;
+  padding: 80px;
+  color:white;
+}
+
+.footer-copyright{
+  background-color: $tertiary-500;
+  padding: 6px 0px;
+  color: white;
+}
+
+.footer-logo{
+  width:136px;
+  height: 96px;
+}
+
+.footer-link{
+  color: white;
+  text-decoration: none;
+}
+
+
+.footer-list{
+  max-width: 125px;
+  list-style-type: none;
+  color: white;
+  padding-left: 0px;
+}
+
+.footer-list a{
+  color: white;
+  text-decoration:none;
+}
+
+.footer-list a:hover{
+  color: $secondary-300;
+  font-weight:700;    
+}
+
+.social-btn{
+  width: 40px; height: 40px;                 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: white;                               
+  position: relative; 
+  isolation: isolate;    
+  border-radius: 50%;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+
+.social-btn::before{
+  content: "";
+  position: absolute; 
+  top:50%; left: 50%;
+  width: 100%; height: 100%;
+  border-radius: 50px;
+  background: white;
+  transform: translate(-50%,-50%) scale(.6);                     
+  opacity: 0;
+  transition: transform .22s ease, opacity .22s ease;
+  z-index: -1;                              
+}
+
+
+.social-btn:hover::before,
+.social-btn:focus-visible::before{
+  transform:  translate(-50%,-50%) scale(1);
+  opacity: 20%;
+}
+
+.footer-info{
+  position:relative;
+}
+
+.btn-totop{
+  background-color: $tertiary-500;
+  color: white;
+  padding: 16px;
+  position: absolute;
+  top: 75% ;right: 10%;
+
+}
+
+.btn-totop:hover{
+  background-color: darken($tertiary-500, 10% );
+
 }
