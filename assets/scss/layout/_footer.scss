@@ -16,6 +16,18 @@
   color: white;
 }
 
+.footer-list a{
+  font-size: 14px;
+}
+
+.footer-copyright p{
+  font-size: 12px;
+}
+
+.footer-contact p{
+  font-size: 14px;
+}
+
 .footer-logo{
   width:136px;
   height: 96px;
@@ -96,3 +108,4 @@
   background-color: darken($tertiary-500, 10% );
 
 }
+

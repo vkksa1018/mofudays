@@ -13,14 +13,43 @@
   height: 44px;
 }
 
+.cart-btn{
+  display: flex;              
+  justify-content: center;
+  width: 44px;                 
+  height: 44px;
+  border: 2px solid $primary-500;    
+  border-radius: 50%;          
+  text-decoration: none;
+
+}
+
+.cart-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.cart-btn:hover {
+  border: 2px solid lighten($primary-500, $amount: 20%);
+}
+
+.cart-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.cart-btn:hover svg path,
+.cart-btn:hover svg circle {
+  stroke: lighten($primary-500, $amount: 10%);
+}
+
+
 header .nav-link{
   color: $brown-500;
 }
 
-header .nav-link .nav-icon{
+header .nav-link .nav-icon {
   width: 24px;
   height: 24px;
-  color:$primary-500;
+  color: $primary-500;            
 }
 
 header .dropdown-menu {
