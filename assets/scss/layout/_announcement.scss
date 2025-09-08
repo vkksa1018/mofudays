@@ -1,0 +1,16 @@
+.announcement .container{
+    background-color: $tertiary-500;
+    color: white;
+    padding-top:9.5px;
+    padding-bottom: 9.5px;
+}
+
+.btn-signup{
+    background-color: white;
+    color: $tertiary-500;
+}
+
+.btn-signup:hover{
+    border: solid 2px white;
+    color: white;
+}
