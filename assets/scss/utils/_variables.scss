@@ -1040,6 +1040,7 @@ $input-focus-bg: $input-bg !default;
 $input-focus-border-color: tint-color($component-active-bg, 50%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
+// $input-focus-width: 2px !default;  // 2025/09/09 納森修改 "input 在 focus 下的 border粗度" 
 // $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $input-focus-box-shadow: none !default; //修改james
 $input-placeholder-color: $neutral-400 !default; //修改james
