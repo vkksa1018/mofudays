@@ -1,5 +1,10 @@
 .navbar{
   margin-top: 32px;
+  background-color: white;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: $brown-500;
 }
 
 .nav-logo{
@@ -29,7 +34,7 @@
 }
 
 .cart-btn:hover {
-  border: 2px solid lighten($primary-500, $amount: 20%);
+  background-color: $primary-500;
 }
 
 .cart-btn:hover svg {
@@ -38,7 +43,7 @@
 
 .cart-btn:hover svg path,
 .cart-btn:hover svg circle {
-  stroke: lighten($primary-500, $amount: 10%);
+  stroke: white;
 }
 
 
