@@ -1,16 +1,27 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "./utils/variables";
-@import "../../node_modules/bootstrap";
+// 第三方套件
 @import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Zen+Maru+Gothic&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css");
 
-@import './layout/header.scss';
-@import './layout/header-logout.scss';
-@import './layout/announcement';
-@import './layout/footer.scss';
+// 變數、通用樣式
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./utils/variables";
+@import "../../node_modules/bootstrap";
 
-@import './pages/index.scss';
-@import './pages/login.scss';
+// base
+@import "./base/base.scss";
 
+// components
+@import "./conponents/button.scss";
+@import "./conponents/form.scss";
+
+// layout
+@import "./layout/header.scss";
+@import "./layout/header-logout.scss";
+@import "./layout/announcement";
+@import "./layout/footer.scss";
+
+// pages
 @import "./pages/index.scss";
+@import "./pages/login.scss";
+@import "./pages/pet-info";
