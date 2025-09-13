@@ -5,9 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Zen+Maru+Gothic&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css");
 
-@import "./layout/header.scss";
-@import "./layout/header-logout.scss";
-@import "./layout/announcement";
-@import "./layout/footer.scss";
+@import './layout/header.scss';
+@import './layout/header-logout.scss';
+@import './layout/announcement';
+@import './layout/footer.scss';
+
+@import './pages/index.scss';
+@import './pages/login.scss';
 
 @import "./pages/index.scss";
