@@ -7,128 +7,329 @@
     <title>index</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-    <%- include('./layout/announcement'); -%>
-    <%- include('./layout/header-logout'); -%>
-    <a href="">123</a>
-    <h1 class="index-title">我是首頁</h1>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"
-        >Email address</label
-      >
-      <input
-        type="email"
-        class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="name@example.com"
-      />
-    </div>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="checkDefault"
-      />
-      <label class="form-check-label" for="checkDefault">
-        Default checkbox
-      </label>
-    </div>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="checkChecked"
-        checked
-      />
-      <label class="form-check-label" for="checkChecked">
-        Checked checkbox
-      </label>
-    </div>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="checkDisabled"
-        disabled
-      />
-      <label class="form-check-label" for="checkDisabled">
-        Disabled checkbox
-      </label>
-    </div>
-    <div class="dropdown">
-      <button
-        class="btn border"
-        type="button"
-        id="dropdownMenuButton1"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/dog.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit,
-          iusto odio assumenda alias id nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <%- include('./layout/header'); -%> <%- include('./layout/announcement');
+    -%> <%- include('./layout/header-logout'); -%>
+    <section class="hero position-relative">
+      <div class="container py-11">
+        <div class="row justify-content-center g-5">
+          <div
+            class="col-6 d-flex flex-column justify-content-center align-items-center text-center"
+          >
+            <img
+              src="../assets/images/index/01_hero_headline_desktop.svg"
+              alt="01_hero_headline_desktop"
+            />
+            <div class="custom-dashed border-dashed my-6"></div>
+            <h2 class="h5 text-brown-300 mb-12 ls-10">
+              每月一盒小驚喜，讓陪伴更輕鬆也更有温度
+            </h2>
+            <button type="button" class="btn btn-primary">立即訂閱</button>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              關閉
-            </button>
-            <button type="button" class="btn btn-primary">確定</button>
+          <div class="col-6">
+            <img
+              src="../assets/images/index/hero_img.png"
+              class="img-fluid w-100"
+              alt="hero_img"
+            />
           </div>
         </div>
       </div>
-    </div>
+      <img
+        src="../assets/images/index/hero_bone_patten.svg"
+        alt="bone"
+        class="decor bone"
+      />
+      <img
+        src="../assets/images/index/hero_green_patten.svg"
+        alt="green_patten"
+        class="decor green_patten"
+      />
+      <img
+        src="../assets/images/index/hero_yellow_patten.svg"
+        alt="yellow_patten"
+        class="decor yellow_patten"
+      />
+    </section>
+    <section class="about position-relative bg-secondary-300">
+      <div class="container py-9">
+        <div class="row justify-content-center g-5">
+          <div class="col-5">
+            <img
+              src="../assets/images/index/about_img.png"
+              alt="about"
+              class="img-fluid w-100"
+            />
+          </div>
+          <div
+            class="col-5 d-flex flex-column justify-content-center align-items-start"
+          >
+            <img
+              src="../assets/images/index/02_about_headline_desktop.svg"
+              alt="02_about_headline_desktop.svg"
+              class="mb-5"
+            />
+            <h3 class="p1">毛日和，靈感來自日文的「OO日和」</h3>
+            <h3 class="p1">意指最適合做某件事的好日子</h3>
+            <h3 class="p1">我們相信，毛孩是家人，每一天都該是他們的幸福日子</h3>
+          </div>
+        </div>
+      </div>
+      <img
+        src="../assets/images/index/about_footprint_patten.svg"
+        alt="footprint"
+        class="decor footprint"
+      />
+    </section>
+    <section class="service">
+      <div class="container py-11">
+        <img
+          src="../assets/images/index/03_service_headline_desktop.svg"
+          alt="03_service_headline"
+          class="mb-3 center d-block mx-auto"
+        />
+        <h3 class="mb-6 text-center title-large text-primary-500">
+          與毛孩創造不一樣的回憶
+        </h3>
+        <div class="row">
+          <div class="service_card col-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="../assets/images/index/service_01.png"
+                alt="service_step_1"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="../assets/images/index/time.svg" alt="time" />
+              </div>
+            </div>
+            <h4 class="title-medium">工作忙碌，難以備貨？</h4>
+            <div class="custom-dashed border-dashed my-4"></div>
+            <p>訂閱服務會依照您的需求</p>
+            <p>定期將精選好物送到家</p>
+            <p>省下採買時間、專心陪伴毛孩</p>
+          </div>
+          <div class="service_card col-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="../assets/images/index/service_02.png"
+                alt="service_step_2"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="../assets/images/index/gem.svg" alt="gem" />
+              </div>
+            </div>
+            <h4 class="title-medium">產品過多，選擇困難？</h4>
+            <div class="custom-dashed border-dashed my-4"></div>
+            <p>替您嚴選高品質</p>
+            <p>兼具實用與趣味的毛孩用品</p>
+            <p>讓每次開箱都充滿驚喜與安心</p>
+          </div>
+          <div class="service_card col-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="../assets/images/index/service_03.png"
+                alt="service_step_3"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="../assets/images/index/gift.svg" alt="gift" />
+              </div>
+            </div>
+            <h4 class="title-medium">一如既往，毫無驚喜？</h4>
+            <div class="custom-dashed border-dashed my-4"></div>
+            <p>每期提供不同主題與新品</p>
+            <p>幫助毛孩嘗試新鮮事物</p>
+            <p>創造更多共同的美好回憶</p>
+          </div>
+          <div class="service_card col-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="../assets/images/index/service_04.png"
+                alt="service_step_4"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img
+                  src="../assets/images/index/book-heart.svg"
+                  alt="book-heart"
+                />
+              </div>
+            </div>
+            <h4 class="title-medium">多寵家庭，難以管理？</h4>
+            <div class="custom-dashed border-dashed my-4"></div>
+            <p>提供多樣化、可彈性調整的方案</p>
+            <p>滿足不同毛孩的需求</p>
+            <p>讓飼主更輕鬆管理每一位寶貝</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="process position-relative">
+      <div class="container py-11">
+        <img
+          src="../assets/images/index/04_process_headline_desktop.svg"
+          alt="process_headline"
+          class="mb-3 d-block mx-auto"
+        />
+        <h3 class="mb-6 title-large text-center text-primary-500">
+          每月一盒讓他感受到你的心意
+        </h3>
+        <div class="row d-flex justify-content-center mb-5">
+          <div class="col-4 process-item image-item me-5">
+            <img src="../assets/images/index/step_01.png" alt="step1" />
+          </div>
+          <div class="col-4 process-item text-item">
+            <div class="step-icon">
+              <img
+                src="../assets/images/index/service_step_1.svg"
+                alt="foot_step1"
+              />
+            </div>
+            <div class="text-content ms-4">
+              <h4 class="title-medium">填資料！</h4>
+              <p>為毛孩填寫基本資訊</p>
+              <p>我們才能更了解牠的需求與喜好</p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-5">
+          <div class="col-4 process-item text-item me-5">
+            <div class="step-icon">
+              <img
+                src="../assets/images/index/service_step_2.svg"
+                alt="foot_step2"
+              />
+            </div>
+            <div class="text-content ms-4">
+              <h4 class="title-medium">看推薦！</h4>
+              <p>根據毛孩資料，推薦最適合的驚喜盒</p>
+              <p>專屬於你們的每日幸福</p>
+            </div>
+          </div>
+          <div class="col-4 process-item image-item">
+            <img src="../assets/images/index/step_02.png" alt="step2" />
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-5">
+          <div class="col-4 process-item image-item me-5">
+            <img src="../assets/images/index/step_03.png" alt="step3" />
+          </div>
+          <div class="col-4 process-item text-item">
+            <div class="step-icon">
+              <img
+                src="../assets/images/index/service_step_3.svg"
+                alt="foot_step3"
+              />
+            </div>
+            <div class="text-content ms-4">
+              <h4 class="title-medium">打包寄出！</h4>
+              <p>精選内容打包完畢</p>
+              <p>用心裝進每一份療癒與驚喜</p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-11">
+          <div class="col-4 process-item text-item me-5">
+            <div class="step-icon">
+              <img
+                src="../assets/images/index/service_step_4.svg"
+                alt="foot_step4"
+              />
+            </div>
+            <div class="text-content ms-4">
+              <h4 class="title-medium">享受寵物盒！</h4>
+              <p>開箱專屬毛孩的幸福時光</p>
+              <p>從吃、玩到健康都被照顧到</p>
+            </div>
+          </div>
+          <div class="col-4 process-item image-item">
+            <img src="../assets/images/index/step_01.png" alt="step1" />
+          </div>
+        </div>
+        <div class="mb-6">
+          <img
+            src="../assets/images/index/05_box_headline_desktop.svg"
+            alt="05_box_headline"
+            class="mb-6 d-block mx-auto"
+          />
+          <section class="product-section">
+            <div class="product-layout">
+              <!-- 第一張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="../assets/images/index/box_01.png"
+                    alt="box1"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">零食 1～2 包</div>
+              </div>
 
+              <!-- 第一個連接 icon -->
+              <div class="connect-icon">
+                <div class="icon-circle"></div>
+              </div>
+
+              <!-- 第二張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="../assets/images/index/box_02.png"
+                    alt="box2"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">玩具 1～2 個</div>
+              </div>
+
+              <!-- 第二個連接 icon -->
+              <div class="connect-icon">
+                <div class="icon-circle"></div>
+              </div>
+
+              <!-- 第三張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="../assets/images/index/box_03.png"
+                    alt="box3"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">專屬毛寵知識卡<br />1 套</div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <button type="button" class="btn btn-primary d-block mx-auto">
+          立即訂閱
+        </button>
+        <img
+          src="../assets/images/index/process_openbox_patten.svg"
+          alt="openbox"
+          class="decor openbox"
+        />
+        <img
+          src="../assets/images/index/pets_say.png"
+          alt="pets_say"
+          class="decor petsay"
+        />
+      </div>
+    </section>
+    <section class="comment py-11">
+      <img
+        src="../assets/images/index/06_comment_headline_desktop.svg"
+        alt="06_comment_headline_desktop"
+        class="mb-6 d-block mx-auto"
+      />
+      <div class="row">
+        <div class="col-3">
+          <div class="comment-card"></div>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
