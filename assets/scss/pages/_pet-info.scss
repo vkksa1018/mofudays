@@ -1,0 +1,31 @@
+// 通用
+
+//樣式
+.info-card {
+  background-color: $primary-100;
+  padding: 80px 110px;
+  border-radius: 80px;
+}
+
+// 文字
+.title p {
+  font-size: 1.125em;
+  color: $primary-500;
+}
+.info-card h4 {
+  color: $primary-500;
+  margin-bottom: 40px;
+}
+.item-title {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+
+// button
+.input-number {
+  color: $brown-500;
+}
+.btn-health img {
+  width: 120px;
+  height: 120px;
+}
