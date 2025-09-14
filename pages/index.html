@@ -23,7 +23,12 @@
             <h2 class="h5 text-brown-300 mb-12 ls-10">
               每月一盒小驚喜，讓陪伴更輕鬆也更有温度
             </h2>
-            <button type="button" class="btn btn-primary">立即訂閱</button>
+            <button
+              type="button"
+              class="btn rounded-pill btn-primary btn-subscribe"
+            >
+              立即訂閱
+            </button>
           </div>
           <div class="col-6">
             <img
@@ -303,7 +308,10 @@
             </div>
           </section>
         </div>
-        <button type="button" class="btn btn-primary d-block mx-auto">
+        <button
+          type="button"
+          class="btn rounded-pill btn-primary btn-subscribe px-160 d-flex mx-auto"
+        >
           立即訂閱
         </button>
         <img
@@ -324,14 +332,191 @@
         alt="06_comment_headline_desktop"
         class="mb-6 d-block mx-auto"
       />
-      <div class="row">
-        <div class="col-3">
-          <div class="comment-card"></div>
+      <div class="container-fluid">
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- 第一組 (4 張卡片並排) -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center gx-5">
+                <div class="col-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="../assets/images/index/comment_avatar_01.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">Yuki·Shiba 媽媽</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">一打開毛日和，Shiba 就興奮地</p>
+                    <p class="p2">摇尾巴，超愛那個鴨肉條</p>
+                    <p></p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="review-card-pink pt-10 pb-12 text-center">
+                    <img
+                      src="../assets/images/index/comment_avatar_02.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">豬皮的老母</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">每月開箱變成例行節目，現在猪</p>
+                    <p class="p2">皮聽到門鈴聲都自動坐好，等他</p>
+                    <p class="p2">自己的快遞</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="../assets/images/index/comment_avatar_03.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">雙寶狗媽</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">上個月開箱零食沒馬上給，結果</p>
+                    <p class="p2">阿寶氣到把盒子咬坡了，新盒子</p>
+                    <p class="p2">還没到，情緒已炸裂</p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="review-card-pink pt-10 pb-12 text-center">
+                    <img
+                      src="../assets/images/index/comment_avatar_04.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">賓三姊妹的奴才長官</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">最怕三隻同時挑嘴，結果這次三</p>
+                    <p class="p2">隻都搶同一條零食！這選品太會</p>
+                    <p class="p2">了吧</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 第二組 (剩下的卡片) -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="../assets/images/index/comment_avatar_05.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">Momo 監工中</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">每次開箱都像搶銀行，我才剛拆</p>
+                    <p class="p2">一半，Momo 就已經開吃了...</p>
+                  </div>
+                </div>
+                <!-- 可以再補其他評論，湊滿 col-3 -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 控制按鈕 -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#reviewCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#reviewCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </section>
+    <button
+      class="customer-service-btn"
+      type="button"
+      onclick="toggleCustomerService()"
+    >
+      <i class="fas fa-headset" id="service-icon"></i>
+      <span><i class="bi bi-chat-dots"></i>客服中心</span>
+    </button>
+    <div class="customer-service-chat py-12" id="customerServiceChat">
+      <div class="chat-header mb-4">
+        <div class="title-large">您好</div>
+        <div class="title-large">我們能提供什麼幫助？</div>
+      </div>
+      <div class="chat-body mx-12">
+        <a href="#" class="chat-button">
+          常見問題
+          <i class="bi bi-file-earmark"></i>
+        </a>
+        <a href="#" class="chat-button">
+          傳訊息給我們
+          <i class="bi bi-envelope"></i>
+        </a>
+        <div class="chat-footer">
+          我們上班時間為週一到週五的 10:00 -
+          19:00，再請您耐心等候我們回來喔！謝謝
+        </div>
+      </div>
+    </div>
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <script>
+      let isServiceOpen = false;
+
+      function toggleCustomerService() {
+        const chatWindow = document.getElementById("customerServiceChat");
+        const serviceIcon = document.getElementById("service-icon");
+
+        isServiceOpen = !isServiceOpen;
+
+        if (isServiceOpen) {
+          // 打開客服窗口
+          chatWindow.classList.add("show");
+          serviceIcon.className = "fas fa-times";
+        } else {
+          // 關閉客服窗口
+          chatWindow.classList.remove("show");
+          serviceIcon.className = "fas fa-comment";
+        }
+      }
+
+      // 點擊窗口外部關閉客服窗口
+      document.addEventListener("click", function (event) {
+        const chatWindow = document.getElementById("customerServiceChat");
+        const serviceBtn = document.querySelector(".customer-service-btn");
+
+        if (
+          isServiceOpen &&
+          !chatWindow.contains(event.target) &&
+          !serviceBtn.contains(event.target)
+        ) {
+          toggleCustomerService();
+        }
+      });
+    </script>
   </body>
 </html>

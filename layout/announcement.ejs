@@ -1,8 +1,45 @@
 <nav class="announcement">
-  <div class="container container-fluid d-flex justify-content-center align-items-center rounded-3">
-      <p class="me-5">新註冊會員：首單現折$60</p>
-      <a class="navbar-brand" href="signup.html"><button type="button" class="btn btn-signup py-1 px-2">立即註冊</button></a>
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- 位置 1 - 較大空白 -->
+      <div class="col-3"></div>
+
+      <!-- 位置 2 - 公告訊息區 -->
+      <div class="col-4">
+        <div
+          id="announcementCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="mb-0">新註冊會員：首單現折$60</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">滿千免運優惠中！</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">訂閱禮盒，每月驚喜送到家</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 位置 3 - 小間距 -->
+      <div class="col-1"></div>
+
+      <!-- 位置 4 - 註冊按鈕 -->
+      <div class="col-2 text-center">
+        <a href="signup.html">
+          <button type="button" class="btn btn-signup py-1 px-2">
+            立即註冊
+          </button>
+        </a>
+      </div>
+
+      <!-- 位置 5 - 較大空白 -->
+      <div class="col-2"></div>
     </div>
-    
   </div>
 </nav>
