@@ -1,3 +1,371 @@
-.index-title {
-  font-size: 100px;
+/* noto字體 */
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+/* 背景套用格線 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: linear-gradient(to right, #ddd 1px, transparent 1px),
+    linear-gradient(to bottom, #ddd 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -2;
+}
+
+/* maru字體 */
+.zen-maru {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+/* 間距 */
+.ls-10 {
+  letter-spacing: 0.1em; /* 大約等於 10% */
+}
+
+/* 自訂標題樣式1 */
+.title-large {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700; /* Bold */
+  letter-spacing: 0.1em; /* 10% */
+  font-family: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+}
+/* 自訂標題樣式2 */
+.title-medium {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+}
+/* 自訂標題樣式3 */
+.title-small {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+}
+
+/* 虛線 */
+.custom-dashed {
+  border-top: 1px dashed #e2ddda;
+  border-width: 2px;
+  border-image: repeating-linear-gradient(
+      to right,
+      #e2ddda 0 6px,
+      transparent 6px 12px
+    )
+    1;
+  width: 100%;
+  height: 0;
+}
+
+/* 圖片定位1 */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.decor {
+  position: absolute;
+  z-index: -0.75;
+}
+
+.bone {
+  left: 45.83%;
+  bottom: 10.82%;
+  width: 74px;
+  height: 110px;
+}
+
+.green_patten {
+  right: 6.25%;
+  bottom: 11.81%;
+  width: 80px;
+  height: 118px;
+}
+
+.yellow_patten {
+  top: 29.52%;
+  left: 8.33%;
+  width: 80px;
+  height: 58px;
+}
+
+/* 內文格式1 */
+.p1 {
+  /* 根據 Figma 設計設定字體樣式 */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* 內文格式2 */
+.p2 {
+  /* 根據 Figma 設計設定字體樣式 */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* 圖片定位2 */
+.about {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.footprint {
+  top: 22.98%;
+  left: 70.625%;
+  width: 82px;
+  height: 115px;
+}
+/* service卡片 */
+.service_card {
+  img {
+    border-radius: 56px;
+  }
+
+  h4 {
+    text-align: center;
+    color: $brown-500;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: $brown-300;
+  }
+}
+
+.service_card .image-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 56px;
+  overflow: hidden;
+}
+
+/* 確保原圖正常顯示 */
+.service_card .image-wrapper img {
+  border-radius: 56px;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* 橘色遮罩層 - 改用 ::after 避免層級問題 */
+.service_card .image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(252, 118, 47, 0.8); /* 80% 透明度橘色 */
+  border-radius: 56px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.service_card:hover .image-wrapper::after {
+  opacity: 1;
+}
+
+/* Icon 樣式 */
+.service_card .hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.service_card:hover .hover-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* 卡片整體 hover 效果 */
+.service_card {
+  transition: transform 0.3s ease;
+}
+
+.service_card:hover {
+  transform: translateY(-5px);
+}
+
+.process {
+  background-color: $primary-100;
+  border-radius: 280px;
+}
+
+.process-item {
+  background: white;
+  border-radius: 56px;
+}
+
+/* 圖片區域 */
+.process-item.image-item {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 274px;
+}
+
+.process-item.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 56px;
+}
+
+/* 文字區域 */
+.process-item.text-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 274px;
+}
+
+/* 數字圖示 */
+.step-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.step-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-item {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+.product-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 產品卡片 */
+.product-card {
+  flex: 0 0 calc(33.333% - 40px); /* 相當於 col-4，減去 icon 空間 */
+  text-align: center;
+  position: relative;
+}
+
+/* 白色圓形背景 */
+.card-background {
+  width: 280px;
+  height: 280px;
+  background: white;
+  border-radius: 160px; /* 半徑 160px */
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover .card-background {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 產品圖片 */
+.product-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* 卡片文字 */
+.card-text {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700; /* Bold */
+  letter-spacing: 0.1em; /* 10% */
+  color: $brown-500;
+  font-family: "Zen Maru Gothic", "Noto Sans TC", sans-serif;
+}
+
+/* 連接 icon */
+.connect-icon {
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.connect-icon .icon-circle {
+  width: 48px;
+  height: 48px;
+  background: #ff6b35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.connect-icon .icon-circle:hover {
+  transform: scale(1.1);
+}
+
+.connect-icon .icon-circle::before {
+  content: "+";
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 圖片定位3 */
+.process {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.openbox {
+  right: 0%;
+  bottom: 0%;
+  width: 400px;
+  height: 400px;
+}
+
+.petsay {
+  left: 4.17%;
+  bottom: 20.28%;
+  width: 548.06px;
+  height: 293px;
 }
