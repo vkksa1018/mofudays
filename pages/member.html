@@ -23,7 +23,7 @@
             >
               <li class="nav-item me-16" role="presentation">
                 <button
-                  class="btn button-outline-primary btn-member text-primary-500 active rounded-pill"
+                  class="btn button-outline-primary btn-member active rounded-pill"
                   id="pills-profile-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-profile"
@@ -38,7 +38,7 @@
               </li>
               <li class="nav-item me-16" role="presentation">
                 <button
-                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
+                  class="btn button-outline-primary btn-member rounded-pill"
                   id="pills-orderlists-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-orderlists"
@@ -53,7 +53,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button
-                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
+                  class="btn button-outline-primary btn-member rounded-pill"
                   id="pills-exclusives-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-exclusives"
@@ -77,48 +77,46 @@
                 tabindex="0"
               >
                 <form class="needs-validation" novalidate>
-                  <div class="mb-4">
-                    <div
-                      class="d-flex justify-content-between align-bottom my-16"
-                    >
-                      <h2 class="h h2 text-primary-500">
+                  <div class="mb-40">
+
+                      <h2 class="h h2 text-primary-500 mt-16 mb-32 ">
                         <span class="icon-user me-2"></span>會員資料
                       </h2>
-                      <button
-                        type="submit"
-                        class="btn btn-primary btn-member rounded-pill align-bottom btn-login"
-                      >
-                        存檔
-                      </button>
-                    </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="user-name" class="form-label p1">姓名</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="user-name"
-                        placeholder="請輸入姓名"
-                        maxlength="20"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-name"
+                          placeholder="請輸入姓名"
+                          maxlength="20"
+                          required
+                        />
+                          <i class="icon icon-user-round-pen position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">
                         姓名不得為空或是超過20個字!
                       </div>
                     </div>
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="user-nick-name" class="form-label p1"
                         >暱稱</label
                       >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="user-nick-name"
-                        placeholder="請輸入暱稱"
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-nick-name"
+                          placeholder="請輸入暱稱"
+                        />
+                        <i class="icon icon-file-user position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                     </div>
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative ">
                       <label for="birthday" class="form-label p1">生日</label>
                       <input
                         type="text"
@@ -133,7 +131,7 @@
                       </div>
                     </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="email" class="form-label p1">Email</label>
                       <input
                         type="email"
@@ -149,7 +147,7 @@
                       <div class="invalid-tooltip">請輸入正確電子信箱!</div>
                     </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="mobile" class="form-label p1">手機號碼</label>
                       <input
                         type="text"
@@ -163,7 +161,7 @@
                       <div class="invalid-tooltip">請輸入手機號碼!</div>
                     </div>
 
-                    <div class="mb-3 ps-8">
+                    <div class="mb-56 ps-8">
                       <label for="address" class="form-label p1"
                         >住家地址</label
                       >
@@ -203,7 +201,7 @@
                     </div>
                   </div>
                   <div class="mb-4">
-                    <h2 class="h h2 text-primary-500 mb-16">
+                    <h2 class="h h2 text-primary-500 mb-32">
                       <span class="icon-truck me-2"></span>送貨資料
                     </h2>
 
@@ -250,6 +248,14 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-48">
+                    <button
+                        type="submit"
+                        class="btn btn-save rounded-pill align-bottom "
+                      >
+                        存檔
+                      </button>
                   </div>
                 </form>
               </div>
