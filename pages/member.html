@@ -12,65 +12,73 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main class="my-80">
+    <main class="mb-80">
       <div class="container">
+        <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-1 z-3">
+        <img src="../assets/images/member/hero_green_patten.png" alt="" class="position-absolute green-patten-1 me-0 z-3">
+        <img src="../assets/images/member/FAQ_footprint_patten.png" alt="" class="position-absolute foot-print z-3">
+        
         <div class="row justify-content-center">
-          <div class="col-10 bg-yellow bg-radius px-110 py-80">
-            <ul
-              class="nav nav-pills justify-content-center mb-4"
-              id="pills-tab"
-              role="tablist"
-            >
-              <li class="nav-item me-16" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member active rounded-pill"
-                  id="pills-profile-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-profile"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-profile"
-                  aria-selected="true"
-                >
-                  <span class="icon-user-round-pen align-bottom"></span
-                  ><span class="ms-2">會員資料</span>
-                </button>
-              </li>
-              <li class="nav-item me-16" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member rounded-pill"
-                  id="pills-orderlists-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-orderlists"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-orderlists"
-                  aria-selected="false"
-                >
-                  <span class="icon-receipt-text align-bottom"></span
-                  ><span class="ms-2">訂單管理</span>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member rounded-pill"
-                  id="pills-exclusives-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-exclusives"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-exclusives"
-                  aria-selected="false"
-                >
-                  <span class="icon-ticket-check align-bottom"></span
-                  ><span class="ms-2">會員專屬活動</span>
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content p-48" id="pills-tabContent">
+          <div class="col-10 position-relative">
+            <div class="d-flex justify-content-between align-items-end mt-16 mb-24">
+              <ul
+                class="nav nav-pills d-flex align-items-end flex-fill ps-80"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member active rounded-pill"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="true"
+                  >
+                    <span class="icon-user-round-pen align-bottom"></span
+                    ><span class="ms-2">會員資料</span>
+                  </button>
+                </li>
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-orderlists-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-orderlists"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-orderlists"
+                    aria-selected="false"
+                  >
+                    <span class="icon-receipt-text align-bottom"></span
+                    ><span class="ms-2">訂單管理</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-exclusives-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-exclusives"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-exclusives"
+                    aria-selected="false"
+                  >
+                    <span class="icon-ticket-check align-bottom"></span
+                    ><span class="ms-2">會員專屬活動</span>
+                  </button>
+                </li>
+              </ul>
+              <img src="../assets/images/member/member_personal_1.png" alt="" class="member-img-tab flex-fill">
+            </div>
+            <div class="tab-content p-48 bg-yellow bg-radius py-40 px-55 position-relative" id="pills-tabContent">
+              
               <!-- 會員資料 -->
               <div
-                class="member-data tab-pane fade show active section-lined"
+                class="member-data tab-pane fade show active"
                 id="pills-profile"
                 role="tabpanel"
                 aria-labelledby="pills-profile-tab"
@@ -84,6 +92,8 @@
                       </h2>
 
                     <div class="mb-56 ps-8 position-relative">
+                      <!-- <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-2 z-3">
+                      <img src="../assets/images/member/hero_green_patten.png" alt="" class="position-absolute green-patten-2 z-3"> -->
                       <label for="user-name" class="form-label p1">姓名</label>
                       <div class="input-group">
                         <input
@@ -118,14 +128,16 @@
                     </div>
                     <div class="mb-56 ps-8 position-relative ">
                       <label for="birthday" class="form-label p1">生日</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="birthday"
-                        placeholder="請輸入生日, 例如: 1991/10/09"
-                        required
-                      />
-                      <i class="icon icon-cake position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="birthday"
+                          placeholder="請輸入生日, 例如: 1991/10/09"
+                          required
+                        />
+                        <i class="icon icon-cake position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">
                         請輸入正確年月日! 例如: 1991/10/09
@@ -134,30 +146,36 @@
 
                     <div class="mb-56 ps-8 position-relative">
                       <label for="email" class="form-label p1">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="請輸入電子信箱"
-                        autocomplete="email"
-                        inputmode="email"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          placeholder="請輸入電子信箱"
+                          autocomplete="email"
+                          inputmode="email"
+                          required
+                        />
+                        <div class="icon icon-mail position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">請輸入正確電子信箱!</div>
                     </div>
 
                     <div class="mb-56 ps-8 position-relative">
                       <label for="mobile" class="form-label p1">手機號碼</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="mobile"
-                        placeholder="請輸入手機號碼"
-                        maxlength="10"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="請輸入手機號碼"
+                          maxlength="10"
+                          required
+                        />
+                        <i class="icon icon-smartphone position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">請輸入手機號碼!</div>
                     </div>
@@ -189,22 +207,29 @@
                         </div>
 
                         <div class="col-md-7 position-relative">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="addres"
-                            placeholder="地址"
-                            required
-                          />
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="addres"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
                           <div class="invalid-tooltip">請輸入地址!</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="mb-4">
+                  <div class="shipping-info mb-4 position-relative">
                     <h2 class="h h2 text-primary-500 mb-32">
-                      <span class="icon-truck me-2"></span>送貨資料
+                      <span class="icon-shopping-bag me-2"></span>送貨資料
                     </h2>
+
+                    <img src="../assets/images/member/member_shipping_cart.png" alt="" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-2">
+                    <img src="../assets/images/member/about-bg.png" alt="" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-1">
+                    <img src="../assets/images/member/member_waiting_dog.png" alt="" class="position-absolute img-waiting-dog transform-x img-shake top-1 end-1 z-1">
 
                     <div class="mb-3 ps-8">
                       <label for="shipping-address" class="form-label p1"
@@ -237,20 +262,22 @@
                         </div>
 
                         <div class="col-md-7 position-relative">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="shipping-addr"
-                            placeholder="地址"
-                            required
-                          />
-
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="shipping-addr"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
                           <div class="invalid-tooltip">請輸入送達地址!</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex justify-content-center mt-48">
+                  <div class="d-flex justify-content-center mt-80">
                     <button
                         type="submit"
                         class="btn btn-save rounded-pill align-bottom "
@@ -262,8 +289,8 @@
               </div>
 
               <!-- 訂單內容 -->
-                <div
-                  class="tab-pane fade my-16 section-lined pt-32 "
+              <div
+                  class="tab-pane fade mt-16"
                   id="pills-orderlists"
                   role="tabpanel"
                   aria-labelledby="pills-orderlists-tab"
@@ -272,7 +299,7 @@
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link active p1"
+                        class="nav-link active p1 fw-500"
                         id="all-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#all-orderlist-pane"
@@ -286,7 +313,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link p1"
+                        class="nav-link p1 fw-500"
                         id="not-paid-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#not-paid-orderlist-pane"
@@ -300,7 +327,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link p1"
+                        class="nav-link p1 fw-500"
                         id="paid-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#paid-orderlist-pane"
@@ -315,7 +342,7 @@
                   </ul>
                   <div class="tab-content" id="myTabContent">
                     <div
-                      class="tab-pane fade show active"
+                      class="tab-pane fade show active orderlist-table-wrap"
                       id="all-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="all-orderlist"
@@ -364,27 +391,9 @@
                         </tbody>
                       </table>
 
-                      <nav aria-label="Page navigation example " class="my-32">
-  <div class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </div>
-</nav>
-
                     </div>
                     <div
-                      class="tab-pane fade"
+                      class="tab-pane fade orderlist-table-wrap"
                       id="not-paid-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="not-paid-orderlist-tab"
@@ -414,26 +423,9 @@
                           </tr>
                         </tbody>
                       </table>
-                      <nav aria-label="Page navigation example " class="my-32">
-  <ul class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
                     </div>
                     <div
-                      class="tab-pane fade"
+                      class="tab-pane fade orderlist-table-wrap"
                       id="paid-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="paid-orderlist-tab"
@@ -472,39 +464,47 @@
                           </tr>
                         </tbody>
                       </table>
-                      <nav aria-label="Page navigation example " class="my-32">
-  <ul class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
                     </div>
                   </div>
-                </div>
+                  <div>
+                    <div class="d-flex justify-content-end mt-48">
+                            <img src="../assets/images/member/pet-toy.png" alt="" class="img-pet-toy img-shake">
+                            <img src="../assets/images/member/pet_snack.png" alt="" class="img-pet-snack img-shake">
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <div class="pagination justify-content-center align-bottom mt-16 mb-32">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </div>
+                  </nav>
+              </div>
 
               <!-- 會員專屬活動 -->
               <div
-                class="tab-pane fade my-16 section-lined pt-32 theme-event"
+                class="tab-pane fade theme-event"
                 id="pills-exclusives"
                 role="tabpanel"
                 aria-labelledby="pills-exclusives-tab"
                 tabindex="0"
               >
               <!-- 會員專屬優惠 - 毛寶貝開箱秀 -->
-              <div class="unbox mb-48">
-                <h2 class="text-center unbox-title mb-2">毛寶貝開箱秀</h2>
-                <p class=" mb-4 text-center text-teritary-500 p3">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
+              <div class="unbox mt-16 mb-132">
+                <img src="../assets/images/member/member_open_box.png" alt="" class="position-absolute end-0 img-open-box img-shake">
+                <h2 class="h2 text-center unbox-title mb-12">毛寶貝開箱秀</h2>
+                <h4 class="h4 text-center text-secondary-500 mb-4">秀出你的小可愛!</h4>
+                <p class=" mb-36 text-center text-teritary-500 p2 fw-500">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
                   <div class="row row-cols-1 row-cols-md-4 g-4 mb-24">
                     <div class="col">
                       <div class="card h-100">
@@ -554,13 +554,22 @@
               </div>
 
               <!-- 會員專屬活動 - 會員限定優惠 -->
-              <div class="exclusive mb-48">
-                <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+              <div class="exclusive mb-132">
+                
                 <div class="exclusive-content">
-                  <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
-                  <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
-                  <p class="text-center text-teritary-500 fw-500 p3">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
-                  <p class="text-center text-teritary-500 fw-500 p3 mb-4">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p>
+                  <div class="d-flex justify-content-center align-items-center gap-2">
+                    <img src="../assets/images/member/member_wave.png" alt="" class="img-wave me-16 img-shake">
+                    <div class="">
+                      <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+                      <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
+                      <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
+                    </div>
+                    <img src="../assets/images/member/member_firework.png" alt="" class="img-firework-1 ml-16 img-shake">
+                  </div>
+                  <p class="text-center text-teritary-500 fw-500 p2">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
+                  <p class="text-center text-teritary-500 fw-500 p2 mb-4">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p>
+                    
+                  
                   <div class="card mb-3 card-hover p-20">
                     <div class="row g-0">
                       <div class="col-md-5">
