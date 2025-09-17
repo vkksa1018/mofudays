@@ -1,31 +1,55 @@
 // 通用
-
-//樣式
-.info-card {
-  background-color: $primary-100;
-  padding: 80px 110px;
-  border-radius: 80px;
+.fs-24 {
+  font-size: 24px;
 }
 
-// 文字
+// 間距
+.px-100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.px-110 {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+// 元件文字
+main span {
+  font-size: 0.875rem;
+  color: $primary-500;
+}
+
 .title p {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $primary-500;
 }
 .info-card h4 {
   color: $primary-500;
-  margin-bottom: 40px;
 }
 .item-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   letter-spacing: 0.03em;
 }
+.item-text {
+  font-size: 0.875rem;
+  color: $brown-300;
+  letter-spacing: 0.05em;
+}
 
-// button
+// 元件-卡片
+.info-card {
+  background-color: $primary-100;
+  border-radius: 80px;
+}
 .input-number {
   color: $brown-500;
 }
-.btn-health img {
+.health-img {
   width: 120px;
-  height: 120px;
+  height: auto;
 }
+
+// 元件-button
