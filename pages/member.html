@@ -290,7 +290,7 @@
 
               <!-- 訂單內容 -->
               <div
-                  class="tab-pane fade mt-16"
+                  class="member-orderlist tab-pane fade mt-16"
                   id="pills-orderlists"
                   role="tabpanel"
                   aria-labelledby="pills-orderlists-tab"
@@ -506,72 +506,185 @@
                 <h4 class="h4 text-center text-secondary-500 mb-4">秀出你的小可愛!</h4>
                 <p class=" mb-36 text-center text-teritary-500 p2 fw-500">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
                 <div class="row row-cols-1 row-cols-md-4 g-4 mb-24">
-                  <div class="col">
-                    <div class="h-100 flip-card">
-                      <div class="flip-inner">
-                        <!-- 正面 -->
-                        <div class="flip-face flip-front">
-                          <div class="p-1">
-                            <img src="../assets/images/member/member_shiba.png" class="card-img-top" alt="...">
-                          </div>
-                          <div class="d-flex justify-content-between p-16">
-                            <div>
-                              <h5 class="card-title mb-1">豆豆</h5>
-                              <p class="card-text mb-0">柴犬 5 歲</p>
-                            </div>
-                            <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
-                          </div>
-                        </div>
+                  <div id="petUnboxCarousel" class="carousel slide w-100" data-bs-ride="false" data-bs-interval="false" data-bs-wrap="true">
+                    <!-- 指示點（可選） -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="第 1 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="1" aria-label="第 2 頁"></button>
+                    </div>
 
-                        <!-- 背面 -->
-                        <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
-                          <h6 class="mb-2">豆豆的小故事</h6>
-                          <p class="mb-0 p2">最愛把零食藏在沙發底下 🙈</p>
-                        </div>
+                    <div class="carousel-inner">
+                      <!-- Slide 1 -->
+                      <div class="carousel-item active">
+                        <div class="row g-4">
+                          <!-- 卡片 1 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <!-- 正面 -->
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="../assets/images/member/member_shiba.png" class="card-img-top" alt="豆豆">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">豆豆</h5>
+                                      <p class="card-text mb-0">柴犬 5 歲</p>
+                                    </div>
+                                    <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <!-- 背面 -->
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="mb-2">豆豆的小故事</h6>
+                                  <p class="mb-0 p2">最愛把零食藏在沙發底下 🙈</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片 2 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top object-position-right-center" alt="Haru">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">Haru</h5>
+                                      <p class="card-text mb-0">哈士娃 1 歲</p>
+                                    </div>
+                                    <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw object-position-center">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="mb-2">Haru 的密語</h6>
+                                          <p class="mb-0 p2">今天也要可愛出擊！</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- 卡片 3 -->
+                                  <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                                    <div class="flip-card h-100">
+                                      <div class="flip-inner">
+                                        <div class="flip-face flip-front">
+                                          <div class="p-1">
+                                            <img src="../assets/images/member/member_poodle.png" class="card-img-top object-position-right-center" alt="可可">
+                                          </div>
+                                          <div class="d-flex justify-content-between p-16">
+                                            <div>
+                                              <h5 class="card-title mb-1">可可</h5>
+                                              <p class="card-text mb-0">貴賓犬 2 歲</p>
+                                            </div>
+                                            <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                          </div>
+                                        </div>
+                                        <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                          <h6 class="mb-2">可可的公告</h6>
+                                          <p class="mb-0 p2">最愛梳毛跟被稱讚 ✨</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- 卡片 4 -->
+                                  <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                                    <div class="flip-card h-100">
+                                      <div class="flip-inner">
+                                        <div class="flip-face flip-front">
+                                          <div class="p-1">
+                                            <img src="../assets/images/member/member_shapper.png" class="card-img-top" alt="奶昔">
+                                          </div>
+                                          <div class="d-flex justify-content-between p-16">
+                                            <div>
+                                              <h5 class="card-title mb-1">奶昔</h5>
+                                              <p class="card-text mb-0">邊境牧羊犬 2 歲</p>
+                                            </div>
+                                            <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                          </div>
+                                        </div>
+                                        <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                          <h6 class="mb-2">奶昔的私藏</h6>
+                                          <p class="mb-0 p2">最擅長盯緊飛盤 🥏</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- /.row -->
+                              </div><!-- /.carousel-item -->
+
+                            <!-- Slide 2（可重複第一頁內容或放未來新增卡片；先做示例） -->
+                            <div class="carousel-item">
+                              <div class="row g-4">
+                                <!-- 這裡你可以重複卡片或放其他卡，示範先複製 1、2 -->
+                                <div class="col-12 col-sm-6 col-md-3">
+                                  <!-- 卡片 1 複製或放新資料 -->
+                                  <!-- ...（略，同上） -->
+                                  <div class="flip-card h-100">
+                                    <div class="flip-inner">
+                                      <div class="flip-face flip-front">
+                                        <div class="p-1">
+                                          <img src="../assets/images/member/member_shiba.png" class="card-img-top" alt="豆豆">
+                                        </div>
+                                        <div class="d-flex justify-content-between p-16">
+                                          <div>
+                                            <h5 class="card-title mb-1">豆豆</h5>
+                                            <p class="card-text mb-0">柴犬 5 歲</p>
+                                          </div>
+                                          <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                        </div>
+                                      </div>
+                                      <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                        <h6 class="mb-2">豆豆的小故事</h6>
+                                        <p class="mb-0 p2">今天也要當開箱小隊長！</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-3">
+                                  <!-- 卡片 2 複製或放新資料 -->
+                                  <!-- ...（略，同上） -->
+                                  <div class="flip-card h-100">
+                                    <div class="flip-inner">
+                                      <div class="flip-face flip-front">
+                                        <div class="p-1">
+                                          <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top" alt="Haru">
+                                        </div>
+                                        <div class="d-flex justify-content-between p-16">
+                                          <div>
+                                            <h5 class="card-title mb-1">Haru</h5>
+                                            <p class="card-text mb-0">哈士娃 1 歲</p>
+                                          </div>
+                                          <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                        </div>
+                                      </div>
+                                      <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                        <h6 class="mb-2">Haru 的密語</h6>
+                                        <p class="mb-0 p2">帶我去兜風～</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- 也可以保持兩格空白，或複製 3、4 -->
+                                <div class="col-12 col-sm-6 col-md-3 d-none d-md-block"></div>
+                                <div class="col-12 col-sm-6 col-md-3 d-none d-md-block"></div>
+                              </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <div class="p-1">
-                      <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top" alt="...">
-                      </div>
-                      <div class="d-flex justify-content-between p-16">
-                        <div class="">
-                          <h5 class="card-title mb-1">Haru</h5>
-                          <p class="card-text mb-0">哈士娃 1 歲</p>
-                        </div>
-                        <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <div class="p-1">
-                      <img src="../assets/images/member/member_poodle.png" class="card-img-top" alt="...">
-                      </div>
-                      <div class="d-flex justify-content-between p-16">
-                        <div class="">
-                          <h5 class="card-title mb-1">可可</h5>
-                          <p class="card-text mb-0">貴賓犬 2 歲</p>
-                        </div>
-                        <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card h-100">
-                      <div class="p-1">
-                      <img src="../assets/images/member/member_shapper.png" class="card-img-top" alt="...">
-                      </div>
-                       <div class="d-flex justify-content-between p-16">
-                        <div class="">
-                          <h5 class="card-title mb-1">奶昔</h5>
-                          <p class="card-text mb-0">邊境牧羊犬 2 歲</p>
-                        </div>
-                        <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
-                      </div>
-                    </div>
+
+                    <!-- 控制箭頭 -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">上一頁</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">下一頁</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -589,17 +702,19 @@
                     </div>
                     <img src="../assets/images/member/member_firework.png" alt="" class="img-firework-1 ml-16 img-shake">
                   </div>
-                  <p class="text-center text-teritary-500 fw-500 p2">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
-                  <p class="text-center text-teritary-500 fw-500 p2 mb-4">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p>
+                  <p class="text-center text-teritary-500 fw-500 p2 mb-4">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
+                  <!-- <p class="text-center text-teritary-500 fw-500 p2 ">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p> -->
                     
                   
                   <div class="card mb-3 card-hover p-20">
                     <div class="row g-0">
                       <div class="col-md-5">
-                        <div class="card-body ps-24 text-center vh-50 pt-152">
-                          <h6 class="h6 card-title mb-4">夏日感謝祭<br/>會員專屬優惠活動!</h6>
-                          <p class="p3 card-text p4 mb-2">即日​起​完成​續訂​就​送​限定​折扣!<br/>還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光</p>
-                          <button class="btn b3 btn-primary rounded-pill btn-subscribe" type="button">立即訂閱</button>
+                        <div class="card-body ps-24 text-center vh-50 pt-200">
+                          <h3 class="h4 card-title mb-4 fw-900">即日​起​完成​續訂​就​送​限定​折扣!</h3>
+                          <p class="card-text p3 mb-4 fw-500">還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光</p>
+                          <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary rounded-pill btn-keep-subscribe" type="button">立即續訂</button>
+                          </div>
                         </div>
                       </div>
                       <div class="col-md-7">

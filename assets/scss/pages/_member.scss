@@ -138,6 +138,10 @@ h2.unbox-title {
   font-weight: 500;
 }
 
+.fw-900 {
+  font-weight: 900;
+}
+
 
 // ----------------------------------------  間距通用
 // ------------------------------------ Margin  
@@ -204,6 +208,10 @@ h2.unbox-title {
 
 .me-16{
   margin-right: 1rem;
+}
+
+.me-32{
+  margin-right: 2rem;
 }
 
 .mb-2 {
@@ -279,6 +287,10 @@ h2.unbox-title {
   padding: 1rem;
 }
 
+.p-18 {
+  padding: 1.125rem;
+}
+
 .p-48 {
   padding: 3rem;
 }
@@ -301,8 +313,8 @@ h2.unbox-title {
   padding-top: 2rem;
 }
 
-.pt-152 {
-  padding-top: 152px;
+.pt-200 {
+  padding-top: 200px;
 }
 
 .pb-28 {
@@ -442,13 +454,12 @@ select:invalid {
 
 
 // ----------------------------------------  訂單管理頁籤
-
-.member-data,
-.orderlist {
+.member-orderlist .member-data,
+.member-orderlist .orderlist {
   font-size: 14px;
 }
 
-.tbody {
+.member-orderlist .tbody {
   font-size: 12px;
 }
 
@@ -461,8 +472,8 @@ select:invalid {
   font-size: 10px;
 }
 
-.form-control,
-.form-select {
+.member-orderlist .form-control,
+.member-orderlist .form-select {
   padding-left: 1rem !important;     
   padding-right: 1rem !important;  
 }
@@ -475,7 +486,7 @@ select:invalid {
 }
 
 /* 這層才吃 min-height，避免 table 自身不吃 */
-.orderlist-table-wrap {
+.member-orderlist .orderlist-table-wrap {
   min-height: 300px;     /* 先寫 300px */
 }
 
@@ -494,13 +505,15 @@ select:invalid {
 
 // ------------------------------------ 毛寶貝開箱秀 
 
-.card-img-top {
+.unbox .card-img-top {
   height: 250px;        /* 設定固定高度，依需求可改 */
   object-fit: cover;    /* 照比例裁切*/
   width: 100%;          /* 填滿寬度 */
+  border-top-left-radius: 50px;   /* 左上角 */
+  border-top-right-radius: 50px;  /* 右上角 */
 }
 
-.card-body {
+.unbox .card-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* 讓文字內容靠下 */
@@ -514,7 +527,10 @@ select:invalid {
 /* 讓卡片可以 3D 翻轉 */
 .flip-card {
   perspective: 1000px; /* 給子元素 3D 效果 */
-  border-top: 24px;
+  border-radius: 50px !important;
+  overflow: hidden;  
+  min-height: 350px;
+  width: 100%;
 }
 
 .flip-inner {
@@ -522,8 +538,11 @@ select:invalid {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
   background-color: $white;
+  border: 1px solid $neutral-300;
+  border-radius: inherit;    
+  padding: 1.5rem;
 }
 
 .flip-card:hover .flip-inner {
@@ -535,37 +554,71 @@ select:invalid {
   position: absolute;
   inset: 0;                /* top/right/bottom/left: 0 */
   backface-visibility: hidden;
-  border-radius: .5rem;
+  border-radius: 50px;
+  width: 100%;        
+  height: 100%;     
 }
 
 /* 背面要翻轉180度，才會被看到 */
 .flip-back {
   transform: rotateY(180deg);
   background: #fff; /* 或自訂顏色 */
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid $neutral-300;
 }
 
+.object-position-right-center{
+  object-position: right center;  /* 例如：以上方為主，避免裁掉頭部 */
+}
+
+.object-position-center{
+  object-position: center center;  /* 例如：以上方為主，避免裁掉頭部 */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;                /* 不要整個垂直長條 */
+  padding: 0.5rem;            /* 給按鈕一點內距 */
+  top: 50%;                   /* 垂直置中 */
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev { left: -40px; }   /* 往左推出去 */
+.carousel-control-next { right: -40px; }  /* 往右推出去 */
+
+.carousel-indicators,
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(51%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%);
+}
+
+.carousel-indicators {
+  bottom: -60px;   /* 離底部更遠 */
+  justify-content: center; /* 保持置中 */
+}
 
 // ------------------------------------ 會員專屬優惠
 
-.btn-subscribe {
+.btn-keep-subscribe {
   border: none;
   color: $white;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
-.btn-subscribe:hover {
+.btn-keep-subscribe:hover {
   // background-color: $secondary-400;
   border: none;
   background-color: #fbbd3f;
   color: $white;
   padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
 
-.btn-subscribe:active {
+.btn-keep-subscribe:active {
   border: none;
   color: $white !important;
   padding: 0.5rem 1rem;
+  font-size: 1.5rem;
 }
 
 .btn-reserve {
@@ -610,7 +663,7 @@ select:invalid {
 }
 
 .yellow-patten-1{
-  top: 70% !important;    /* 距離上方 30% */
+  top: 70% !important; 
   margin-left: 3rem;
 }
 
