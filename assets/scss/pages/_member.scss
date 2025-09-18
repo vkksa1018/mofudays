@@ -54,37 +54,16 @@ p {
   letter-spacing: 0.02em;
 }
 
-.ms-2 {
-  margin-left: 0.125rem;
+.container {
+  max-width: 1296px;
 }
 
-.me-4 {
-  margin-right: 0.25rem;
+// ----------------------------------------  顏色通用
+.text-teritary-500 {
+  color: #58baab;
 }
 
-.me-16 {
-  margin-right: 1rem;
-}
-
-.mb-16 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-32 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.my-80 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.p-48 {
-  padding: 3rem;
-}
-
+// ----------------------------------------  標題通用
 .h {
   font-family: "Zen Maru Gothic";
 }
@@ -125,6 +104,11 @@ p {
   letter-spacing: 0.05em;
 }
 
+h2.unbox-title {
+  color: $primary-500;
+}
+
+//  ----------------------------------------  內文通用
 .p1 {
   font-size: 1.125rem;
   font-weight: 400;
@@ -149,63 +133,154 @@ p {
   letter-spacing: 0.05em;
 }
 
-.b1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
-.b2 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-}
-
-.b3 {
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-.bg-radius {
-  border-radius: 40px;
-}
-
-.bg-yoke-yellow {
-  background-color: #fad376;
-}
-
-.card-hover {
-  border-radius: 50px;
-  background-color: #fad376;
-}
-
-.container {
-  max-width: 1296px;
-}
-
-.text-teritary-500 {
-  color: #58baab;
-}
-
+//  ----------------------------------------  文字通用
 .fw-500 {
   font-weight: 500;
 }
 
-.section-lined {
-  border-bottom: 2px dashed $primary-300;
+
+// ----------------------------------------  間距通用
+// ------------------------------------ Margin  
+.my-auto{
+    margin-top: auto !important;
+    margin-bottom: auto !important;
 }
 
-.bg-yellow {
-  background-color: #fff1ea;
+.my-4 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
+.my-16 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-32 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-80 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.mt-16 {
+  margin-top: 1rem;
+}
+
+.mt-32 {
+  margin-top: 2rem;
+}
+
+.mt-36 {
+  margin-top: 2.25rem;
+}
+
+.mt-48 {
+  margin-top: 3rem;
+}
+
+.mt-60 {
+  margin-top: 3.75rem;
+}
+
+.mt-80 {
+  margin-top: 5rem;
+}
+
+.me-4 {
+  margin-right: 0.25rem;
+}
+
+.me-16 {
+  margin-right: 1rem;
+}
+
+.me-8{
+  margin-right: 0.5rem;
+}
+
+.me-16{
+  margin-right: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.125rem;
+}
+
+.mb-4 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 0.375rem;
+}
+
+.mb-8 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 0.75rem !important;
+}
+
+.mb-16 {
+  margin-bottom: 1rem;
+}
+
+.mb-24 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.mb-36 {
+  margin-bottom: 2.25rem !important;
+}
+
+.mb-40 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-48 {
+  margin-bottom: 3rem;
+}
+
+.mb-56 {
+  margin-bottom: 56px;
+}
+
+.mb-80 {
+  margin-bottom: 5rem;
+}
+
+.mb-132 {
+  margin-bottom: 132px;
+}
+
+.ml-16{
+  margin-left: 1rem;
+}
+
+.ms-2 {
+  margin-left: 0.125rem;
+}
+
+// ------------------------------------ Padding  
 .p-8 {
   padding: 0.5rem;
 }
 
-.pb-28 {
-  padding-bottom: 1.75rem;
+.p-16 {
+  padding: 1rem;
+}
+
+.p-48 {
+  padding: 3rem;
 }
 
 .px-55 {
@@ -246,6 +321,10 @@ p {
   padding: 1.5rem;
 }
 
+.pb-28 {
+  padding-bottom: 1.75rem;
+}
+
 .ps-8 {
   padding-left: 0.5rem;
 }
@@ -255,124 +334,40 @@ p {
 }
 
 
-.mt-16 {
-  margin-top: 1rem;
+// ----------------------------------------  背景通用
+.bg-radius {
+  border-radius: 40px;
 }
 
-.mt-32 {
-  margin-top: 2rem;
+.bg-yellow {
+  background-color: #fff1ea;
 }
 
-.mt-36 {
-  margin-top: 2.25rem;
+.bg-yoke-yellow {
+  background-color: #fad376;
 }
 
-.mt-48 {
-  margin-top: 3rem;
+.card-hover {
+  border-radius: 50px;
+  background-color: #fad376;
 }
 
-.mt-60 {
-  margin-top: 3.75rem;
+.b1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
-.mt-80 {
-  margin-top: 5rem;
+.b2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
-.me-8{
-  margin-right: 0.5rem;
-}
-
-.me-16{
-  margin-right: 1rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.125rem;
-}
-
-.mb-4 {
-  margin-bottom: 0.25rem;
-}
-
-.mb-6 {
-  margin-bottom: 0.375rem;
-}
-
-.mb-8 {
-  margin-bottom: 0.5rem;
-}
-
-.mb-12 {
-  margin-bottom: 0.75rem !important;
-}
-
-.mb-24 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-32 {
-  margin-bottom: 2rem;
-}
-
-.mb-36 {
-  margin-bottom: 2.25rem !important;
-}
-
-.mb-40 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-48 {
-  margin-bottom: 3rem;
-}
-
-.mb-56 {
-  margin-bottom: 56px;
-}
-
-.mb-80 {
-  margin-bottom: 5rem;
-}
-
-.mb-132 {
-  margin-bottom: 132px;
-}
-
-.ml-16{
-  margin-left: 1rem;
-}
-
-.my-4 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.my-16 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-32 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.member-data,
-.orderlist {
-  font-size: 14px;
-}
-.tbody {
-  font-size: 12px;
-}
-
-.nav-link:active {
-  color: $white;
-}
-
-.order-number {
-  color: $neutral-500;
-  font-size: 10px;
+.b3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .btn-member {
@@ -432,15 +427,59 @@ p {
   background-color: $primary-500 !important;
 }
 
+// ----------------------------------------  icon通用
+
 .icon {
   color: $neutral-400;
   font-size: 1.25rem !important;
 }
 
-.my-auto{
-    margin-top: auto !important;
-    margin-bottom: auto !important;
+// ----------------------------------------  個人資料
+
+select:invalid {
+  color: rgba(108, 117, 125, 0.65);
 }
+
+
+// ----------------------------------------  訂單管理頁籤
+
+.member-data,
+.orderlist {
+  font-size: 14px;
+}
+
+.tbody {
+  font-size: 12px;
+}
+
+.nav-link:active {
+  color: $white;
+}
+
+.order-number {
+  color: $neutral-500;
+  font-size: 10px;
+}
+
+.form-control,
+.form-select {
+  padding-left: 1rem !important;     
+  padding-right: 1rem !important;  
+}
+
+.table td, 
+.table th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  vertical-align: middle;  /* 內容垂直置中 */
+}
+
+/* 這層才吃 min-height，避免 table 自身不吃 */
+.orderlist-table-wrap {
+  min-height: 300px;     /* 先寫 300px */
+}
+
+// ----------------------------------------  會員專屬頁籤
 
 .exclusive-title {
   color: $primary-500;
@@ -452,6 +491,62 @@ p {
   text-align: center;
   margin-bottom: 0.24rem;
 }
+
+// ------------------------------------ 毛寶貝開箱秀 
+
+.card-img-top {
+  height: 250px;        /* 設定固定高度，依需求可改 */
+  object-fit: cover;    /* 照比例裁切*/
+  width: 100%;          /* 填滿寬度 */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 讓文字內容靠下 */
+}
+
+.img-single-paw{
+  max-width: 50px;
+  height:50px;
+}
+
+/* 讓卡片可以 3D 翻轉 */
+.flip-card {
+  perspective: 1000px; /* 給子元素 3D 效果 */
+  border-top: 24px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  background-color: $white;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* 正反兩面基礎樣式 */
+.flip-face {
+  position: absolute;
+  inset: 0;                /* top/right/bottom/left: 0 */
+  backface-visibility: hidden;
+  border-radius: .5rem;
+}
+
+/* 背面要翻轉180度，才會被看到 */
+.flip-back {
+  transform: rotateY(180deg);
+  background: #fff; /* 或自訂顏色 */
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+
+// ------------------------------------ 會員專屬優惠
 
 .btn-subscribe {
   border: none;
@@ -494,13 +589,6 @@ p {
   padding: 0.5rem 2rem;
 }
 
-select:invalid {
-  color: rgba(108, 117, 125, 0.65);
-}
-
-h2.unbox-title {
-  color: $primary-500;
-}
 
 /* 1) 卡片裁角 */
 .exclusive .card {
@@ -521,11 +609,21 @@ h2.unbox-title {
   object-fit: cover; /* 保持比例並裁切多餘 */
 }
 
-.form-control,
-.form-select {
-  padding-left: 1rem !important;     
-  padding-right: 1rem !important;  
+.yellow-patten-1{
+  top: 70% !important;    /* 距離上方 30% */
+  margin-left: 3rem;
 }
+
+.green-patten-1{
+  top: 90% !important;
+  right:10%;
+}
+
+// ------------------------------------ 主題活動
+
+
+
+// ----------------------------------------  圖片通用
 
 .member-img-tab{
   max-width: 220px;
@@ -549,45 +647,12 @@ h2.unbox-title {
   transform: scaleX(-1);
 }
 
-.yellow-patten-1{
-  top: 70% !important;    /* 距離上方 30% */
-  margin-left: 3rem;
-}
-
-
-.green-patten-1{
-  top: 90% !important;
-  right:10%;
-}
-
-
-// .yellow-patten-2{
-//   top: 200% !important;    /* 距離上方 30% */
-//   right: 0%;
-//   margin-right: 6rem;
-// }
-
-// .green-patten-2{
-//   top: 240% !important;     
-//   margin-left: 3rem;
-// }
 
 .foot-print{
   top: 20%;
   left:25%;
 }
 
-.table td, 
-.table th {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  vertical-align: middle;  /* 內容垂直置中 */
-}
-
-/* 這層才吃 min-height，避免 table 自身不吃 */
-.orderlist-table-wrap {
-  min-height: 300px;     /* 你想保留的表格可視高度 */
-}
 
 .img-pet-toy,
 .img-pet-snack {
@@ -596,10 +661,6 @@ h2.unbox-title {
   transition: transform 0.2s ease-in-out;
 }
 
-/* hover 時加上動畫 */
-.img-shake:hover{
-  animation: shake 0.4s;   /* 動畫名稱 shake，持續 0.4 秒 */
-}
 
 .img-open-box{
   max-width: 120px;
@@ -616,6 +677,11 @@ h2.unbox-title {
   height:90px;
 }
 
+// ----------------------------------------  動畫
+
+.img-shake:hover{
+  animation: shake 0.4s;   /* 動畫名稱 shake，持續 0.4 秒 */
+}
 
 /* 定義抖動動畫 */
 @keyframes shake {
