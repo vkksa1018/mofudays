@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>推薦方案</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="pet-info py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div class="title mb-6 px-110">
+          <h2 class="fw-bold mb-2">查看您的推薦方案</h2>
+          <p class="fw-bold">為毛孩送上每月一盒溫暖心意</p>
+        </div>
+
+        <!-- 儲存按鈕 -->
+        <div class="text-center">
+          <a
+            class="btn btn-primary rounded-pill btn-subscribe me-6"
+            href="/pages/pet-info.html"
+            role="button"
+            >繼續新增訂閱</a
+          >
+          <a
+            class="btn btn-primary rounded-pill btn-subscribe"
+            href="/pages/cart.html"
+            role="button"
+            >加入購物車</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
