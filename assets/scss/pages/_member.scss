@@ -98,9 +98,9 @@ p {
   letter-spacing: 0.05em;
 }
 
-.h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
+.h6 {
+  font-size: 1.125rem;
+  font-weight: 500;
   letter-spacing: 0.05em;
 }
 
@@ -136,6 +136,10 @@ h2.unbox-title {
 //  ----------------------------------------  文字通用
 .fw-500 {
   font-weight: 500;
+}
+
+.fw-700 {
+  font-weight:700;
 }
 
 .fw-900 {
@@ -279,6 +283,11 @@ h2.unbox-title {
 }
 
 // ------------------------------------ Padding  
+
+.p-2 {
+  padding: 0.125rem;
+}
+
 .p-8 {
   padding: 0.5rem;
 }
@@ -517,6 +526,7 @@ select:invalid {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* 讓文字內容靠下 */
+  // border: 2px solid $primary-300;
 }
 
 .img-single-paw{
@@ -540,7 +550,6 @@ select:invalid {
   transform-style: preserve-3d;
   transition: transform 0.7s ease;
   background-color: $white;
-  border: 1px solid $neutral-300;
   border-radius: inherit;    
   padding: 1.5rem;
 }
@@ -556,14 +565,12 @@ select:invalid {
   backface-visibility: hidden;
   border-radius: 50px;
   width: 100%;        
-  height: 100%;     
+  height: 100%;    
 }
 
 /* 背面要翻轉180度，才會被看到 */
 .flip-back {
   transform: rotateY(180deg);
-  background: #fff; /* 或自訂顏色 */
-  border: 1px solid $neutral-300;
 }
 
 .object-position-right-center{
@@ -662,19 +669,63 @@ select:invalid {
   object-fit: cover; /* 保持比例並裁切多餘 */
 }
 
-.yellow-patten-1{
+.member-center .yellow-patten-1{
   top: 70% !important; 
   margin-left: 3rem;
 }
 
-.green-patten-1{
+.member-center .green-patten-1{
   top: 90% !important;
   right:10%;
 }
 
 // ------------------------------------ 主題活動
 
+.theme-event{
+  .theme-event-card{
+    border-radius: 15px;   /* 左上角 */
+    // border-top-right-radius: 15px;  /* 右上角 */
+  }
 
+  small{
+    font-weight: 700;
+    color:$neutral-400;
+  }
+
+  .img-play{
+    position: absolute;
+    max-width: 135px;
+    height: 135px;
+    bottom:10%;
+    right: 10%;
+    border-radius: 50%;
+  }
+
+  .img-feed{
+    position: absolute;
+    max-width: 120px;
+    height: 120px;
+    bottom:7.5%;
+    left: 10%;
+    border-radius: 50%;
+  }
+}
+
+// .title-lined {
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .title-lined::after {
+//   content: "";
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   height: 2px;                /* 線條粗細 */
+//   background: #0d6efd;        /* 線條顏色，可換成你的 $primary-500 */
+//   z-index: -1;                /* 線條在文字下方 */
+// }
 
 // ----------------------------------------  圖片通用
 
@@ -714,7 +765,6 @@ select:invalid {
   transition: transform 0.2s ease-in-out;
 }
 
-
 .img-open-box{
   max-width: 120px;
   height: 120px;
@@ -725,18 +775,27 @@ select:invalid {
   max-width: 80px;
   height:80px;
 }
+
 .img-wave{
   max-width: 90px;
   height:90px;
 }
 
-// ----------------------------------------  動畫
-
-.img-shake:hover{
-  animation: shake 0.4s;   /* 動畫名稱 shake，持續 0.4 秒 */
+.img-hover-bigger{
+  transition: transform 0.5s ease-in-out; 
 }
 
-/* 定義抖動動畫 */
+.theme-event-card:hover .img-hover-bigger {
+  transform: scale(1.1);
+}
+
+// ----------------------------------------  動畫
+
+// 抖動動畫
+.img-shake:hover{
+  animation: shake 0.4s;  
+}
+
 @keyframes shake {
   0%   { transform: translate(0, 0) rotate(0deg); }
   20%  { transform: translate(-2px, 0) rotate(-5deg); }
@@ -747,3 +806,61 @@ select:invalid {
 }
 
 
+
+// 文字漸入
+.auto-show{
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 100vh;
+}
+
+@keyframes text-appear{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 圖片緩顯
+.img-reveal{
+  animation: image-reveal both;
+  animation-timeline: view(10% 5%);
+}
+
+@keyframes image-reveal{
+  from{
+    filter:saturate(0) constrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale:.95;
+    translate: 0rem 4rem;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+// 元素下而上漸入
+
+.fade-up{
+  animation: fadeUp both;
+  animation-timeline:view();
+  animation-range:entry 20% cover 40%;
+}
+
+@keyframes fadeUp{
+    from{
+      opacity: 0;
+      transform: translateY(10px) scale(0.5);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
