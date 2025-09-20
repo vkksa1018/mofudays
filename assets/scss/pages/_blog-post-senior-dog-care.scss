@@ -1,0 +1,49 @@
+.post-wrap .card .card-img-top{
+    max-width: auto;
+    max-height: 179px;
+
+}
+
+.author-img{
+    max-width:120px;
+    max-height:120px;
+}
+
+.post-title{
+    font-size: 48px;
+    font-weight:500;
+}
+
+.post-info{
+    color: $neutral-500;
+    font-size: 14px;
+}
+
+.post-info a{
+    color: $primary-500;
+    font-style: italic;
+
+}
+
+.blog-post .section-border{
+    border-bottom: 2px solid $primary-500;
+
+}
+
+.section-title{
+    display:inline-flex;
+    align-items: center;
+}
+
+
+
+.section-title::before{
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(/assets/images/common/footprint_patten_1png.png) no-repeat center;
+    background-size: cover;
+    margin-right: 16px;
+}
+

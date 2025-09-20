@@ -4,7 +4,7 @@
 
 .split-card{
     max-width: 100%;
-    max-height:724px;
+    // max-height:724px;
     border-radius: 80px;
     background-color: $primary-100;
 }
@@ -32,10 +32,10 @@ form{
 
 a.btn-form-login:focus,
 a.btn-form-login:active {
-  outline: none !important;            /* 移除黑框 */
-  box-shadow: none !important;     /* 移除 bootstrap 預設陰影 */
-  background-color: #e55e15;   /* 點擊時深橘 */
-  color: #fff;                 /* 保持白字 */
+  outline: none !important;         
+  box-shadow: none !important;    
+  background-color: #e55e15; 
+  color: #fff;               
 }
 
 a.btn-form-login:focus-visible {
@@ -65,7 +65,10 @@ a.btn-form-login:focus-visible {
 }
 
 .carousel-img {
-  object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
 }
 
 .carousel-indicators {
@@ -99,4 +102,7 @@ a.btn-form-login:focus-visible {
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
    border-color: $primary-500;
 }
+
+
+
 
