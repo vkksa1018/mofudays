@@ -48,6 +48,11 @@ p {
 }
 
 .member-center {
+  
+  .tab-content{
+    display: block !important;
+  }
+
   .body {
     font-size: 4rem;
     font-weight: 500;
