@@ -1,0 +1,75 @@
+// ----------------------------------------  動畫
+
+// 抖動動畫
+.img-shake:hover{
+  animation: shake 0.4s;  
+}
+
+@keyframes shake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(-2px, 0) rotate(-5deg); }
+  40%  { transform: translate(2px, 0) rotate(5deg); }
+  60%  { transform: translate(-2px, 0) rotate(-5deg); }
+  80%  { transform: translate(2px, 0) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+
+// 文字漸入
+.auto-show{
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 5% cover 100vh;
+}
+
+@keyframes text-appear{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 圖片緩顯
+.img-reveal{
+  animation: image-reveal both;
+  animation-timeline: view(10% 5%);
+}
+
+@keyframes image-reveal{
+  from{
+    filter:saturate(0) constrast(4) brightness(.1) blur(5px);
+    opacity: 0;
+    scale:.95;
+    translate: 0rem 4rem;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+// 元素下而上漸入
+
+.fade-up{
+  animation: fadeUp both;
+  animation-timeline:view();
+  animation-range:entry 20% cover 40%;
+}
+
+@keyframes fadeUp{
+    from{
+      opacity: 0;
+      transform: translateY(10px) scale(0.5);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
