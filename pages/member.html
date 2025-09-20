@@ -12,158 +12,175 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main class="my-80">
+    <main class="member-center mb-80">
       <div class="container">
+        <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-1 z-3">
+        <img src="../assets/images/member/hero_green_patten.png" alt="" class="position-absolute green-patten-1 me-0 z-3">
+        <img src="../assets/images/member/FAQ_footprint_patten.png" alt="" class="position-absolute foot-print z-3">
+        
         <div class="row justify-content-center">
-          <div class="col-10 bg-yellow bg-radius px-110 py-80">
-            <ul
-              class="nav nav-pills justify-content-center mb-4"
-              id="pills-tab"
-              role="tablist"
-            >
-              <li class="nav-item me-16" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member text-primary-500 active rounded-pill"
-                  id="pills-profile-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-profile"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-profile"
-                  aria-selected="true"
-                >
-                  <span class="icon-user-round-pen align-bottom"></span
-                  ><span class="ms-2">會員資料</span>
-                </button>
-              </li>
-              <li class="nav-item me-16" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
-                  id="pills-orderlists-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-orderlists"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-orderlists"
-                  aria-selected="false"
-                >
-                  <span class="icon-receipt-text align-bottom"></span
-                  ><span class="ms-2">訂單管理</span>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
-                  id="pills-exclusives-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pills-exclusives"
-                  type="button"
-                  role="tab"
-                  aria-controls="pills-exclusives"
-                  aria-selected="false"
-                >
-                  <span class="icon-ticket-check align-bottom"></span
-                  ><span class="ms-2">會員專屬活動</span>
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content p-48" id="pills-tabContent">
+          <div class="col-10 position-relative">
+            <div class="d-flex justify-content-between align-items-end mt-16 mb-24">
+              <ul
+                class="nav nav-pills d-flex align-items-end flex-fill ps-80"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member active rounded-pill"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="true"
+                  >
+                    <span class="icon-user-round-pen align-bottom"></span
+                    ><span class="ms-2">會員資料</span>
+                  </button>
+                </li>
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-orderlists-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-orderlists"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-orderlists"
+                    aria-selected="false"
+                  >
+                    <span class="icon-receipt-text align-bottom"></span
+                    ><span class="ms-2">訂單管理</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-exclusives-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-exclusives"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-exclusives"
+                    aria-selected="false"
+                  >
+                    <span class="icon-ticket-check align-bottom"></span
+                    ><span class="ms-2">會員專屬活動</span>
+                  </button>
+                </li>
+              </ul>
+              <img src="../assets/images/member/member_personal_1.png" alt="" class="member-img-tab flex-fill">
+            </div>
+            <div class="tab-content p-48 bg-yellow bg-radius py-40 px-55 position-relative" id="pills-tabContent">
+              
               <!-- 會員資料 -->
               <div
-                class="member-data tab-pane fade show active section-lined"
+                class="member-data tab-pane fade show active"
                 id="pills-profile"
                 role="tabpanel"
                 aria-labelledby="pills-profile-tab"
                 tabindex="0"
               >
                 <form class="needs-validation" novalidate>
-                  <div class="mb-4">
-                    <div
-                      class="d-flex justify-content-between align-bottom my-16"
-                    >
-                      <h2 class="h h2 text-primary-500">
+                  <div class="mb-40">
+
+                      <h2 class="h h2 text-primary-500 mt-16 mb-32 ">
                         <span class="icon-user me-2"></span>會員資料
                       </h2>
-                      <button
-                        type="submit"
-                        class="btn btn-primary btn-member rounded-pill align-bottom btn-login"
-                      >
-                        存檔
-                      </button>
-                    </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
+                      <!-- <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-2 z-3">
+                      <img src="../assets/images/member/hero_green_patten.png" alt="" class="position-absolute green-patten-2 z-3"> -->
                       <label for="user-name" class="form-label p1">姓名</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="user-name"
-                        placeholder="請輸入姓名"
-                        maxlength="20"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-name"
+                          placeholder="請輸入姓名"
+                          maxlength="20"
+                          required
+                        />
+                          <i class="icon icon-user-round-pen position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">
                         姓名不得為空或是超過20個字!
                       </div>
                     </div>
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="user-nick-name" class="form-label p1"
                         >暱稱</label
                       >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="user-nick-name"
-                        placeholder="請輸入暱稱"
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-nick-name"
+                          placeholder="請輸入暱稱"
+                        />
+                        <i class="icon icon-file-user position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                     </div>
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative ">
                       <label for="birthday" class="form-label p1">生日</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="birthday"
-                        placeholder="請輸入生日, 例如: 1991/10/09"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="birthday"
+                          placeholder="請輸入生日, 例如: 1991/10/09"
+                          required
+                        />
+                        <i class="icon icon-cake position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">
                         請輸入正確年月日! 例如: 1991/10/09
                       </div>
                     </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="email" class="form-label p1">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        name="email"
-                        placeholder="請輸入電子信箱"
-                        autocomplete="email"
-                        inputmode="email"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          placeholder="請輸入電子信箱"
+                          autocomplete="email"
+                          inputmode="email"
+                          required
+                        />
+                        <div class="icon icon-mail position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">請輸入正確電子信箱!</div>
                     </div>
 
-                    <div class="mb-3 ps-8 position-relative">
+                    <div class="mb-56 ps-8 position-relative">
                       <label for="mobile" class="form-label p1">手機號碼</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="mobile"
-                        placeholder="請輸入手機號碼"
-                        maxlength="10"
-                        required
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="請輸入手機號碼"
+                          maxlength="10"
+                          required
+                        />
+                        <i class="icon icon-smartphone position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
                       <div class="valid-tooltip">正確!</div>
                       <div class="invalid-tooltip">請輸入手機號碼!</div>
                     </div>
 
-                    <div class="mb-3 ps-8">
+                    <div class="mb-56 ps-8">
                       <label for="address" class="form-label p1"
                         >住家地址</label
                       >
@@ -190,22 +207,29 @@
                         </div>
 
                         <div class="col-md-7 position-relative">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="addres"
-                            placeholder="地址"
-                            required
-                          />
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="addres"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
                           <div class="invalid-tooltip">請輸入地址!</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="mb-4">
-                    <h2 class="h h2 text-primary-500 mb-16">
-                      <span class="icon-truck me-2"></span>送貨資料
+                  <div class="shipping-info mb-4 position-relative">
+                    <h2 class="h h2 text-primary-500 mb-32">
+                      <span class="icon-shopping-bag me-2"></span>送貨資料
                     </h2>
+
+                    <img src="../assets/images/member/member_shipping_cart.png" alt="" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-2">
+                    <img src="../assets/images/member/about-bg.png" alt="" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-1">
+                    <img src="../assets/images/member/member_waiting_dog.png" alt="" class="position-absolute img-waiting-dog transform-x img-shake top-1 end-1 z-1">
 
                     <div class="mb-3 ps-8">
                       <label for="shipping-address" class="form-label p1"
@@ -238,25 +262,35 @@
                         </div>
 
                         <div class="col-md-7 position-relative">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="shipping-addr"
-                            placeholder="地址"
-                            required
-                          />
-
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="shipping-addr"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
                           <div class="invalid-tooltip">請輸入送達地址!</div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="d-flex justify-content-center mt-80">
+                    <button
+                        type="submit"
+                        class="btn btn-save rounded-pill align-bottom "
+                      >
+                        存檔
+                      </button>
+                  </div>
                 </form>
               </div>
 
               <!-- 訂單內容 -->
-                <div
-                  class="tab-pane fade my-16 section-lined pt-32 "
+              <div
+                  class="member-orderlist tab-pane fade mt-16"
                   id="pills-orderlists"
                   role="tabpanel"
                   aria-labelledby="pills-orderlists-tab"
@@ -265,7 +299,7 @@
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link active p1"
+                        class="nav-link active p1 fw-500"
                         id="all-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#all-orderlist-pane"
@@ -279,7 +313,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link p1"
+                        class="nav-link p1 fw-500"
                         id="not-paid-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#not-paid-orderlist-pane"
@@ -293,7 +327,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                       <button
-                        class="nav-link p1"
+                        class="nav-link p1 fw-500"
                         id="paid-orderlist-tab"
                         data-bs-toggle="tab"
                         data-bs-target="#paid-orderlist-pane"
@@ -308,7 +342,7 @@
                   </ul>
                   <div class="tab-content" id="myTabContent">
                     <div
-                      class="tab-pane fade show active"
+                      class="tab-pane fade show active orderlist-table-wrap"
                       id="all-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="all-orderlist"
@@ -357,27 +391,9 @@
                         </tbody>
                       </table>
 
-                      <nav aria-label="Page navigation example " class="my-32">
-  <div class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </div>
-</nav>
-
                     </div>
                     <div
-                      class="tab-pane fade"
+                      class="tab-pane fade orderlist-table-wrap"
                       id="not-paid-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="not-paid-orderlist-tab"
@@ -407,26 +423,9 @@
                           </tr>
                         </tbody>
                       </table>
-                      <nav aria-label="Page navigation example " class="my-32">
-  <ul class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
                     </div>
                     <div
-                      class="tab-pane fade"
+                      class="tab-pane fade orderlist-table-wrap"
                       id="paid-orderlist-pane"
                       role="tabpanel"
                       aria-labelledby="paid-orderlist-tab"
@@ -465,150 +464,324 @@
                           </tr>
                         </tbody>
                       </table>
-                      <nav aria-label="Page navigation example " class="my-32">
-  <ul class="pagination justify-content-center align-bottom">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
                     </div>
                   </div>
-                </div>
+                  <div>
+                    <div class="d-flex justify-content-end mt-48">
+                            <img src="../assets/images/member/pet-toy.png" alt="" class="img-pet-toy img-shake">
+                            <img src="../assets/images/member/pet_snack.png" alt="" class="img-pet-snack img-shake">
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <div class="pagination justify-content-center align-bottom mt-16 mb-32">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </div>
+                  </nav>
+              </div>
 
               <!-- 會員專屬活動 -->
               <div
-                class="tab-pane fade my-16 section-lined pt-32 theme-event"
+                class="tab-pane fade theme-event"
                 id="pills-exclusives"
                 role="tabpanel"
                 aria-labelledby="pills-exclusives-tab"
                 tabindex="0"
               >
               <!-- 會員專屬優惠 - 毛寶貝開箱秀 -->
-              <div class="unbox mb-48">
-                <h2 class="text-center unbox-title mb-2">毛寶貝開箱秀</h2>
-                <p class=" mb-4 text-center text-teritary-500 p3">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
-                  <div class="row row-cols-1 row-cols-md-4 g-4 mb-24">
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="p-1">
-                        <img src="../assets/images/member/member_shiba.png" class="card-img-top h-75" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">豆豆</h5>
-                          <p class="card-text">柴犬 5 歲</p>
-                        </div>
+              <div class="unbox mt-16 mb-132">
+                <img src="../assets/images/member/member_open_box.png" alt="" class="position-absolute end-0 img-open-box img-shake">
+                <h2 class="h2 text-center unbox-title mb-12">毛寶貝開箱秀</h2>
+                <h4 class="h4 text-center text-secondary-500 mb-4">秀出你的小可愛!</h4>
+                <p class=" mb-36 text-center text-teritary-500 p2 fw-500">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
+                <div class="row row-cols-1 row-cols-md-4 g-4 mb-24">
+                  <div id="petUnboxCarousel" class="carousel slide w-100" data-bs-ride="false" data-bs-interval="false" data-bs-wrap="true">
+                    <!-- 指示點（可選） -->
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="第 1 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="1" aria-label="第 2 頁"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                      <!-- Slide 1 -->
+                      <div class="carousel-item active">
+                        <div class="row g-4">
+                          <!-- 卡片 1 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <!-- 正面 -->
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="../assets/images/member/member_shiba.png" class="card-img-top" alt="豆豆">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">豆豆</h5>
+                                      <p class="card-text mb-0">柴犬 5 歲</p>
+                                    </div>
+                                    <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <!-- 背面 -->
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="mb-2">豆豆的小故事</h6>
+                                  <p class="mb-0 p2">最愛把零食藏在沙發底下 🙈</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片 2 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top object-position-right-center" alt="Haru">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">Haru</h5>
+                                      <p class="card-text mb-0">哈士娃 1 歲</p>
+                                    </div>
+                                    <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw object-position-center">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="mb-2">Haru 的密語</h6>
+                                          <p class="mb-0 p2">今天也要可愛出擊！</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- 卡片 3 -->
+                                  <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                                    <div class="flip-card h-100">
+                                      <div class="flip-inner">
+                                        <div class="flip-face flip-front">
+                                          <div class="p-1">
+                                            <img src="../assets/images/member/member_poodle.png" class="card-img-top" alt="可可">
+                                          </div>
+                                          <div class="d-flex justify-content-between p-16">
+                                            <div>
+                                              <h5 class="card-title mb-1">可可</h5>
+                                              <p class="card-text mb-0">貴賓犬 2 歲</p>
+                                            </div>
+                                            <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                          </div>
+                                        </div>
+                                        <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                          <h6 class="mb-2">可可的公告</h6>
+                                          <p class="mb-0 p2">最愛梳毛跟被稱讚 ✨</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- 卡片 4 -->
+                                  <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                                    <div class="flip-card h-100">
+                                      <div class="flip-inner">
+                                        <div class="flip-face flip-front">
+                                          <div class="p-1">
+                                            <img src="../assets/images/member/member_shapper.png" class="card-img-top" alt="奶昔">
+                                          </div>
+                                          <div class="d-flex justify-content-between p-16">
+                                            <div>
+                                              <h5 class="card-title mb-1">奶昔</h5>
+                                              <p class="card-text mb-0">邊境牧羊犬 2 歲</p>
+                                            </div>
+                                            <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                          </div>
+                                        </div>
+                                        <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                          <h6 class="mb-2">奶昔的私藏</h6>
+                                          <p class="mb-0 p2">最擅長盯緊飛盤 🥏</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div><!-- /.row -->
+                              </div><!-- /.carousel-item -->
+
+                            <!-- Slide 2（可重複第一頁內容或放未來新增卡片；先做示例） -->
+                            <div class="carousel-item">
+                              <div class="row g-4">
+                                <!-- 這裡你可以重複卡片或放其他卡，示範先複製 1、2 -->
+                                <div class="col-12 col-sm-6 col-md-3">
+                                  <!-- 卡片 1 複製或放新資料 -->
+                                  <!-- ...（略，同上） -->
+                                  <div class="flip-card h-100">
+                                    <div class="flip-inner">
+                                      <div class="flip-face flip-front">
+                                        <div class="p-1">
+                                          <img src="../assets/images/member/member_shiba.png" class="card-img-top" alt="豆豆">
+                                        </div>
+                                        <div class="d-flex justify-content-between p-16">
+                                          <div>
+                                            <h5 class="card-title mb-1">豆豆</h5>
+                                            <p class="card-text mb-0">柴犬 5 歲</p>
+                                          </div>
+                                          <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                        </div>
+                                      </div>
+                                      <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                        <h6 class="mb-2">豆豆的小故事</h6>
+                                        <p class="mb-0 p2">今天也要當開箱小隊長！</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-3">
+                                  <!-- 卡片 2 複製或放新資料 -->
+                                  <!-- ...（略，同上） -->
+                                  <div class="flip-card h-100">
+                                    <div class="flip-inner">
+                                      <div class="flip-face flip-front">
+                                        <div class="p-1">
+                                          <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top" alt="Haru">
+                                        </div>
+                                        <div class="d-flex justify-content-between p-16">
+                                          <div>
+                                            <h5 class="card-title mb-1">Haru</h5>
+                                            <p class="card-text mb-0">哈士娃 1 歲</p>
+                                          </div>
+                                          <img src="../assets/images/member/footprint_patten 2.png" alt="" class="img-single-paw">
+                                        </div>
+                                      </div>
+                                      <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                        <h6 class="mb-2">Haru 的密語</h6>
+                                        <p class="mb-0 p2">帶我去兜風～</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- 也可以保持兩格空白，或複製 3、4 -->
+                                <div class="col-12 col-sm-6 col-md-3 d-none d-md-block"></div>
+                                <div class="col-12 col-sm-6 col-md-3 d-none d-md-block"></div>
+                              </div>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="p-1">
-                        <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">Haru</h5>
-                          <p class="card-text">哈士娃 1 歲</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="p-1">
-                        <img src="../assets/images/member/member_poodle.png" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">可可</h5>
-                          <p class="card-text">貴邊犬 2 歲</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <div class="p-1">
-                        <img src="../assets/images/member/member_shapper.png" class="card-img-top" alt="...">
-                        </div>
-                        <div class="card-body">
-                          <h5 class="card-title">奶昔</h5>
-                          <p class="card-text">邊境牧羊犬 2 歲</p>
-                        </div>
-                      </div>
-                    </div>
+
+                    <!-- 控制箭頭 -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">上一頁</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">下一頁</span>
+                    </button>
                   </div>
+                </div>
               </div>
 
               <!-- 會員專屬活動 - 會員限定優惠 -->
-              <div class="exclusive mb-48">
-                <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+              <div class="exclusive mb-132">
+                
                 <div class="exclusive-content">
-                  <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
-                  <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
-                  <p class="text-center text-teritary-500 fw-500 p3">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
-                  <p class="text-center text-teritary-500 fw-500 p3 mb-4">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p>
-                  <div class="card mb-3 card-hover p-20">
+
+                  <div class="auto-show">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                      <img src="../assets/images/member/member_wave.png" alt="" class="img-wave me-16 img-shake img-reveal">
+                      <div class="">
+                        <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+                        <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
+                        <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
+                      </div>
+                      <img src="../assets/images/member/member_firework.png" alt="" class="img-firework-1 ml-16 img-shake img-reveal">
+                    </div>
+                    <p class="text-center text-teritary-500 fw-500 p2 mb-4">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
+                    <!-- <p class="text-center text-teritary-500 fw-500 p2 ">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p> -->
+                  </div>
+                  
+                  <div class="card mb-3 card-hover p-20 auto-show">
                     <div class="row g-0">
                       <div class="col-md-5">
-                        <div class="card-body ps-24 text-center vh-50 pt-152">
-                          <h6 class="h6 card-title mb-4">夏日感謝祭<br/>會員專屬優惠活動!</h6>
-                          <p class="p3 card-text p4 mb-2">即日​起​完成​續訂​就​送​限定​折扣!<br/>還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光</p>
-                          <button class="btn b3 btn-primary rounded-pill btn-subscribe" type="button">立即訂閱</button>
+                        <div class="">
+                          <div class="card-body ps-24 text-center vh-50 pt-200">
+                            <h3 class="h4 card-title mb-4 fw-900">即日​起​​續訂​就​送​限定​折扣!</h3>
+                            <p class="card-text p3 mb-4 fw-500">還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光!</p>
+                            <div class="d-flex justify-content-center">
+                              <button class="btn btn-primary rounded-pill btn-keep-subscribe" type="button">立即續訂</button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div class="col-md-7">
                         <div class="img-wrap h-100">
-                          <img src="../assets/images/member/member_summer_exclusive.png" class="img-fluid rounded-start summer_exclusive" alt="...">
+                            <img src="../assets/images/member/member_summer_exclusive.png" class="img-fluid rounded-start summer_exclusive" alt="...">
                         </div>
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
 
               <!-- 會員專屬活動 - 主題活動 -->
                <div class="theme-event">
-                <h2 class="text-center mb-2 text-primary-500 mb-4">主題活動</h2>
-                  <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="../assets/images/member/theme_event_1.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title h5 mb-4" >毛孩麻吉日<br/>一起 Show 出熱血!</h5>
-                          <p class="card-text p3 mb-4">毛日​和​一年​一度​的​「毛​孩​麻吉日」​捐血犬活​動來啦！​<br/>現​場將​提供​獸醫​健檢、​健康​講座、​免​費狂犬​病​疫苗、​抽好禮，​還有​限量​10​組免​費血檢​名​額！​一起​「Show出熱血」，​加入​捐血​犬行列​吧！​</p>
-                        </div>
-                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
+                <div class="auto-show">
+                  <div class="position-relative">
+                      <img src="../assets/images/member/Illustration-feed.png" alt="" class="img-feed img-shake img-reveal">
+                      <h2 class="h2 text-center mb-2 text-primary-500 mb-4 title-lined">主題活動</h2>
+                      <h4 class="h4 text-center text-secondary-500 mb-4">專屬你與毛孩的特別時光 !</h4>
+                      <img src="../assets/images/member/member_play.png" alt="" class="img-play img-shake img-reveal">
+                  </div>
+                  <p class=" mb-36 text-center text-teritary-500 p2 fw-500">9月~10月的會員專屬毛孩派對開跑啦！一起熱血 Show 出愛、探索寵物心聲，還有驚喜福袋等你來拿！</p>
+                </div>
+               
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="../assets/images/member/theme_event_1.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="...">
+                      <div class="card-body">
+                        <h6 class="card-title h6 fw-700 mb-4 " >毛​​麻吉​捐血犬活​動來啦!</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/19 - 20</p>
+                        <p class="card-text p4">現​場將​提供​獸醫​健檢、​健康​講座、​免​費狂犬​病​疫苗、​抽好禮，​還有​限量​10​組免​費血檢​名​額！​一起​「Show出熱血」，​加入​捐血​犬行列​吧！​</p>
                       </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="../assets/images/member/theme_event_2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title h5 mb-4">寵物溝通小教室<br/>本月會員限定講座</h5>
-                          <p class="card-text p3 mb-4">狗勾其實也常使用尾巴、耳朵等等肢體語言，來向我們傳遞各式各樣的訊息。想了解該如何更了解毛寶貝嗎?<br/>本次特別邀請狗兒行為諮詢師 PAPA 老師來分享，快來一起聽懂、看懂牠們到底在想甚麼吧！</p>
-                        </div>
-                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card h-100">
-                        <img src="../assets/images/member/theme_event_3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title h5 mb-4">會員限定<br/>毛孩福袋夏日驚喜互換祭</h5>
-                          <p class="card-text p3 mb-4">這個月，我們將舉辦一次「毛孩福袋互換」活動，參加者將獲得一份隨機搭配的驚喜福袋！裡面可能有別人家毛孩最愛的玩具或點心，也許會是你的寶貝的新歡！</p>
-                          <small>📌本次活動採會員限定登記制，每人限額登記一份。</small>
-                        </div>
-                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
-                      </div>
+                      <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button"><a href="./member_activities_1.html">立即報名</a></button>
                     </div>
                   </div>
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="../assets/images/member/theme_event_2.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="...">
+                      <div class="card-body flex-1">
+                        <h6 class="card-title h6 fw-700 mb-4">想更了解毛寶貝嗎?</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/26 - 27</p>
+                        <p class="card-text p4 mb-1">狗勾其實也常使用尾巴、耳朵等等肢體語言，來向我們傳遞各式各樣的訊息!</p>
+                        <p class="card-text p4">特別邀請狗兒行為諮詢師 PAPA 老師來分享，快來一起聽懂、看懂牠們到底在想甚麼吧！</p>
+                      </div>
+                      <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button"><a href="./member_activities_2.html">立即報名</a></button>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="../assets/images/member/theme_event_3.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="...">
+                      <div class="card-body">
+                        <h6 class="card-title h6 fw-700 mb-4">會員限定福袋互換日!</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/26 - 27</p>
+                        <p class="card-text p4 mb-1">這個月，我們將舉辦一次「毛孩福袋互換」，參加者將獲得一份隨機的驚喜福袋！</p>
+                        <p class="card-text p4 mb-4">裡面可能有別人家毛孩最愛的玩具或點心，也許會是你的寶貝的新歡！</p>
+                        <small class="fw-700">📌本次活動採會員限定登記制，每人限額登記一份。</small>
+                      </div>
+                      <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button"><a href="./member_activities_3.html">立即報名</a></button>
+                    </div>
+                  </div>
+                </div>
                </div>
               </div>
             </div>
