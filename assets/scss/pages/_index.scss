@@ -112,6 +112,13 @@ body::before {
   line-height: 1.5;
 }
 
+.p3 {
+  /* 根據 Figma 設計設定字體樣式 */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 /* 圖片定位2 */
 .about {
   position: relative;
@@ -368,4 +375,366 @@ body::before {
   bottom: 20.28%;
   width: 548.06px;
   height: 293px;
+}
+
+/*訂閱按鈕large*/
+.px-160 {
+  padding-left: 160px !important;
+  padding-right: 160px !important;
+}
+
+/*評論區卡片 藍/粉 */
+.review-card {
+  background: url("/assets/images/index/dog_outline_blue.png") no-repeat
+    center/contain;
+  min-height: 329px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-card-pink {
+  background: url("/assets/images/index/dog_outline_pink.png") no-repeat
+    center/contain;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 評論區星星間距 */
+.stars {
+  font-size: 1.2rem; /* 星星大小 */
+}
+
+/* 客服中心按鈕樣式 */
+.customer-service-btn {
+  position: fixed;
+  right: 0px;
+  bottom: 40px;
+  background-color: $brown-500;
+  color: white;
+  border: none;
+  padding: 24px 12.5px;
+  border-radius: 16px 0 0 16px;
+  writing-mode: vertical-rl; /* 直式文字 */
+  text-orientation: mixed;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  transition: all 0.3s ease;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-service-btn:hover {
+  background-color: $brown-300; /* 稍微亮一點的咖啡色 */
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.customer-service-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customer-service-btn i {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* 客服聊天窗口 */
+.customer-service-chat {
+  position: fixed;
+  right: 90px;
+  bottom: 30px;
+  width: 350px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 1050;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.customer-service-chat.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: all;
+}
+
+.chat-header {
+  text-align: center;
+  color: $brown-500;
+}
+
+.chat-subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.chat-button {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  margin-bottom: 16px;
+  background: white;
+  border: 1px solid $brown-300;
+  border-radius: 8px;
+  color: $brown-300;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    background-color: $brown-300;
+    color: white;
+    border-color: $brown-300;
+    text-decoration: none;
+  }
+
+  i {
+    float: right;
+    margin-top: 2px;
+    opacity: 0.7;
+  }
+}
+
+.chat-footer {
+  font-size: 12px;
+  color: $brown-300;
+  line-height: 1.5;
+}
+
+/* Modal Header 背景圖片 */
+.modal-header {
+  background-image: url("/assets/images/index/dog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  border: none;
+  text-align: center;
+}
+
+/* 關閉按鈕定位 */
+.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: $brown-100;
+  border-radius: 50%;
+  padding: 8px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+  background-color: white;
+}
+
+/* 小標題文字 */
+.header-subtitle {
+  color: white;
+  font-size: 24px;
+  margin-top: 8px;
+  font-weight: 400;
+}
+
+/* 主標題 */
+.modal-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* 最新消息 accordion */
+.custom-accordion {
+  position: relative;
+  max-width: 1200px; /* 控制最大寬度 */
+  margin: 0 auto; /* 在 modal 中水平置中 */
+  padding: 0 64px;
+}
+
+.accordion-item {
+  position: relative;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 讓 function-tag + button 一起置中 */
+  position: relative;
+}
+
+/*  左邊橘色按鈕 */
+.function-tag {
+  background: $primary;
+  color: white;
+  padding: 4px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(255, 108, 26, 0.3);
+  width: 220px; /* 設定固定寬度 */
+  text-align: center; /* 文字置中 */
+  margin-left: -20px;
+}
+
+/* 右邊標題 */
+.accordion-button {
+  background: $neutral-100;
+  border: 1px solid $brown-100;
+  border-radius: 20px !important;
+  padding: 4px 36px;
+  font-weight: 500;
+  color: $brown-500;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+}
+.accordion-button:not(.collapsed) {
+  background: #f8f9fa;
+  border-color: #e9ecef;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-color: #e9ecef;
+  background: #f8f9fa;
+}
+
+.accordion-button:active,
+.accordion-button:hover {
+  background: #f8f9fa;
+  border-color: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23666'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* 內文 */
+.accordion-body {
+  padding: 28px;
+  background: $neutral-100;
+  border: 1px solid $neutral-100;
+  border-top: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-collapse {
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.date-tag {
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.content-text {
+  line-height: 1.6;
+  color: $brown-500;
+  margin-bottom: 0;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .custom-accordion {
+    margin-left: 60px;
+  }
+
+  .function-tag {
+    left: -60px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .accordion-button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .accordion-body {
+    padding: 16px;
+    padding-left: 60px;
+    margin-left: -44px;
+  }
+}
+
+/* 超出視窗時出現滑動條、內置滑動條 */
+.modal-dialog {
+  max-height: 90vh; /* Modal 本身最大高度限制在螢幕 90% */
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow: hidden; /* 防止內容溢出破壞 radius */
+  border-radius: 0.5rem; /* 確保有 radius */
+}
+
+.modal-body {
+  max-height: calc(90vh - 120px); /* 減去 header 和 footer 的高度 */
+  overflow-y: auto;
+  padding-right: 12px; /* 給滑動條留空間，避免內容被遮蓋 */
+}
+
+/* 自定義滑動條樣式，讓它更美觀 */
+.modal-body::-webkit-scrollbar,
+.modal-content > *:not(.modal-header):not(.modal-footer)::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track,
+.modal-content
+  > *:not(.modal-header):not(.modal-footer)::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb,
+.modal-content
+  > *:not(.modal-header):not(.modal-footer)::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover,
+.modal-content
+  > *:not(.modal-header):not(.modal-footer)::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }

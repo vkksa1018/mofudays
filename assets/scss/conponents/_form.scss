@@ -1,3 +1,11 @@
 .form-select {
   letter-spacing: 0.05em;
 }
+
+input:focus {
+  border-width: 2px;
+}
+
+select:focus {
+  border-width: 2px;
+}
