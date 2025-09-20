@@ -1,0 +1,182 @@
+.faq {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+/* ===== tab樣式 ===== */
+.faq-tabs {
+  list-style: none; /* 移除黑點 */
+  margin: 0; /* 移除 ul 預設 margin */
+  padding: 0; /* 移除 ul 預設 padding */
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px; /* 調整間距 */
+}
+
+.faq-tabs .nav-link {
+  border: 1px solid $brown-300;
+  border-radius: 50px;
+  padding: 8px 32px;
+  color: $brown-300;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.faq-tabs .nav-link.active {
+  background-color: $primary-500;
+  color: white;
+  border-color: $primary-500;
+}
+
+.faq-header {
+  align-items: flex-end; /* 整個 header 裡的左右項目靠底 */
+}
+
+.faq-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 確保內部文字也靠底 */
+}
+
+/* ===== 標題樣式 ===== */
+.faq-title h2 {
+  color: $brown-500;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 3%;
+}
+
+.faq-title p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $primary-500;
+}
+
+.faq-content {
+  background-color: $primary-100;
+  border-radius: 80px;
+  padding: 32px;
+  margin-top: 24px;
+}
+
+/* card主體切換 */
+.card-container.theme-tertiary {
+  --theme-color: #{$tertiary-500};
+}
+.card-container.theme-primary {
+  --theme-color: #{$primary-500};
+}
+
+/* ===== cards ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  gap: 32px;
+  max-width: 1076px;
+  margin: 0 auto;
+}
+
+.card-container {
+  position: relative;
+  min-width: 337px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 28px;
+}
+
+.question-section {
+  background: var(--theme-color);
+  color: white;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-radius: 56px 56px 0 0;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.question-section::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--theme-color);
+}
+
+.top-bubble {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: var(--theme-color);
+  padding: 16px 24px;
+  border: 3px solid var(--theme-color);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  z-index: 2;
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: white;
+}
+
+.answer-section {
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 0 0 56px 56px;
+  color: $brown-500;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 響應式 */
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card-container {
+    max-width: 100%;
+  }
+  .question-section {
+    height: auto;
+    padding: 45px 20px 25px 20px;
+  }
+}
+
+/* tab content 隱藏 / 顯示 */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
