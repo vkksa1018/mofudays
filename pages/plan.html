@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>推薦方案</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="plan py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div class="title mb-6 px-110">
+          <h2 class="fw-bold mb-2 ls-5">查看您的推薦方案</h2>
+        </div>
+
+        <!-- 推薦方案卡片 -->
+        <div class="card-bg py-9 px-110 mb-6">
+          <!-- 圖片 -->
+          <div class="row-table mb-5">
+            <div class="col-table-8">
+              <img
+                src="https://picsum.photos/856/620"
+                alt="新手爸媽安心組1"
+                class="rounded-4"
+              />
+            </div>
+            <div class="col-table-2">
+              <img
+                src="https://picsum.photos/200/200"
+                alt="新手爸媽安心組2"
+                class="rounded-4 mb-4"
+              />
+              <img
+                src="https://picsum.photos/200/200"
+                alt="新手爸媽安心組3"
+                class="rounded-4 mb-4"
+              />
+              <img
+                src="https://picsum.photos/200/200"
+                alt="新手爸媽安心組4"
+                class="rounded-4"
+              />
+            </div>
+          </div>
+
+          <!-- 底下表格 -->
+          <div class="table-container-bg px-6 py-5">
+            <div class="row-table">
+              <!-- 品項 -->
+              <div class="col-table-6">
+                <h5 class="text-primary-500 fw-bold ls-5 mb-1">
+                  新手爸媽安心組
+                </h5>
+                <p class="table-title mb-5">
+                  給第一次養毛孩的你，一份剛剛好的照顧
+                </p>
+                <p class="table-text fw-normal">
+                  零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                </p>
+              </div>
+
+              <!-- 單價+數量 -->
+              <div
+                class="col-table-4 d-flex flex-column justify-content-between flex-wrap"
+              >
+                <p class="total-text fw-bold text-end">
+                  每月<span class="fs-24 fw-medium px-2">$699</span>
+                </p>
+                <div class="d-flex justify-content-end">
+                  <div class="input-group w-75" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="3"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 儲存按鈕 -->
+      <div class="text-center">
+        <a
+          class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
+          href="/pages/pet-info.html"
+          role="button"
+          >繼續新增訂閱</a
+        >
+        <a
+          class="btn btn-primary rounded-pill btn-active px-40"
+          href="/pages/cart.html"
+          role="button"
+          >加入購物車</a
+        >
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

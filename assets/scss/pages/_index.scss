@@ -532,7 +532,7 @@ body::before {
 }
 
 /* 關閉按鈕定位 */
-.btn-close {
+.modal-dialog .btn-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -543,7 +543,7 @@ body::before {
   transition: all 0.3s ease;
 }
 
-.btn-close:hover {
+.modal-dialog .btn-close:hover {
   opacity: 1;
   background-color: white;
 }

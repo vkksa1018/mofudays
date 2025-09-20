@@ -1,31 +1,49 @@
-// 通用
-
-//樣式
-.info-card {
-  background-color: $primary-100;
-  padding: 80px 110px;
-  border-radius: 80px;
+// 元件文字
+.pet-info span {
+  font-size: 0.875rem;
+  color: $primary-500;
 }
-
-// 文字
 .title p {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $primary-500;
-}
-.info-card h4 {
-  color: $primary-500;
-  margin-bottom: 40px;
-}
-.item-title {
-  font-size: 18px;
   letter-spacing: 0.03em;
 }
+.item-title {
+  font-size: 1.125rem;
+  letter-spacing: 0.03em;
+}
+.item-text {
+  font-size: 0.875rem;
+  color: $brown-300;
+}
 
-// button
+// 元件-卡片
 .input-number {
   color: $brown-500;
 }
-.btn-health img {
+.health-img {
   width: 120px;
-  height: 120px;
+  height: auto;
+}
+.diet .btn {
+  width: 204px;
+}
+
+// 定位圖
+.card-bg {
+  position: relative;
+}
+.dog-illustration {
+  position: absolute;
+  bottom: -164px;
+  left: -184px;
+  width: 480px;
+  height: 480px;
+}
+.feed-illustration {
+  position: absolute;
+  top: -57px;
+  right: -72px;
+  width: 280px;
+  height: 245px;
 }
