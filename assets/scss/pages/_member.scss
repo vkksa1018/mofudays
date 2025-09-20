@@ -48,6 +48,7 @@ p {
 }
 
 .member-center {
+
   .body {
     font-size: 4rem;
     font-weight: 500;
@@ -728,6 +729,18 @@ p {
       left: 10%;
       border-radius: 50%;
     }
+
+    /* 讓內容浮到裝飾圖上層（避免被蓋住） */
+.member-center .tab-content { position: relative; z-index: 10; }
+
+/* 裝飾圖降低層級且不攔截點擊 */
+.member-center .yellow-patten-1,
+.member-center .green-patten-1,
+.member-center .foot-print { z-index: 0; pointer-events: none; }
+
+/* 萬一別人 SCSS 把 pane 隱藏，先保險打開 */
+.member-center .tab-pane.active { display: block !important; }
+.member-center .tab-pane.fade.show { opacity: 1 !important; }
   }
 
   // .title-lined {
