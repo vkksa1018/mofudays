@@ -71,8 +71,9 @@ a.btn-form-login:focus-visible {
   display: block; 
 }
 
-.carousel-indicators {
+.split-card .carousel-indicators {
   gap: 12px;
+  bottom: 0px;
 }
 
 .carousel-indicators [data-bs-target]{
