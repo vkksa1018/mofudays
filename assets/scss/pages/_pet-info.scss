@@ -1,5 +1,5 @@
 // 元件文字
-pet-info span {
+.pet-info span {
   font-size: 0.875rem;
   color: $primary-500;
 }
@@ -7,9 +7,6 @@ pet-info span {
   font-size: 1.125rem;
   color: $primary-500;
   letter-spacing: 0.03em;
-}
-.info-card h4 {
-  color: $primary-500;
 }
 .item-title {
   font-size: 1.125rem;
@@ -27,4 +24,26 @@ pet-info span {
 .health-img {
   width: 120px;
   height: auto;
+}
+.diet .btn {
+  width: 204px;
+}
+
+// 定位圖
+.card-bg {
+  position: relative;
+}
+.dog-illustration {
+  position: absolute;
+  bottom: -164px;
+  left: -184px;
+  width: 480px;
+  height: 480px;
+}
+.feed-illustration {
+  position: absolute;
+  top: -57px;
+  right: -72px;
+  width: 280px;
+  height: 245px;
 }

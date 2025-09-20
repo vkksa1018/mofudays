@@ -8,11 +8,17 @@
 .cart {
   letter-spacing: 0.05em;
 }
+.checkout {
+  letter-spacing: 0.05em;
+}
 .ls-5 {
   letter-spacing: 0.05em;
 }
 .fs-24 {
   font-size: 24px;
+}
+.fs-14 {
+  font-size: 14px;
 }
 .text-primary-500 {
   color: $primary-500;
@@ -60,6 +66,11 @@
   padding-left: 12px;
   padding-right: 12px;
 }
+.col-table-1-5 {
+  width: calc(100% / 10) * 1.5;
+  padding-left: 12px;
+  padding-right: 12px;
+}
 .col-table-2 {
   width: calc(100% / 10) * 2;
   padding-left: 12px;
@@ -94,4 +105,17 @@
   width: calc(100% / 10) * 10;
   padding-left: 12px;
   padding-right: 12px;
+}
+
+// 元件
+.step-item {
+  display: block;
+}
+
+.step-item + .step-item ::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  padding: 0px 16px;
+  background-color: $secondary-400;
 }

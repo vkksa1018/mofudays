@@ -202,7 +202,7 @@
   color: $brown-300 !important;
   letter-spacing: 0.05em;
   border-color: $primary-500 !important;
-  border-width: 2px;
+  border-width: 2px !important;
 }
 
 .btn-check:checked + .btn-health {
