@@ -22,9 +22,11 @@
 @import "./layout/announcement";
 @import "./layout/footer.scss";
 
-// pages
-@import "./pages/index.scss";
+//pages
 @import "./pages/login.scss";
-@import "./pages/pet-info";
+@import "./pages/index.scss";
 @import "./pages/member.scss";
+@import "./pages/member_activities.scss";
+@import "./pages/pet-info.scss";
 @import "./pages/faq.scss";
+
