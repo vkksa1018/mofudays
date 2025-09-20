@@ -1,0 +1,95 @@
+// 通用
+// 文字+卡片
+.cart {
+  letter-spacing: 0.05em;
+}
+
+// 格線+間距
+.row-table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.col-table-1 {
+  width: calc(100% / 10);
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-2 {
+  width: calc(100% / 10) * 2;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-3 {
+  width: calc(100% / 10) * 3;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-4 {
+  width: calc(100% / 10) * 4;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-5 {
+  width: calc(100% / 10) * 5;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-6 {
+  width: calc(100% / 10) * 6;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.col-table-10 {
+  width: calc(100% / 10) * 10;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.px-110 {
+  padding-left: 110px;
+  padding-right: 110px;
+}
+.py-9-5 {
+  padding-top: 9.5px;
+  padding-bottom: 9.5px;
+}
+
+// 單獨
+//表格
+.table-title-bg {
+  background-color: $primary-300;
+  border-radius: 8px;
+}
+.table-container-bg {
+  background-color: $white;
+  border-radius: 8px;
+}
+.total-bg {
+  background-color: $primary-200;
+  border-radius: 8px;
+}
+.table-img {
+  width: 196px;
+  height: 130px;
+}
+.table-title {
+  font-size: 1.125rem;
+  letter-spacing: 0.03em;
+}
+.table-text {
+  font-size: 0.875rem;
+  color: $brown-300;
+}
+.cart .btn-close {
+  width: 16px;
+  height: 16px;
+}
+
+// 文字
+.total-text {
+  color: $primary-500;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}

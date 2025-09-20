@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>推薦方案</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="cart py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div class="title mb-6 px-110">
+          <h2 class="fw-bold mb-2">購物車</h2>
+        </div>
+
+        <!-- 訂閱內容卡片 -->
+        <div class="card-bg py-9 px-110 mb-6">
+          <div class="row">
+            <!-- 表格 -->
+            <div class="col-table-10">
+              <h5 class="mb-5">訂閱內容</h5>
+
+              <!-- 表格標題 -->
+              <div class="table-title-bg d-flex py-2 mb-2">
+                <p class="col-table-2 text-center"></p>
+                <p class="col-table-3 text-center">品項</p>
+                <p class="col-table-1 text-center">單價</p>
+                <p class="col-table-2 text-center">數量</p>
+                <p class="col-table-1 text-center">小計</p>
+                <p class="col-table-1 text-center"></p>
+              </div>
+
+              <!-- 表格第一列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/assets/images/subscribe/product-img-01.png"
+                    alt="新手爸媽安心組"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">新手爸媽安心組</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="3"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $2,097
+                </div>
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- 表格第二列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/assets/images/subscribe/product-img-02.png"
+                    alt="青春汪能量補給包"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">青春汪能量補給包</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div class="col-table-2 px-4 d-flex align-items-center">
+                  <div class="input-group" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="2"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $1,398
+                </div>
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- 表格第三列 -->
+              <div class="table-container-bg d-flex py-4 mb-7">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/assets/images/subscribe/product-img-03.png"
+                    alt="青春汪能量補給包"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">牛氣補補能量盒</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div class="col-table-2 px-4 d-flex align-items-center">
+                  <div class="input-group" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="1"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 選擇訂閱期數 -->
+            <div class="col-table-6">
+              <h5 class="mb-5">選擇訂閱期數</h5>
+              <div class="d-flex gap-4">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-diet px-0 py-3 w-25"
+                >
+                  1 個月
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-diet px-0 py-3 w-25"
+                >
+                  3 個月
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-diet px-0 py-3 w-25"
+                >
+                  6 個月
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary btn-diet px-0 py-3 w-25"
+                >
+                  12 個月
+                </button>
+              </div>
+            </div>
+
+            <!-- 訂單合計 -->
+            <div class="col-table-4">
+              <h5 class="mb-5">訂單合計</h5>
+              <div class="total-bg px-5 py-9-5">
+                <p class="total-text fw-bold text-end">
+                  每月<span class="fs-24 fw-medium px-2">$4,194</span>元
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 儲存按鈕 -->
+      <div class="text-center">
+        <a
+          class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
+          href="/pages/pet-info.html"
+          role="button"
+          >繼續訂閱</a
+        >
+        <a
+          class="btn btn-primary rounded-pill btn-active px-40"
+          href="/pages/cart.html"
+          role="button"
+          >確認結帳</a
+        >
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

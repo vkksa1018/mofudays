@@ -1,30 +1,39 @@
 // 通用
+// 文字+卡片
+.pet-info {
+  letter-spacing: 0.05em;
+}
 .fs-24 {
   font-size: 24px;
 }
+.card-bg {
+  background-color: $primary-100;
+  border-radius: 80px;
+}
 
-// 間距
+// 格線+間距
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
 .px-100 {
   padding-left: 100px;
   padding-right: 100px;
-}
-.px-110 {
-  padding-left: 110px;
-  padding-right: 110px;
 }
 .mb-40 {
   margin-bottom: 40px;
 }
 
+// 單獨
 // 元件文字
 main span {
   font-size: 0.875rem;
   color: $primary-500;
 }
-
 .title p {
   font-size: 1.125rem;
   color: $primary-500;
+  letter-spacing: 0.03em;
 }
 .info-card h4 {
   color: $primary-500;
@@ -36,14 +45,9 @@ main span {
 .item-text {
   font-size: 0.875rem;
   color: $brown-300;
-  letter-spacing: 0.05em;
 }
 
 // 元件-卡片
-.info-card {
-  background-color: $primary-100;
-  border-radius: 80px;
-}
 .input-number {
   color: $brown-500;
 }
@@ -51,5 +55,3 @@ main span {
   width: 120px;
   height: auto;
 }
-
-// 元件-button
