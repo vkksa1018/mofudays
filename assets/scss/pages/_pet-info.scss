@@ -1,32 +1,5 @@
-// 通用
-// 文字+卡片
-.pet-info {
-  letter-spacing: 0.05em;
-}
-.fs-24 {
-  font-size: 24px;
-}
-.card-bg {
-  background-color: $primary-100;
-  border-radius: 80px;
-}
-
-// 格線+間距
-.px-40 {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-.px-100 {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-.mb-40 {
-  margin-bottom: 40px;
-}
-
-// 單獨
 // 元件文字
-main span {
+pet-info span {
   font-size: 0.875rem;
   color: $primary-500;
 }
