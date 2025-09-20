@@ -1,9 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>填寫毛孩資料</title>
   </head>
-  <body></body>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="pet-info py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-6 px-110"
+        >
+          <!-- 標題 -->
+          <div class="title">
+            <h2 class="fw-bold mb-2">簡單 2 步驟</h2>
+            <p class="fw-bold">為毛孩送上每月一盒溫暖心意</p>
+          </div>
+          <!-- 進度條 -->
+          <div class="d-flex align-items-center">
+            <a href="/pages/pet-info.html" class="step-first">
+              <img
+                src="/assets/images/index/service_step_1.svg"
+                alt="step_1"
+                class="mx-auto d-block"
+              />
+              <p class="text-center fs-14">填寫毛孩資料</p>
+            </a>
+            <div class="progress-line"></div>
+
+            <a href="/pages/plan.html" class="step-item">
+              <img
+                src="/assets/images/index/service_step_2.svg"
+                alt="step_2"
+                class="mx-auto d-block"
+              />
+              <p class="text-center fs-14">查看方案</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- 毛孩資料卡片 -->
+        <div class="card-bg py-9 mb-6">
+          <div class="row justify-content-center">
+            <!-- 標題 -->
+            <div class="col-10">
+              <h4 class="fw-bold text-primary-500 mb-40">
+                幫助我們先認識你的毛孩～
+              </h4>
+            </div>
+            <!-- 左邊欄位 -->
+            <div class="col-4 pe-5">
+              <!-- 毛孩名稱 -->
+              <div class="pet-name mb-7">
+                <div class="d-flex align-items-center mb-4">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold">毛孩的名字是？</p>
+                </div>
+                <div>
+                  <label for="pet-name" class="form-label"></label>
+                  <input
+                    type="name"
+                    class="form-control"
+                    id="pet-name"
+                    placeholder="輸入毛孩的名字/暱稱"
+                  />
+                </div>
+              </div>
+
+              <!-- 毛孩性別 -->
+              <div class="pet-gender mb-7">
+                <div class="d-flex align-items-center mb-4">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold">
+                    毛孩是什麼性別？<span class="align-top">*必填</span>
+                  </p>
+                </div>
+                <div
+                  class="btn-group w-100"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio1"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-diet py-3 px-5" for="btnradio1"
+                    >男生</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio2"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-diet py-3 px-5" for="btnradio2"
+                    >女生</label
+                  >
+                </div>
+              </div>
+
+              <!-- 毛孩歲數 -->
+              <div class="pet-year mb-7">
+                <div class="d-flex mb-2 align-items-center">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold text-middle">
+                    毛孩幾歲了？<span class="align-top">*必填</span>
+                  </p>
+                </div>
+                <p class="item-text mb-4">
+                  我們將會根據年紀，準備適合的零食與小物
+                </p>
+                <div class="dropdown">
+                  <button
+                    class="form-select text-start border py-3 px-5"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    選擇年齡
+                  </button>
+                  <ul
+                    class="dropdown-menu w-100"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li selected class="dropdown-item">
+                      幼犬 ( 出生 ～ 1 歲左右 )
+                    </li>
+                    <li class="dropdown-item">1 ～ 3 歲</li>
+                    <li class="dropdown-item">4 ～ 6 歲</li>
+                    <li class="dropdown-item">7 歲以上</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 毛孩體型 -->
+              <div class="pet-size mb-7">
+                <div class="d-flex align-items-center mb-2">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold">
+                    牠是什麼體型的狗狗？<span class="align-top">*必填</span>
+                  </p>
+                </div>
+                <p class="item-text mb-4">我們將會參考體型，準備適合的用品</p>
+
+                <div class="dropdown">
+                  <button
+                    class="form-select text-start border py-3 px-5"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    選擇體型
+                  </button>
+                  <ul
+                    class="dropdown-menu w-100"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li class="dropdown-item">
+                      >小型犬（ ex. 博美、貴賓、吉娃娃 ）
+                    </li>
+                    <li class="dropdown-item">
+                      中型犬（ ex. 柴犬、邊境牧羊犬、鬆獅 ）
+                    </li>
+                    <li class="dropdown-item">
+                      大型犬（ ex. 黃金獵犬、哈士奇、拉布拉多 ）
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右邊欄位 -->
+            <div class="col-6">
+              <!-- 過敏食材 -->
+              <div class="pet-diet mb-7">
+                <div class="d-flex mb-2 align-items-center">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold text-middle">
+                    毛孩有什麼過敏或忌口的食材？( 可複選 )
+                  </p>
+                </div>
+                <p class="item-text mb-4">
+                  有沒有讓毛孩一吃就搔癢、過敏的食物呢？請讓我們幫你避開～
+                </p>
+
+                <!-- 食材按鈕 -->
+                <div class="diet d-flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>雞肉</p>
+                      <p class="icon-drumstick"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>牛肉</p>
+                      <p class="icon-beef"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>豬肉</p>
+                      <p class="icon-ham"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>羊肉</p>
+                      <p class="icon-ham"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>魚</p>
+                      <p class="icon-fish"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>穀類 ( 小麥/玉米 )</p>
+                      <p class="icon-wheat"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>乳製品</p>
+                      <p class="icon-milk"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>蛋</p>
+                      <p class="icon-egg"></p>
+                    </div>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-2 btn-diet py-3 px-5"
+                  >
+                    <div class="d-flex justify-content-between">
+                      <p>無</p>
+                      <p class="icon-x"></p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 保健需求 -->
+              <div class="pet-health mb-7">
+                <div class="d-flex mb-2 align-items-center">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold text-middle">
+                    想替毛孩加強什麼保健需求？
+                  </p>
+                </div>
+                <p class="item-text mb-4">
+                  最近毛孩有沒有哪個部分想特別照顧的呢？我們會貼心幫你挑選對應的營養品
+                </p>
+
+                <div class="d-flex gap-5">
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="health"
+                      id="joint"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="joint">
+                      <img
+                        src="/assets/images/subscribe/image_btn_01.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="關節保健"
+                      />
+                      <div class="card-body p-0">
+                        <p>關節保健</p>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="health"
+                      id="digestion"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="digestion">
+                      <img
+                        src="/assets/images/subscribe/image_btn_02.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="消化幫助"
+                      />
+                      <div class="card-body p-0">
+                        <p>消化幫助</p>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="health"
+                      id="skin"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="skin">
+                      <img
+                        src="/assets/images/subscribe/image_btn_03.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="美毛/皮膚問題"
+                      />
+                      <div class="card-body p-0">
+                        <p>美毛/皮膚問題</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 互動方式 -->
+              <div class="pet-play mb-7">
+                <div class="d-flex mb-2 align-items-center">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold text-middle">
+                    毛孩平常最喜歡哪種互動方式？
+                  </p>
+                </div>
+                <p class="item-text mb-4">
+                  最近毛孩有沒有哪個部分想特別照顧的呢？我們會貼心幫你挑選對應的營養品
+                </p>
+
+                <div class="play-card d-flex gap-5">
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="play"
+                      id="brainpower"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="brainpower">
+                      <img
+                        src="/assets/images/subscribe/image_btn_04.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="喜歡腦力激盪"
+                      />
+                      <div class="card-body p-0">
+                        <p>喜歡腦力激盪</p>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="play"
+                      id="bite"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="bite">
+                      <img
+                        src="/assets/images/subscribe/image_btn_05.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="愛玩愛咬"
+                      />
+                      <div class="card-body p-0">
+                        <p>愛玩愛咬</p>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="card border-0" style="width: 14rem">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="play"
+                      id="walk"
+                      autocomplete="off"
+                    />
+                    <label class="btn btn-health px-5 py-5" for="walk">
+                      <img
+                        src="/assets/images/subscribe/image_btn_06.png"
+                        class="card-img-top rounded-4 mb-2"
+                        alt="愛出門走走"
+                      />
+                      <div class="card-body p-0">
+                        <p>愛出門走走</p>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 定位圖 -->
+          <img
+            src="/assets/images/subscribe/Illustration-dog.png"
+            alt="狗狗插畫"
+            class="dog-illustration"
+          />
+          <img
+            src="/assets/images/subscribe/Illustration-feed.png"
+            alt="飼料插畫"
+            class="feed-illustration"
+          />
+        </div>
+
+        <!-- 儲存按鈕 -->
+        <div class="text-center">
+          <a
+            class="btn btn-primary rounded-pill btn-subscribe px-100"
+            href="/pages/plan.html"
+            role="button"
+            >儲存並繼續</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
