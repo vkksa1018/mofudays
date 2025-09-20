@@ -1,0 +1,30 @@
+.signup-form{
+    padding: 100px 80px;
+}
+
+.inp-required{
+    color:red;
+    font-size:14px;
+    font-weight: bold;
+}
+
+input[type="date"] {
+  color: $neutral-400;  
+}
+
+
+/* 讓左欄與右欄等高（row 是 flex，會拉伸；左欄內部也要撐滿） */
+.col-img { display: flex; }
+.col-img .carousel { flex: 1; }
+
+/* 讓 carousel 內層一路吃到父層高度 */
+.col-img .carousel,
+.col-img .carousel-inner,
+.col-img .carousel-item { height: 100%; }
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

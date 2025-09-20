@@ -613,6 +613,16 @@ p {
   .hand-write-font{
     font-family: 'Amatic SC' !important;
   }
+
+  #petUnboxCarousel .carousel-indicators {
+    bottom: -100px; /* 或 -1rem, 視覺再調 */
+  }
+
+  .body-font{
+    font-family: "Noto Sans TC", sans-serif !important;
+  }
+   
+
   // ------------------------------------ 會員專屬優惠
 
   .btn-keep-subscribe {
@@ -795,6 +805,10 @@ p {
   .theme-event-card:hover .img-hover-bigger {
     transform: scale(1.1);
   }
+}
+
+.mb-80 {
+    margin-bottom: 5rem;
 }
 
 // ----------------------------------------  動畫

@@ -7,9 +7,143 @@
 </head>
 
 <body>
+    <%- include('./layout/header-logout'); -%>
+    <main>
+    <%- include('./layout/announcement'); -%>
+      <div class="container login-section py-9">
+        <div class="split-card overflow-hidden">
+          <div class="row g-0">
+            <!-- 輪播圖 -->
+            <section class="col-6 d-none p-0 d-md-block col-img">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active h-100" data-bs-interval="10000">
+                    <img src="/assets/images/common/login-slider-01.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-01">
+                  </div>
+                  <div class="carousel-item h-100" data-bs-interval="2000">
+                    <img src="/assets/images/common/login-slider-02.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-02">
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img src="/assets/images/common/login-slider-03.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-03">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon d-none" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+            <!-- 登入表單 -->
+            <section class="col-12 col-md-6 p-0">
+              <div class="signup-form">
+                <form action="" class="needs-validation" novalidate>
+                  <div class="text-center mb-7">
+                    <h2 class="text-brown-500 mb-4">會員註冊</h2>
+                    <p class="text-brown-500">請填寫下方個人資料，以完成註冊流程!</p>
+                  </div>
+                  <!-- 姓名 -->
+                  <div class="mb-4 d-flex align-items-center">
+                    <label for="name" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">姓名<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="name" placeholder="輸入你的姓名" required> 
+                    </div>
+                  </div>
+                  <!-- 暱稱 -->
+                  <div class="mb-5 d-flex align-items-center">
+                    <label for="nickname" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">暱稱</label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="nickname" placeholder="輸入你的用戶暱稱">
+                    </div>
+                  </div>
+                
+                  <!-- 生日 -->
+                  <div class="mb-5 d-flex align-items-center">
+                     <label for="birthday" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">生日<sup class="inp-required">*</sup></label>
+                     <div class="w-100">
+                        <input type="date" class="form-control w-100" id="birthday" placeholder="西元年/月/日" required>
+                     </div>
+                  </div>
+                  <!-- 手機 -->
+                  <div class="mb-5 d-flex align-items-center">
+                    <label for="phone" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">手機<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                        <input type="tel" class="form-control w-100" id="phone" placeholder="輸入你的手機號碼" required>
+                    </div>
+                  </div>
+                <!-- 信箱 -->
+                 <div class="mb-5 d-flex align-items-center">
+                    <label for="email" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">電子信箱<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="email" placeholder="輸入你的信箱" required>
+                    </div>
+                  </div>
+                  <!-- 密碼 -->
+                 <div class="mb-5 d-flex align-items-center">
+                    <label for="password" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">密碼<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="password" class="form-control w-100" id="password" placeholder="輸入你的密碼" required>
+                    </div>
+                 </div>
+                 <!-- 確認密碼 -->
+                <div class="mb-5 d-flex align-items-center">
+                    <label for="password-confirm" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">確認密碼<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="password" class="form-control w-100" id="password-confirm" placeholder="再次輸入你的密碼" required>
+                    </div>
+                </div>
+                <!-- 地址 -->
+                <div class="mb-5 d-flex align-items-center mb-6">
+                    <label for="address" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">地址<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="address" placeholder="輸入你的通訊地址" required>
+                    </div>
+                </div>
+                <!-- 立即加入按鈕 -->
+                <div class="d-grid mb-9">
+                    <button class="btn btn-form-login w-100" type="submit">立即加入</button>
+                </div>
+                <!-- 註冊連結 -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="mb-0 me-2 text-brown-300">已經是會員？</p>
+                    <a href="login.html"><button type="button" class="btn btn-form-signup fw-bold">立即登入</button></a>
+                </div>
 
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
 
+    </main>
 
-    
-</body>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script>
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');  // 讓 .invalid-feedback 顯示
+        }, false);
+      });
+    })();
+    </script>
+  </body>
 </html>
+
