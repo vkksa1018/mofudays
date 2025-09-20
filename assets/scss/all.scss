@@ -22,8 +22,5 @@
 @import "./layout/announcement";
 @import "./layout/footer.scss";
 
-// pages
-@import "./pages/index.scss";
-@import "./pages/login.scss";
-@import "./pages/pet-info";
 @import './pages/member.scss';
+@import './pages/_member_activities.scss';
