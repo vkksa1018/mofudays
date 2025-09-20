@@ -174,9 +174,9 @@
 }
 
 /* tab content 隱藏 / 顯示 */
-.tab-content {
+.faq-content .tab-content {
   display: none;
 }
-.tab-content.active {
+.faq-content .tab-content.active {
   display: block;
 }
