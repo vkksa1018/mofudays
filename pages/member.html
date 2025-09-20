@@ -3,14 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="all.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="member.css" />
+    <link rel="stylesheet" href="../assets/scss/all.scss" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/lucide-static@latest/font/lucide.css"
@@ -18,6 +11,7 @@
     <title>Document</title>
   </head>
   <body>
+    <%- include('./layout/header'); -%>
     <main class="my-80">
       <div class="container">
         <div class="row justify-content-center">
@@ -29,7 +23,7 @@
             >
               <li class="nav-item me-16" role="presentation">
                 <button
-                  class="btn button-outline-primary text-primary-500 active rounded-pill "
+                  class="btn button-outline-primary btn-member text-primary-500 active rounded-pill"
                   id="pills-profile-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-profile"
@@ -39,12 +33,12 @@
                   aria-selected="true"
                 >
                   <span class="icon-user-round-pen align-bottom"></span
-                  ><span class="ms-2">個人資料</span>
+                  ><span class="ms-2">會員資料</span>
                 </button>
               </li>
               <li class="nav-item me-16" role="presentation">
                 <button
-                  class="btn button-outline-primary text-primary-500 rounded-pill"
+                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
                   id="pills-orderlists-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-orderlists"
@@ -59,7 +53,7 @@
               </li>
               <li class="nav-item" role="presentation">
                 <button
-                  class="btn button-outline-primary text-primary-500 rounded-pill"
+                  class="btn button-outline-primary btn-member text-primary-500 rounded-pill"
                   id="pills-exclusives-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-exclusives"
@@ -73,86 +67,578 @@
                 </button>
               </li>
             </ul>
-            <div class="tab-content section-lined p-48" id="pills-tabContent">
+            <div class="tab-content p-48" id="pills-tabContent">
+              <!-- 會員資料 -->
               <div
-                class="tab-pane fade show active"
+                class="member-data tab-pane fade show active section-lined"
                 id="pills-profile"
                 role="tabpanel"
                 aria-labelledby="pills-profile-tab"
                 tabindex="0"
               >
-                <h2 class="h h2 mb-16 align-bottom text-primary-500">
-                  <span class="icon-user align-bottom"></span>會員資料
-                </h2>
-                <div class="mb-3 ps-8">
-                  <label for="user-name" class="form-label p1"
-                    >姓名</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="user-name"
-                    placeholder="請輸入姓名"
-                  />
-                </div>
-                <div class="mb-3 ps-8">
-                  <label for="user-nick-name" class="form-label p1"
-                    >暱稱</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="user-nick-name"
-                    placeholder="請輸入暱稱"
-                  />
-                </div>
-                <div class="mb-3 ps-8">
-                  <label for="birthday" class="form-label p1"
-                    >生日</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="birthday"
-                    placeholder="請輸入生日, 例如: 1991/10/09"
-                  />
-                </div>
-                <div class="mb-3 ps-8">
-                  <label for="birthday" class="form-label p1"
-                    >Email</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="email"
-                    placeholder="請輸入電子郵件"
-                  />
-                </div>
+                <form class="needs-validation" novalidate>
+                  <div class="mb-4">
+                    <div
+                      class="d-flex justify-content-between align-bottom my-16"
+                    >
+                      <h2 class="h h2 text-primary-500">
+                        <span class="icon-user me-2"></span>會員資料
+                      </h2>
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-member rounded-pill align-bottom btn-login"
+                      >
+                        存檔
+                      </button>
+                    </div>
+
+                    <div class="mb-3 ps-8 position-relative">
+                      <label for="user-name" class="form-label p1">姓名</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="user-name"
+                        placeholder="請輸入姓名"
+                        maxlength="20"
+                        required
+                      />
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">
+                        姓名不得為空或是超過20個字!
+                      </div>
+                    </div>
+                    <div class="mb-3 ps-8 position-relative">
+                      <label for="user-nick-name" class="form-label p1"
+                        >暱稱</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="user-nick-name"
+                        placeholder="請輸入暱稱"
+                      />
+                    </div>
+                    <div class="mb-3 ps-8 position-relative">
+                      <label for="birthday" class="form-label p1">生日</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="birthday"
+                        placeholder="請輸入生日, 例如: 1991/10/09"
+                        required
+                      />
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">
+                        請輸入正確年月日! 例如: 1991/10/09
+                      </div>
+                    </div>
+
+                    <div class="mb-3 ps-8 position-relative">
+                      <label for="email" class="form-label p1">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="請輸入電子信箱"
+                        autocomplete="email"
+                        inputmode="email"
+                        required
+                      />
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">請輸入正確電子信箱!</div>
+                    </div>
+
+                    <div class="mb-3 ps-8 position-relative">
+                      <label for="mobile" class="form-label p1">手機號碼</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="mobile"
+                        placeholder="請輸入手機號碼"
+                        maxlength="10"
+                        required
+                      />
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">請輸入手機號碼!</div>
+                    </div>
+
+                    <div class="mb-3 ps-8">
+                      <label for="address" class="form-label p1"
+                        >住家地址</label
+                      >
+                      <div id="address" class="row">
+                        <div class="col-md-3 position-relative">
+                          <select class="form-select" id="city" required>
+                            <option selected disabled value="">縣/市</option>
+                            <option>台北市</option>
+                            <option>台中市</option>
+                            <option>高雄市</option>
+                          </select>
+                          <div class="invalid-tooltip">請選擇縣/市!</div>
+                        </div>
+
+                        <div class="col-md-2 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="zip"
+                            placeholder="郵遞區號"
+                            required
+                          />
+                          <div class="invalid-tooltip">請輸入郵遞區號!</div>
+                        </div>
+
+                        <div class="col-md-7 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="addres"
+                            placeholder="地址"
+                            required
+                          />
+                          <div class="invalid-tooltip">請輸入地址!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <h2 class="h h2 text-primary-500 mb-16">
+                      <span class="icon-truck me-2"></span>送貨資料
+                    </h2>
+
+                    <div class="mb-3 ps-8">
+                      <label for="shipping-address" class="form-label p1"
+                        >送達地址</label
+                      >
+                      <div id="shipping-address" class="row">
+                        <div class="col-md-3 position-relative">
+                          <select
+                            class="form-select"
+                            id="shipping-city"
+                            required
+                          >
+                            <option selected disabled value="">縣/市</option>
+                            <option>台北市</option>
+                            <option>台中市</option>
+                            <option>高雄市</option>
+                          </select>
+                          <div class="invalid-tooltip">請選擇縣/市!</div>
+                        </div>
+
+                        <div class="col-md-2 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="shipping-zip"
+                            placeholder="郵遞區號"
+                            required
+                          />
+                          <div class="invalid-tooltip">請輸入郵遞區號!</div>
+                        </div>
+
+                        <div class="col-md-7 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="shipping-addr"
+                            placeholder="地址"
+                            required
+                          />
+
+                          <div class="invalid-tooltip">請輸入送達地址!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
+
+              <!-- 訂單內容 -->
+                <div
+                  class="tab-pane fade my-16 section-lined pt-32 "
+                  id="pills-orderlists"
+                  role="tabpanel"
+                  aria-labelledby="pills-orderlists-tab"
+                  tabindex="0"
+                >
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active p1"
+                        id="all-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#all-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="all-orderlist-pane"
+                        aria-selected="true"
+                      >
+                        總覽
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link p1"
+                        id="not-paid-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#not-paid-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="not-paid-orderlist-pane"
+                        aria-selected="false"
+                      >
+                        未結帳
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link p1"
+                        id="paid-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#paid-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="paid-orderlist-pane"
+                        aria-selected="false"
+                      >
+                        已結帳
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="all-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="all-orderlist"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/10</td>
+                            <td><a href="">新手爸媽安心組</br><span class="order-number">訂單編號 #00003</span></a></td>
+                            <td>$699</td>
+                            <td>3</td>
+                            <td>$2097</td>
+                            <td>-</td>
+                            <td>待結帳</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/09</td>
+                            <td><a href="">青春汪能量補給包</br><span class="order-number">訂單編號 #00002</span></a></td>
+                            <td>$699</td>
+                            <td>2</td>
+                            <td>$1398</td>
+                            <td>2025/08/12</td>
+                            <td>運送中</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/03</td>
+                            <td><a href="">牛氣補補能量盒</br><span class="order-number">訂單編號 #00001</span></a></td>
+                            <td>$699</td>
+                            <td>1</td>
+                            <td>$1699</td>
+                            <td>2025/08/06</td>
+                            <td>2025/08/05已取貨</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <nav aria-label="Page navigation example " class="my-32">
+  <div class="pagination justify-content-center align-bottom">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </div>
+</nav>
+
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="not-paid-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="not-paid-orderlist-tab"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/10</td>
+                            <td><a href="">新手爸媽安心組</br><span class="order-number">訂單編號 #00003</span></a></td>
+                            <td>$699</td>
+                            <td>3</td>
+                            <td>$2097</td>
+                            <td>-</td>
+                            <td>待結帳</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <nav aria-label="Page navigation example " class="my-32">
+  <ul class="pagination justify-content-center align-bottom">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="paid-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="paid-orderlist-tab"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/09</td>
+                            <td><a href="">青春汪能量補給包<br/><span class="order-number">訂單編號 #00002</span></a></td>
+                            <td>$699</td>
+                            <td>2</td>
+                            <td>$1398</td>
+                            <td>2025/08/12</td>
+                            <td>運送中</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/03</td>
+                            <td><a href="">牛氣補補能量盒<br/><span class="order-number">訂單編號 #00001</span></a></td>
+                            <td>$699</td>
+                            <td>1</td>
+                            <td>$1699</td>
+                            <td>2025/08/06</td>
+                            <td>已取貨(2025/08/05)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <nav aria-label="Page navigation example " class="my-32">
+  <ul class="pagination justify-content-center align-bottom">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- 會員專屬活動 -->
               <div
-                class="tab-pane fade"
-                id="pills-orderlists"
-                role="tabpanel"
-                aria-labelledby="pills-orderlists-tab"
-                tabindex="0"
-              >
-                這是訂單內容
-              </div>
-              <div
-                class="tab-pane fade"
+                class="tab-pane fade my-16 section-lined pt-32 theme-event"
                 id="pills-exclusives"
                 role="tabpanel"
                 aria-labelledby="pills-exclusives-tab"
                 tabindex="0"
               >
-                這是會員專屬活動
+              <!-- 會員專屬優惠 - 毛寶貝開箱秀 -->
+              <div class="unbox mb-48">
+                <h2 class="text-center unbox-title mb-2">毛寶貝開箱秀</h2>
+                <p class=" mb-4 text-center text-teritary-500 p3">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
+                  <div class="row row-cols-1 row-cols-md-4 g-4 mb-24">
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="p-1">
+                        <img src="../assets/images/member/member_shiba.png" class="card-img-top h-75" alt="...">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">豆豆</h5>
+                          <p class="card-text">柴犬 5 歲</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="p-1">
+                        <img src="../assets/images/member/member_chihwahwa.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Haru</h5>
+                          <p class="card-text">哈士娃 1 歲</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="p-1">
+                        <img src="../assets/images/member/member_poodle.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">可可</h5>
+                          <p class="card-text">貴邊犬 2 歲</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <div class="p-1">
+                        <img src="../assets/images/member/member_shapper.png" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">奶昔</h5>
+                          <p class="card-text">邊境牧羊犬 2 歲</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- 會員專屬活動 - 會員限定優惠 -->
+              <div class="exclusive mb-48">
+                <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+                <div class="exclusive-content">
+                  <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
+                  <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
+                  <p class="text-center text-teritary-500 fw-500 p3">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
+                  <p class="text-center text-teritary-500 fw-500 p3 mb-4">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p>
+                  <div class="card mb-3 card-hover p-20">
+                    <div class="row g-0">
+                      <div class="col-md-5">
+                        <div class="card-body ps-24 text-center vh-50 pt-152">
+                          <h6 class="h6 card-title mb-4">夏日感謝祭<br/>會員專屬優惠活動!</h6>
+                          <p class="p3 card-text p4 mb-2">即日​起​完成​續訂​就​送​限定​折扣!<br/>還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光</p>
+                          <button class="btn b3 btn-primary rounded-pill btn-subscribe" type="button">立即訂閱</button>
+                        </div>
+                      </div>
+                      <div class="col-md-7">
+                        <div class="img-wrap h-100">
+                          <img src="../assets/images/member/member_summer_exclusive.png" class="img-fluid rounded-start summer_exclusive" alt="...">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 會員專屬活動 - 主題活動 -->
+               <div class="theme-event">
+                <h2 class="text-center mb-2 text-primary-500 mb-4">主題活動</h2>
+                  <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../assets/images/member/theme_event_1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title h5 mb-4" >毛孩麻吉日<br/>一起 Show 出熱血!</h5>
+                          <p class="card-text p3 mb-4">毛日​和​一年​一度​的​「毛​孩​麻吉日」​捐血犬活​動來啦！​<br/>現​場將​提供​獸醫​健檢、​健康​講座、​免​費狂犬​病​疫苗、​抽好禮，​還有​限量​10​組免​費血檢​名​額！​一起​「Show出熱血」，​加入​捐血​犬行列​吧！​</p>
+                        </div>
+                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../assets/images/member/theme_event_2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title h5 mb-4">寵物溝通小教室<br/>本月會員限定講座</h5>
+                          <p class="card-text p3 mb-4">狗勾其實也常使用尾巴、耳朵等等肢體語言，來向我們傳遞各式各樣的訊息。想了解該如何更了解毛寶貝嗎?<br/>本次特別邀請狗兒行為諮詢師 PAPA 老師來分享，快來一起聽懂、看懂牠們到底在想甚麼吧！</p>
+                        </div>
+                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../assets/images/member/theme_event_3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title h5 mb-4">會員限定<br/>毛孩福袋夏日驚喜互換祭</h5>
+                          <p class="card-text p3 mb-4">這個月，我們將舉辦一次「毛孩福袋互換」活動，參加者將獲得一份隨機搭配的驚喜福袋！裡面可能有別人家毛孩最愛的玩具或點心，也許會是你的寶貝的新歡！</p>
+                          <small>📌本次活動採會員限定登記制，每人限額登記一份。</small>
+                        </div>
+                        <button class="btn b3 btn-primary rounded-pill btn-reserve" type="button">立即報名</button>
+                      </div>
+                    </div>
+                  </div>
+               </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <%- include('./layout/footer'); -%>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script> -->
     <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
   </body>
 </html>
