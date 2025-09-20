@@ -12,9 +12,9 @@
 @import "./base/base.scss";
 
 // components
-@import "./conponents/button.scss";
-@import "./conponents/form.scss";
-@import "./component/dropdown.scss"; // 2025/09/09 納森新增
+@import "./components/button.scss";
+@import "./components/form.scss";
+@import "./components/dropdown.scss"; // 2025/09/09 納森新增
 
 // layout
 @import "./layout/header.scss";
@@ -23,10 +23,13 @@
 @import "./layout/footer.scss";
 
 //pages
-@import "./pages/login.scss";
 @import "./pages/index.scss";
+@import "./pages/login.scss";
 @import "./pages/member.scss";
 @import "./pages/member_activities.scss";
-@import "./pages/pet-info.scss";
 @import "./pages/faq.scss";
-
+@import "./base/subscribe.scss";
+@import "./pages/pet-info.scss";
+@import "./pages/plan.scss";
+@import "./pages/cart.scss";
+@import "./pages/checkout.scss";

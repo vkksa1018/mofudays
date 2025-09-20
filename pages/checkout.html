@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>訂單確認</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="checkout py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div class="title mb-6 px-110">
+          <h2 class="fw-bold mb-2 ls-5">訂單確認</h2>
+        </div>
+
+        <!-- 訂單明細卡片 -->
+        <div class="card-bg py-9 px-110 mb-6">
+          <!-- 訂單明細 -->
+          <div class="row-table mb-6">
+            <!-- 表格 -->
+            <div class="col-table-10">
+              <h5 class="mb-5 ls-5">訂單明細</h5>
+
+              <!-- 表格標題 -->
+              <div class="table-title-bg d-flex py-2 mb-2">
+                <p class="col-table-1-5 text-center">訂閱期數</p>
+                <p class="col-table-4 text-center">品項</p>
+                <p class="col-table-1-5 text-center">單價</p>
+                <p class="col-table-1-5 text-center">數量</p>
+                <p class="col-table-1-5 text-center">小計</p>
+              </div>
+
+              <!-- 表格第一列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">新手爸媽安心組</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $2,097
+                </div>
+              </div>
+
+              <!-- 表格第二列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">青春汪能量補給包</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  2
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $1,398
+                </div>
+              </div>
+
+              <!-- 表格第三列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">牛氣補補能量盒</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  1
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+              </div>
+            </div>
+
+            <!-- 訂單合計 -->
+            <div class="col-table-10">
+              <div class="total-bg d-flex align-items-center py-9-5 pe-4">
+                <p class="col-table-1-5 text-center">訂單合計</p>
+                <p class="col-table-4 text-center"></p>
+                <p class="col-table-1-5 text-center"></p>
+                <p class="col-table-1-5 text-center"></p>
+                <p class="col-table-1-5 total-text fw-bold text-center">
+                  每月<span class="fs-24 fw-medium ps-2">$4,194</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 結帳資訊 -->
+          <div class="row-table">
+            <div class="col-table-10">
+              <h5 class="mb-5 ls-5">訂單明細</h5>
+            <div class="col-table-5">
+              <div class="pet-name mb-7">
+                <div class="d-flex align-items-center mb-4">
+                  <p class="icon-dog fs-24 me-3"></p>
+                  <p class="item-title fw-bold">毛孩的名字是？</p>
+                </div>
+                <label
+                  for="exampleFormControlInput1"
+                  class="form-label"
+                ></label>
+                <input
+                  type="name"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="輸入毛孩的名字/暱稱"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 儲存按鈕 -->
+        <div class="text-center">
+          <a
+            class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
+            href="/pages/cart.html"
+            role="button"
+            >回上一步</a
+          >
+          <a
+            class="btn btn-primary rounded-pill btn-active px-40"
+            href="/pages/cart.html"
+            role="button"
+            >確認付款</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
