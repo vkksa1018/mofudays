@@ -4,8 +4,13 @@
 
 input:focus {
   border-width: 2px;
+  border-color: $primary-500 !important;
 }
 
 select:focus {
   border-width: 2px;
+}
+
+.form-control {
+  padding: 12px 24px;
 }
