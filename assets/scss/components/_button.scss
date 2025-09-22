@@ -157,7 +157,6 @@
   border-radius: 8px;
 }
 
-// button group 性別
 .btn-check:checked + .btn-diet {
   color: $primary-500;
   background-color: white;
@@ -165,6 +164,10 @@
   letter-spacing: 0.05em;
   border-color: $primary-500;
   border-width: 2px;
+}
+
+.btn-check:checked + .btn-diet:hover {
+  color: $primary-500 !important;
 }
 
 // input group 數量
@@ -211,6 +214,10 @@
   font-weight: 700;
   border-color: $primary-500;
   border-width: 2px;
+}
+
+.btn-check:checked + .btn-health:hover {
+  color: $primary-500 !important;
 }
 
 // button FAQ

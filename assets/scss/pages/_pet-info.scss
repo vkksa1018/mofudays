@@ -16,6 +16,9 @@
   font-size: 0.875rem;
   color: $brown-300;
 }
+.btn-check:checked + .btn-diet svg path {
+  color: $primary-500;
+}
 
 // 元件-卡片
 .input-number {

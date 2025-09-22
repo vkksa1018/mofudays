@@ -4,7 +4,7 @@
 
 input:focus {
   border-width: 2px;
-  border-color: $primary-500 !important;
+  border-color: $primary-500 !important; // 0912 vivian 新增
 }
 
 select:focus {
@@ -12,5 +12,5 @@ select:focus {
 }
 
 .form-control {
-  padding: 12px 24px;
+  padding: 12px 24px; // 0912 vivian 新增
 }
