@@ -13,15 +13,19 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <main class="member-center mb-80">
+    <main class="member-center position-relative mb-80">
       <div class="container">
+        
         <img src="../assets/images/member/hero_yellow_patten.png" alt="黃色裝飾" class="position-absolute yellow-patten-1 z-3">
         <img src="../assets/images/member/hero_green_patten.png" alt="綠色裝飾" class="position-absolute green-patten-1 me-0 z-3">
-        <img src="../assets/images/member/FAQ_footprint_patten.png" alt="三個小腳掌" class="position-absolute foot-print z-3">
+        
         
         <div class="row justify-content-center">
-          <div class="col-10 position-relative">
-            <div class="d-flex justify-content-between align-items-end mt-16 mb-24">
+          <div class="col-12 col-sm-10 position-relative">
+            <div class="d-flex flex-column-reverse flex-lg-row align-items-center align-items-lg-end justify-content-center justify-content-lg-between gap-4 mt-16 mb-24">
+               <img src="../assets/images/member/FAQ_footprint_patten.png"
+                    alt="三個小腳掌"
+                    class="foot-print" aria-hidden="true">
               <ul
                 class="nav nav-pills d-flex align-items-end flex-fill ps-80"
                 id="pills-tab"
@@ -88,9 +92,9 @@
                 <form class="needs-validation" novalidate>
                   <div class="mb-40">
 
-                      <h2 class="h h2 text-primary-500 mt-16 mb-32 ">
-                        <span class="icon-user me-2"></span>會員資料
-                      </h2>
+                    <h2 class="h h2 text-primary-500 mt-16 mb-32 ">
+                      <span class="icon-user me-2"></span>會員資料
+                    </h2>
 
                     <div class="mb-56 ps-8 position-relative">
                       <!-- <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-2 z-3">
@@ -185,7 +189,7 @@
                       <label for="address" class="form-label p1"
                         >住家地址</label
                       >
-                      <div id="address" class="row">
+                      <div id="address" class="row g-3 g-lg-4">
                         <div class="col-md-3 position-relative">
                           <select class="form-select" id="city" required>
                             <option selected disabled value="">縣/市</option>
@@ -236,7 +240,7 @@
                       <label for="shipping-address" class="form-label p1"
                         >送達地址</label
                       >
-                      <div id="shipping-address" class="row">
+                      <div id="shipping-address" class="row g-3 g-lg-4">
                         <div class="col-md-3 position-relative">
                           <select
                             class="form-select"

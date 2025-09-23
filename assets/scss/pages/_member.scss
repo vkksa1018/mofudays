@@ -64,6 +64,20 @@ p {
     max-width: 1296px;
   }
 
+  @media (max-width: 577px){
+    .tab-content{
+      padding-left: 0px;
+      padding-right:0px
+    }
+  }
+
+  // @media (min-width: 1076px){
+  //   #address.row {
+  //     --bs-gutter-x: 1.5rem; /* ≈ g-4 */
+  //     --bs-gutter-y: 1rem;
+  //   }
+  // }
+
   // ----------------------------------------  顏色通用
   .text-teritary-500 {
     color: #58baab;
@@ -397,6 +411,60 @@ p {
     letter-spacing: 0.05em;
   }
 
+
+  .btn-save {
+    border: 2px solid $primary-500;
+    padding: 0.5rem 6.25rem;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    font-weight: 500;
+    background-color: $white !important;
+    border-radius: 2px;
+    color: $primary-500 !important;
+  }
+  .btn-save:hover {
+    padding: 0.5rem 6.25rem;
+    font-style: 18px;
+    color: $white !important;
+    background-color: $primary-500 !important;
+  }
+  .btn-save:active {
+    padding: 0.5rem 6.25rem;
+    font-style: 18px;
+    letter-spacing: 0.05em;
+    color: $white !important;
+    background-color: $primary-500 !important;
+  }
+
+  // ----------------------------------------  icon通用
+
+  .icon {
+    color: $neutral-400;
+    font-size: 1.25rem !important;
+  }
+
+  // ----------------------------------------  tab區塊
+
+  .foot-print {
+    position: absolute;
+    top : 1.5rem;    
+    margin-left: clamp(33px, 8vw, 104px);  
+    margin-bottom: clamp(12px, 8vw, 32px); 
+    width: clamp(44px, 8vw, 120px); // 大螢幕到中螢幕的平滑縮放         
+    z-index: 1;             
+  }
+
+  .member-img-tab {
+    flex: 0 0 auto !important;   // 不要撐滿 flex
+    width: clamp(140px, 20vw, 320px);
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
   .btn-member {
     border: 2px solid $brown-300;
     padding: 0.5rem 2rem;
@@ -431,43 +499,90 @@ p {
     background-color: $primary-500 !important;
   }
 
-  .btn-save {
-    border: 2px solid $primary-500;
-    padding: 0.5rem 6.25rem;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-    font-weight: 500;
-    background-color: $white !important;
-    border-radius: 2px;
-    color: $primary-500 !important;
-  }
-  .btn-save:hover {
-    padding: 0.5rem 6.25rem;
-    font-style: 18px;
-    color: $white !important;
-    background-color: $primary-500 !important;
-  }
-  .btn-save:active {
-    padding: 0.5rem 6.25rem;
-    font-style: 18px;
-    letter-spacing: 0.05em;
-    color: $white !important;
-    background-color: $primary-500 !important;
+  /* === 中型裝置 (992px–1199px) === */
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .member-img-tab {
+      width: clamp(140px, 18vw, 220px); // 圖片縮小，騰空間給 UL
+      gap: clamp(12px, 3vw, 28px); // gap 隨螢幕大小縮放
+    }
+    #pills-tab { 
+      min-width: 0; 
+      flex-wrap: nowrap; 
+      justify-content: center; 
+    }
+    .btn-member {
+      padding: 0.5rem 1.25rem;   // 從 2rem → 1.25rem
+      font-size: 16px;           // 微縮字級
+    }
   }
 
-  // ----------------------------------------  icon通用
+  /* === 小型裝置 (<992px) === */
+  @media (max-width: 992px) {
+    .member-img-tab {
+      width: 160px;   // 固定大小，避免太小
+      margin: 0 auto 12px;
+    }
+    #pills-tab {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;       // row wrap 更好看
+      padding-left: 0px;
+    }
+    .btn-member {
+      font-size: 15px;
+      padding: 0.45rem 1rem;
+    }
 
-  .icon {
-    color: $neutral-400;
-    font-size: 1.25rem !important;
+    .foot-print{
+      display: none;
+    }
   }
+
+
+  .yellow-patten-1 {
+    top: 70% !important;
+    margin-left: 3rem;
+  }
+
+  .green-patten-1 {
+    top: 90% !important;
+    right: 10%;
+  }
+
+  
+
+  /* 裝飾圖降低層級且不攔截點擊 */
+  .member-center .yellow-patten-1,
+  .member-center .green-patten-1,
+  .member-center .foot-print { z-index: 0; pointer-events: none; }
+
+  /* 讓內容浮到裝飾圖上層（避免被蓋住） */
+  .member-center .tab-content { position: relative; z-index: 10; }
+
+  /* 萬一別人 SCSS 把 pane 隱藏，先保險打開 */
+  .member-center .tab-pane.active { display: block !important; }
+  .member-center .tab-pane.fade.show { opacity: 1 !important; }
 
   // ----------------------------------------  個人資料
 
   select:invalid {
     color: rgba(108, 117, 125, 0.65);
   }
+
+  #address {
+    --bs-gutter-x: 1rem;  /* 水平間距 */
+    --bs-gutter-y: .75rem;/* 垂直間距 */
+  }
+
+  @media (min-width: 1076px){
+    #address{
+      --bs-gutter-x: 1.5rem;  /* ≈ g-4 的 24px */
+      --bs-gutter-y: 1rem;
+    }
+  }
+
+  #address .form-control, #shipping-address .form-control{ padding-right: 2.75rem; }
+  #address .icon, #shipping-address .icon { right: .75rem; pointer-events: none; }
 
   // ----------------------------------------  訂單管理頁籤
   .member-orderlist .member-data,
@@ -693,15 +808,7 @@ p {
     object-fit: cover; /* 保持比例並裁切多餘 */
   }
 
-  .yellow-patten-1 {
-    top: 70% !important;
-    margin-left: 3rem;
-  }
-
-  .green-patten-1 {
-    top: 90% !important;
-    right: 10%;
-  }
+  
 
   // ------------------------------------ 主題活動
 
@@ -734,17 +841,6 @@ p {
       border-radius: 50%;
     }
 
-    /* 讓內容浮到裝飾圖上層（避免被蓋住） */
-.member-center .tab-content { position: relative; z-index: 10; }
-
-/* 裝飾圖降低層級且不攔截點擊 */
-.member-center .yellow-patten-1,
-.member-center .green-patten-1,
-.member-center .foot-print { z-index: 0; pointer-events: none; }
-
-/* 萬一別人 SCSS 把 pane 隱藏，先保險打開 */
-.member-center .tab-pane.active { display: block !important; }
-.member-center .tab-pane.fade.show { opacity: 1 !important; }
   }
 
   // .title-lined {
@@ -765,11 +861,6 @@ p {
 
   // ----------------------------------------  圖片通用
 
-  .member-img-tab {
-    max-width: 220px;
-    height: 220px;
-    border-radius: 50%;
-  }
 
   .img-shipping-cart {
     max-width: 120px;
@@ -787,10 +878,6 @@ p {
     transform: scaleX(-1);
   }
 
-  .foot-print {
-    top: 20%;
-    left: 25%;
-  }
 
   .img-pet-toy,
   .img-pet-snack {
