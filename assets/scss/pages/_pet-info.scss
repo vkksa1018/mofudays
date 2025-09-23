@@ -17,7 +17,7 @@
   color: $brown-300;
 }
 .btn-check:checked + .btn-diet svg path {
-  color: $primary-500;
+  stroke: $primary-500;
 }
 
 // 元件-卡片

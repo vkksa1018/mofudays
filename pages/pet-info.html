@@ -26,24 +26,23 @@
           </div>
           <!-- 進度條 -->
           <div class="d-flex align-items-center">
-            <a href="/pages/pet-info.html" class="step-first">
+            <div class="step-first">
               <img
                 src="/assets/images/index/service_step_1.svg"
                 alt="step_1"
                 class="mx-auto d-block"
               />
               <p class="text-center fs-14">填寫毛孩資料</p>
-            </a>
-            <div class="progress-line"></div>
-
-            <a href="/pages/plan.html" class="step-item">
+            </div>
+            <div class="step-line flex-fill"></div>
+            <div class="step-item">
               <img
                 src="/assets/images/index/service_step_2.svg"
                 alt="step_2"
                 class="mx-auto d-block"
               />
               <p class="text-center fs-14">查看方案</p>
-            </a>
+            </div>
           </div>
         </div>
 
@@ -616,7 +615,6 @@
     </main>
 
     <%- include('./layout/footer'); -%>
-
     <script type="module" src="../main.js"></script>
   </body>
 </html>

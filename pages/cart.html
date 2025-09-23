@@ -53,12 +53,14 @@
                     <p class="table-text fw-normal mb-1">互動小物 x 2</p>
                   </div>
                 </div>
+
                 <!-- 單價 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
                 >
                   $699
                 </div>
+
                 <!-- 數量 -->
                 <div class="col-table-2 d-flex align-items-center">
                   <div class="input-group px-4" style="height: 48px">
@@ -78,12 +80,14 @@
                     </button>
                   </div>
                 </div>
+
                 <!-- 小計 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
                 >
                   $2,097
                 </div>
+
                 <!-- 關閉 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
@@ -218,38 +222,76 @@
             <!-- 選擇訂閱期數 -->
             <div class="col-table-6">
               <h5 class="mb-5 ls-5">選擇訂閱期數</h5>
-              <div class="d-flex gap-4">
-                <button
-                  type="button"
+              <div
+                class="btn px-0 py-0 w-100 d-flex gap-4"
+                role="group"
+                aria-label="Basic radio toggle button group"
+              >
+                <!-- 1 個月 -->
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="subscription-period"
+                  id="one-month"
+                  autocomplete="off"
+                />
+                <label
                   class="btn btn-primary btn-diet px-0 py-3 w-25"
+                  for="one-month"
+                  style="height: 48px"
+                  >1 個月</label
                 >
-                  1 個月
-                </button>
-                <button
-                  type="button"
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="subscription-period"
+                  id="three-month"
+                  autocomplete="off"
+                />
+                <label
                   class="btn btn-primary btn-diet px-0 py-3 w-25"
+                  for="three-month"
+                  style="height: 48px"
+                  >3 個月</label
                 >
-                  3 個月
-                </button>
-                <button
-                  type="button"
+
+                <!-- 6 個月 -->
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="subscription-period"
+                  id="six-month"
+                  autocomplete="off"
+                />
+                <label
                   class="btn btn-primary btn-diet px-0 py-3 w-25"
+                  for="six-month"
+                  style="height: 48px"
+                  >6 個月</label
                 >
-                  6 個月
-                </button>
-                <button
-                  type="button"
+
+                <!-- 12 個月 -->
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="subscription-period"
+                  id="twelve-month"
+                  autocomplete="off"
+                />
+                <label
                   class="btn btn-primary btn-diet px-0 py-3 w-25"
+                  for="twelve-month"
+                  style="height: 48px"
+                  >12 個月</label
                 >
-                  12 個月
-                </button>
               </div>
             </div>
 
             <!-- 訂單合計 -->
             <div class="col-table-4">
               <h5 class="mb-5 ls-5">訂單合計</h5>
-              <div class="total-bg px-5 py-9-5">
+              <div class="total-bg px-5 py-9-5" style="height: 48px">
                 <p class="total-text fw-bold text-end">
                   每月<span class="fs-24 fw-medium px-2">$4,194</span>
                 </p>

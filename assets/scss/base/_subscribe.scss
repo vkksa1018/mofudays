@@ -112,10 +112,17 @@
   display: block;
 }
 
-.step-item + .step-item ::before {
+.step-line {
+  height: 2px;
+  background-color: #fbc02d;
+  margin: 0 8px;
+}
+
+.step-item ::before {
   content: "";
+  display: inline;
   width: 100px;
   height: 2px;
-  padding: 0px 16px;
-  background-color: $secondary-400;
+  background-color: $secondary-300;
+  margin: 0 16px;
 }
