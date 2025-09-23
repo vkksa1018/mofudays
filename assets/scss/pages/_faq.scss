@@ -174,9 +174,18 @@
 }
 
 /* tab content 隱藏 / 顯示 */
-.tab-content {
+.faq-content .tab-content {
   display: none;
 }
-.tab-content.active {
+.faq-content .tab-content.active {
   display: block;
+}
+
+/* 狗腳印 */
+.dog-paw {
+  position: absolute;
+  width: 88px;
+  height: 123px;
+  top: 1201px; /* 距離下邊界 468px */
+  right: 160px; /* 距離右邊界 160px */
 }
