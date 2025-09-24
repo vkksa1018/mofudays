@@ -1,40 +1,144 @@
-.navbar{
-  margin-top: 32px;
+@media (max-width: 768.98px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  .mobile-menu {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
+  .desktop-menu {
+    display: flex !important;
+  }
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+header.container {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+header .navbar {
   background-color: white;
+  border-radius: 0%;
 }
 
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: $brown-500;
+@media (min-width: 576px) {
+  header .navbar {
+    margin-top: 32px;
+    background-color: white;
+    border-radius: 50rem;
+  }
 }
 
-.nav-logo{
-  width:129px;
+.list-mb li.border-bottom {
+  border-bottom: 1px solid $primary-200 !important;
+}
+
+/* 行動優先：設定 navbar 高度（請依實際調整），讓 offcanvas 從它下方開始 */
+:root {
+  --nav-h: 76px;
+} /* 你的手機 navbar 高度 */
+
+.navbar .nav-logo {
   height: 28px;
-
+} /* 視覺比例可自行調整 */
+.nav-menu-icon,
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+.navbar-toggler {
+  box-shadow: none;
 }
 
-.nav-avatar{
+/* 手機滿版 Offcanvas（由上往下） */
+.offcanvas-mobile-full.offcanvas-top {
+  /* 使 offcanvas 佔滿整個可視高度，並避開上方 navbar */
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 桌機：不需要 top offset，但這裡 anyway 隱藏開關按鈕，使用普通 navbar */
+@media (min-width: 992px) {
+  :root {
+    --nav-h: 80px;
+  } /* 如果桌機 navbar 比較高，可同步調整 */
+  .navbar .nav-logo {
+    height: 32px;
+  }
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: $brown-500;
+}
+
+.nav-logo {
+  width: 129px;
+  height: 28px;
+}
+
+.nav-menu-icon,
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  color: $primary-500;
+}
+
+.nav-avatar {
   width: 44px;
   height: 44px;
 }
 
-.cart-btn{
-  display: flex;              
+.cart-btn {
+  display: flex;
   justify-content: center;
-  width: 44px;                 
-  height: 44px;
-  border: 2px solid $primary-500;    
-  border-radius: 50%;          
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   text-decoration: none;
-
 }
 
-.cart-btn svg {
-  transition: transform 0.25s ease;
+@media (min-width: 768px) {
+  .cart-btn {
+    display: flex;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+  }
 }
 
 .cart-btn:hover {
   background-color: $primary-500;
+}
+
+@media (min-width: 768px) {
+  .cart-btn {
+    display: flex;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid $primary-500;
+    border-radius: 50%;
+    text-decoration: none;
+  }
+
+  .cart-btn:hover {
+    background-color: $primary-500;
+  }
 }
 
 .cart-btn:hover svg {
@@ -46,30 +150,28 @@
   stroke: white;
 }
 
-
-header .nav-link{
+header .nav-link {
   color: $brown-500;
 }
 
 header .nav-link .nav-icon {
   width: 24px;
   height: 24px;
-  color: $primary-500;            
+  color: $primary-500;
 }
 
 header .dropdown-menu {
   --bs-dropdown-min-width: auto;
   position: relative;
-
 }
 
 header .dropdown-menu li::after {
   content: "";
   display: block;
-  width: 65%;                     
-  height: 2px;    
-  background:lighten($primary-500, 30%);
-  margin: 0 auto;            
+  width: 65%;
+  height: 2px;
+  background: lighten($primary-500, 30%);
+  margin: 0 auto;
   border-radius: 2px;
 }
 
@@ -79,20 +181,61 @@ header .dropdown-menu li:last-child::after {
 }
 
 /* 隱藏 Bootstrap 的 ::after，改用自己的圖示 */
-header .dropdown-toggle::after{ display:none; }
+header .dropdown-toggle::after {
+  display: none;
+}
 
-.caret-icon{
-  width: 1em; height: 1em;  
+.caret-icon {
+  width: 1em;
+  height: 1em;
   margin-left: 14px;
-  vertical-align: -.1em;
-  transition: transform .2s ease;
+  vertical-align: -0.1em;
+  transition: transform 0.2s ease;
 }
 
 header .dropdown-item:hover,
 .dropdown-item:focus {
-  color: $primary-500;  
+  color: $primary-500;
   background-color: transparent;
   font-weight: 700;
 }
 
+/* 圓形 icon 按鈕（套在 .nav-link.cart-btn 上） */
+.nav-link.cart-btn {
+  --btn-size: 40px;
+  inline-size: var(--btn-size);
+  block-size: var(--btn-size);
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: #fc762f;
+  background: transparent;
+  overflow: hidden;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
 
+.nav-link.cart-btn svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.nav-link.cart-btn:hover,
+.nav-link.cart-btn:focus-visible {
+  background: $primary-500;
+}
+
+.nav-link.cart-btn:active {
+  background: $primary-500;
+  transform: translateY(1px);
+}
+
+/* 斷點可放大按鈕 */
+@media (max-width: 991.98px) {
+  .nav-link.cart-btn {
+    --btn-size: 36px;
+  } /* 行動版可稍小 */
+}
