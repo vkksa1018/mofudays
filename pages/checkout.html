@@ -161,21 +161,98 @@
           <div class="row-table">
             <div class="col-table-10">
               <h5 class="mb-5 ls-5">結帳資訊</h5>
-            <div class="col-table-5">
-              <div class="mb-7">
-                <div class="d-flex align-items-center mb-4">
-                  <p class="item-title fw-bold">輸入你的個人資訊</p>
+
+              <!-- 個人資訊 -->
+              <div class="personal-info">
+                <div class="table-title-bg px-5 py-2 mb-2">
+                  <p>輸入你的個人資訊</p>
                 </div>
-                <label
-                  for="checkout-name"
-                  class="form-label"
-                ></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="checkout-name"
-                  placeholder="姓名"
-                />
+                <div class="d-flex flex-wrap mb-5">
+                  <input
+                    type="name"
+                    class="form-control w-50"
+                    id="checkout-name"
+                    placeholder="姓名"
+                  />
+                  <input
+                    type="text"
+                    class="form-control w-50"
+                    id="checkout-address"
+                    placeholder="地址"
+                  />
+                  <input
+                    type="tel"
+                    class="form-control w-50"
+                    id="checkout-tel"
+                    placeholder="電話"
+                  />
+                  <input
+                    type="email"
+                    class="form-control w-50"
+                    id="checkout-email"
+                    placeholder="電子郵件"
+                  />
+                </div>
+              </div>
+
+              <!-- 付款方式 -->
+              <div class="payment-method">
+                <div class="table-title-bg px-5 py-2 mb-2">
+                  <p>選擇付款方式</p>
+                </div>
+
+                <div
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                  class="mb-5"
+                >
+                  <!-- 信用卡 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="payment-method"
+                    id="credit-card"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 w-25"
+                    for="credit-card"
+                    style="height: 48px"
+                    >信用卡</label
+                  >
+
+                  <!-- LINE PAY -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="payment-method"
+                    id="LINE-PAY"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 w-25"
+                    for="LINE-PAY"
+                    style="height: 48px"
+                    >LINE Pay</label
+                  >
+                </div>
+              </div>
+
+              <!-- 訂單備註 -->
+              <div class="payment-method">
+                <div class="table-title-bg px-5 py-2 mb-2">
+                  <p>訂單備註</p>
+                </div>
+
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="備註"
+                    id="checkout-remark"
+                    style="height: 100px"
+                  ></textarea>
+                  <label for="checkout-remark">備註</label>
+                </div>
               </div>
             </div>
           </div>
