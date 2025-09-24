@@ -13,26 +13,34 @@
       <div class="container py-11">
         <div class="row justify-content-center g-5">
           <div
-            class="col-6 d-flex flex-column justify-content-center align-items-center text-center"
+            class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center text-center"
           >
             <img
               src="../assets/images/index/01_hero_headline_desktop.svg"
               alt="01_hero_headline_desktop"
+              class="hero-headline d-none d-lg-block"
             />
-            <div class="custom-dashed border-dashed my-6"></div>
-            <h2 class="h5 text-brown-300 mb-12 ls-10">
-              每月一盒小驚喜，讓陪伴更輕鬆也更有温度
+            <img
+              src="../assets/images/index/01_hero_headline_mobile.svg"
+              alt="01_hero_headline_mobile"
+              class="hero-headline-mobile d-block d-lg-none"
+            />
+            <div class="custom-dashed border-dashed my-4 my-lg-6"></div>
+            <h2 class="h5 text-brown-300 mb-4 mb-lg-12 ls-10 hero-subtitle">
+              每月一盒小驚喜，<br
+                class="d-block d-sm-none"
+              />讓陪伴更輕鬆也更有温度
             </h2>
             <a
               type="button"
-              class="btn rounded-pill btn-primary btn-subscribe"
+              class="btn rounded-pill btn-primary btn-subscribe hero-button"
               href="./pet-info.html"
               role="button"
             >
               立即訂閱
             </a>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-12 hero-image-col">
             <img
               src="../assets/images/index/hero_img.png"
               class="img-fluid w-100"
@@ -44,7 +52,7 @@
       <img
         src="../assets/images/index/hero_bone_patten.svg"
         alt="bone"
-        class="decor bone"
+        class="decor bone d-none d-lg-block"
       />
       <img
         src="../assets/images/index/hero_green_patten.svg"
@@ -173,92 +181,125 @@
       </div>
     </section>
     <section class="process position-relative">
-      <div class="container py-11">
+      <div class="container py-9 py-lg-11">
         <img
           src="../assets/images/index/04_process_headline_desktop.svg"
           alt="process_headline"
-          class="mb-3 d-block mx-auto"
+          class="mb-3 d-none d-lg-block mx-auto"
+        />
+        <img
+          src="../assets/images/index/04_process_headline_mobile.svg"
+          alt="process_headline_mobile"
+          class="mb-3 d-block d-lg-none mx-auto"
         />
         <h3 class="mb-6 title-large text-center text-primary-500">
           每月一盒讓他感受到你的心意
         </h3>
-        <div class="row d-flex justify-content-center mb-5">
-          <div class="col-4 process-item image-item me-5">
-            <img src="../assets/images/index/step_01.png" alt="step1" />
-          </div>
-          <div class="col-4 process-item text-item">
-            <div class="step-icon">
-              <img
-                src="../assets/images/index/service_step_1.svg"
-                alt="foot_step1"
-              />
+        <div class="process-steps">
+          <!-- 步驟1 -->
+          <div class="row d-flex justify-content-center mb-lg-5">
+            <div
+              class="col-lg-4 col-12 process-item image-item me-lg-5 order-1 order-lg-1"
+            >
+              <img src="../assets/images/index/step_01.png" alt="step1" />
             </div>
-            <div class="text-content ms-4">
-              <h4 class="title-medium">填資料！</h4>
-              <p>為毛孩填寫基本資訊</p>
-              <p>我們才能更了解牠的需求與喜好</p>
+            <div
+              class="col-lg-4 col-12 process-item text-item order-2 order-lg-2"
+            >
+              <div class="step-icon">
+                <img
+                  src="../assets/images/index/service_step_1.svg"
+                  alt="foot_step1"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">填資料！</h4>
+                <p>為毛孩填寫基本資訊</p>
+                <p>我們才能更了解牠的需求與喜好</p>
+              </div>
+            </div>
+          </div>
+          <!-- 步驟2 -->
+          <div class="row d-flex justify-content-center mb-lg-5">
+            <div
+              class="col-lg-4 col-12 process-item text-item me-lg-5 order-2 order-lg-1"
+            >
+              <div class="step-icon">
+                <img
+                  src="../assets/images/index/service_step_2.svg"
+                  alt="foot_step2"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">看推薦！</h4>
+                <p>根據毛孩資料，推薦最適合的驚喜盒</p>
+                <p>專屬於你們的每日幸福</p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-12 process-item image-item order-1 order-lg-2"
+            >
+              <img src="../assets/images/index/step_02.png" alt="step2" />
+            </div>
+          </div>
+          <!-- 步驟3 -->
+          <div class="row d-flex justify-content-center mb-lg-5">
+            <div
+              class="col-lg-4 col-12 process-item image-item me-lg-5 order-1 order-lg-1"
+            >
+              <img src="../assets/images/index/step_03.png" alt="step3" />
+            </div>
+            <div
+              class="col-lg-4 col-12 process-item text-item order-2 order-lg-2"
+            >
+              <div class="step-icon">
+                <img
+                  src="../assets/images/index/service_step_3.svg"
+                  alt="foot_step3"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">打包寄出！</h4>
+                <p>精選内容打包完畢</p>
+                <p>用心裝進每一份療癒與驚喜</p>
+              </div>
+            </div>
+          </div>
+          <!-- 步驟4 -->
+          <div class="row d-flex justify-content-center mb-9 mb-lg-11">
+            <div
+              class="col-lg-4 col-12 process-item text-item me-lg-5 order-2 order-lg-1"
+            >
+              <div class="step-icon">
+                <img
+                  src="../assets/images/index/service_step_4.svg"
+                  alt="foot_step4"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">享受寵物盒！</h4>
+                <p>開箱專屬毛孩的幸福時光</p>
+                <p>從吃、玩到健康都被照顧到</p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-12 process-item image-item order-1 order-lg-2"
+            >
+              <img src="../assets/images/index/step_01.png" alt="step1" />
             </div>
           </div>
         </div>
-        <div class="row d-flex justify-content-center mb-5">
-          <div class="col-4 process-item text-item me-5">
-            <div class="step-icon">
-              <img
-                src="../assets/images/index/service_step_2.svg"
-                alt="foot_step2"
-              />
-            </div>
-            <div class="text-content ms-4">
-              <h4 class="title-medium">看推薦！</h4>
-              <p>根據毛孩資料，推薦最適合的驚喜盒</p>
-              <p>專屬於你們的每日幸福</p>
-            </div>
-          </div>
-          <div class="col-4 process-item image-item">
-            <img src="../assets/images/index/step_02.png" alt="step2" />
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center mb-5">
-          <div class="col-4 process-item image-item me-5">
-            <img src="../assets/images/index/step_03.png" alt="step3" />
-          </div>
-          <div class="col-4 process-item text-item">
-            <div class="step-icon">
-              <img
-                src="../assets/images/index/service_step_3.svg"
-                alt="foot_step3"
-              />
-            </div>
-            <div class="text-content ms-4">
-              <h4 class="title-medium">打包寄出！</h4>
-              <p>精選内容打包完畢</p>
-              <p>用心裝進每一份療癒與驚喜</p>
-            </div>
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center mb-11">
-          <div class="col-4 process-item text-item me-5">
-            <div class="step-icon">
-              <img
-                src="../assets/images/index/service_step_4.svg"
-                alt="foot_step4"
-              />
-            </div>
-            <div class="text-content ms-4">
-              <h4 class="title-medium">享受寵物盒！</h4>
-              <p>開箱專屬毛孩的幸福時光</p>
-              <p>從吃、玩到健康都被照顧到</p>
-            </div>
-          </div>
-          <div class="col-4 process-item image-item">
-            <img src="../assets/images/index/step_01.png" alt="step1" />
-          </div>
-        </div>
+
         <div class="mb-6">
           <img
             src="../assets/images/index/05_box_headline_desktop.svg"
             alt="05_box_headline"
-            class="mb-6 d-block mx-auto"
+            class="mb-6 d-none d-lg-block mx-auto"
+          />
+          <img
+            src="../assets/images/index/05_box_headline_mobile.svg"
+            alt="05_box_headline_mobile"
+            class="mb-6 d-block d-lg-none mx-auto"
           />
           <section class="product-section">
             <div class="product-layout">
