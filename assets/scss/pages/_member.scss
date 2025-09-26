@@ -48,6 +48,10 @@ p {
 }
 
 .member-center {
+
+  .hand-write-font{
+    font-family: 'Amatic SC' !important;
+  }
   
   .tab-content{
     display: block !important;
@@ -64,7 +68,7 @@ p {
     max-width: 1296px;
   }
 
-  @media (max-width: 577px){
+  @media (max-width: 576px){
     .tab-content{
       padding-left: 0px;
       padding-right:0px
@@ -367,6 +371,10 @@ p {
     padding-bottom: 1.75rem;
   }
 
+  .ps-4 {
+    padding-left: 0.25rem;
+  }
+
   .ps-8 {
     padding-left: 0.5rem;
   }
@@ -464,32 +472,47 @@ p {
     object-fit: cover;
     display: block;
   }
+  #pills-tab {
+    --tab-fz: clamp(14px, 1.6vw, 18px);
+    --tab-px: clamp(12px, 2vw, 32px);
+    --tab-py: clamp(4px, 1.2vw, 8px);
+    --tab-radius: 2px;
+    --tab-icon-fz: clamp(18px, 2.2vw, 20px);
+    // --tab-shadow: 0 2px 10px rgba(0,0,0,.06);
+    // --tab-scale-hover: 1.03;  /* hover 放大但不改 padding，避免版面跳動 */
+    // --tab-scale-active: 1.05; /* active 稍微再大一點 */
+    // --tab-shadow: 0 2px 10px rgba(0,0,0,.06);
+  }
 
   .btn-member {
+    font-size: var(--tab-fz);
+    font-weight: 500;
+    padding: var(--tab-py) var(--tab-px);
     border: 2px solid $brown-300;
-    padding: 0.5rem 2rem;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-    font-weight: 500;
+    border-radius: var(--tab-radius);
     background-color: $white !important;
-    border-radius: 2px;
     color: $brown-300 !important;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
   }
+
+
   .btn-member:hover {
-    padding: 0.5rem 2rem;
-    font-style: 18px;
+    font-size: var(--tab-fz);
+    font-weight: 500;
+    padding: var(--tab-py) var(--tab-px);
     letter-spacing: 0.05em;
     line-height: 1.5;
-    font-weight: 500;
     border-radius: 2px;
     border-color: $primary-500 !important;
     color: $white !important;
     background-color: $primary-500 !important;
+    // transform: translateY(-1px) scale(var(--tab-scale-hover)); 
+    // box-shadow: var(--tab-shadow);
   }
   .btn-member:active {
-    padding: 0.5rem 2rem;
-    font-style: 18px;
+    padding: var(--tab-py) var(--tab-px);
+    font-size: var(--tab-fz);
     letter-spacing: 0.05em;
     line-height: 1.5;
     font-weight: 500;
@@ -499,24 +522,23 @@ p {
     background-color: $primary-500 !important;
   }
 
-  /* === 中型裝置 (992px–1199px) === */
+ 
   @media (max-width: 1199px) and (min-width: 992px) {
     .member-img-tab {
-      width: clamp(140px, 18vw, 220px); // 圖片縮小，騰空間給 UL
-      gap: clamp(12px, 3vw, 28px); // gap 隨螢幕大小縮放
+      width: clamp(140px, 18vw, 220px); 
+      gap: clamp(12px, 3vw, 28px); 
     }
     #pills-tab { 
       min-width: 0; 
       flex-wrap: nowrap; 
       justify-content: center; 
     }
-    .btn-member {
-      padding: 0.5rem 1.25rem;   // 從 2rem → 1.25rem
-      font-size: 16px;           // 微縮字級
+    .green-patten-1 {
+      display: none;
     }
   }
 
-  /* === 小型裝置 (<992px) === */
+  
   @media (max-width: 992px) {
     .member-img-tab {
       width: 160px;   // 固定大小，避免太小
@@ -525,31 +547,45 @@ p {
     #pills-tab {
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;       // row wrap 更好看
+      gap: 8px;       
       padding-left: 0px;
     }
-    .btn-member {
-      font-size: 15px;
-      padding: 0.45rem 1rem;
+    .member-data .ps-8{
+      padding-left: 2rem !important;
+    }
+
+    #pills-tabContent{
+      padding-left: 2.5rem !important;
+      padding-right: 2.5rem !important;
     }
 
     .foot-print{
+      display: none;
+    }
+    .yellow-patten-1 {
+      display: none;
+    }
+    .green-patten-1 {
+      display: none;
+    }
+    .img-shipping-cart {
+      display: none;
+    }
+    .img-waiting-dog {
       display: none;
     }
   }
 
 
   .yellow-patten-1 {
-    top: 70% !important;
+    top: 30% !important;
     margin-left: 3rem;
   }
 
   .green-patten-1 {
-    top: 90% !important;
-    right: 10%;
+    top: 45% !important;
+    right: 15%;
   }
-
-  
 
   /* 裝飾圖降低層級且不攔截點擊 */
   .member-center .yellow-patten-1,
@@ -581,8 +617,72 @@ p {
     }
   }
 
-  #address .form-control, #shipping-address .form-control{ padding-right: 2.75rem; }
-  #address .icon, #shipping-address .icon { right: .75rem; pointer-events: none; }
+  #address .form-control, 
+  #shipping-address .form-control{ 
+    padding-right: 2.75rem; 
+  }
+
+  #address .icon, 
+  #shipping-address .icon { 
+    right: .75rem; pointer-events: none; 
+  }
+
+  /* 個人資料頁籤 文字設定 */
+  #pills-profile {
+    font-size: clamp(14px, 1.6vw, 16px);
+    line-height: 1.5;
+
+    /* 標題 */
+    .h.h2, .h2 { 
+      font-size: clamp(24px, 2.6vw, 36px); 
+      line-height: 1.2; 
+    }
+    .h.h3, .h3 { 
+      font-size: clamp(20px, 2.2vw, 32px); 
+      line-height: 1.2; 
+    }
+
+    /* 文字 */
+    .p1 { 
+      font-size: clamp(16px, 1.6vw, 18px); 
+    }
+    .p2 { 
+      font-size: clamp(14px, 1.5vw, 16px); 
+    }
+    .p3 { 
+      font-size: clamp(12px, 1.4vw, 14px); 
+    }
+    .p4 { 
+      font-size: clamp(10px, 1.3vw, 12px); 
+    }
+
+    /* 表單標籤與輸入控件 */
+    .form-label { 
+      font-size: clamp(14px, 1.5vw, 16px);
+    }
+    .form-control,
+    .form-select {
+      font-size: clamp(12px, 1.6vw, 14px);
+    }
+
+    /* 絕對定位的圖示：只調字體大小，不動位置 */
+    .input-group .icon,
+    .input-group i.icon {
+      font-size: clamp(16px, 2.2vw, 20px);
+    }
+
+    /* 驗證提示泡泡 */
+    .valid-tooltip,
+    .invalid-tooltip {
+      font-size: clamp(12px, 1.4vw, 14px);
+    }
+
+    /* 儲存按鈕：只調字級，保留現有 padding 與樣式 */
+    .btn-save {
+      font-size: clamp(14px, 1.7vw, 16px);
+    }
+  }
+  
 
   // ----------------------------------------  訂單管理頁籤
   .member-orderlist .member-data,
@@ -594,9 +694,24 @@ p {
     font-size: 12px;
   }
 
-  .nav-link:active {
-    color: $white;
-  }
+  #myTab{
+    .nav-item{
+      .nav-link{
+         padding: clamp( 0.25rem, 2vw, 0.5rem) clamp(1rem, 1.2vw, 2rem);
+         font-size: clamp(14px, 1.2vw ,1rem);
+      }
+
+      .nav-link:hover {
+        color: $white;
+        background-color: $secondary-400;
+        border-color: $secondary-400;
+      }
+
+      .nav-link:active {
+        color: $white;
+      }
+    }
+  }  
 
   .order-number {
     color: $neutral-500;
@@ -619,6 +734,13 @@ p {
   /* 這層才吃 min-height，避免 table 自身不吃 */
   .member-orderlist .orderlist-table-wrap {
     min-height: 300px; /* 先寫 300px */
+  }
+
+  .pagination{
+    a.page-link:hover{
+      color: $white;
+      background-color: $primary-500;
+    }
   }
 
   // ----------------------------------------  會員專屬頁籤
@@ -730,10 +852,28 @@ p {
     justify-content: center; /* 保持置中 */
   }
 
-  .hand-write-font{
-    font-family: 'Amatic SC' !important;
-  }
+  .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        height: clamp( 1.5rem, 1.75rem ,2rem);
+        width: clamp( 1.5rem, 1.75rem ,2rem);
+    }
 
+  @media (max-width:576px) {
+    .carousel-item{
+      .card-text-back{
+        font-size: 22px !important;
+        margin-bottom: 2.5rem !important;
+      }
+      .card-text-back{
+        font-size: 16px !important;
+      }
+
+      .flip-back{
+        padding-left:3rem;
+        padding-right: 3rem;
+      }
+    }
+  }
   #petUnboxCarousel .carousel-indicators {
     bottom: -100px; /* 或 -1rem, 視覺再調 */
   }
@@ -741,9 +881,167 @@ p {
   .body-font{
     font-family: "Noto Sans TC", sans-serif !important;
   }
+
+  #pills-orderlists {
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.6;
+
+  /* tab 內部小字/標籤可再微調（選擇性） */
+  .nav-link,
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .page-link {
+    font-size: clamp(12px, 1.4vw, 14px);
+  }
+
+  .order-number {
+    font-size: clamp(11px, 1.2vw, 13px);
+    opacity: .9;
+  }
+
+  .orderlist-table-wrap {
+    width: 100%;
+  }
+
+  /* 882px 以下：啟用水平捲動 */
+  @media (max-width: 1112px) {
+    .orderlist-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* 行動裝置更滑順 */
+      /* 讓使用者知道可橫向滑動（選擇性） */
+      /* scroll-snap-type: x proximity; */
+    }
+
+    /* 給表格一個最小寬度，避免被硬擠換行而失真 */
+    .orderlist-table-wrap table {
+      min-width: 920px; /* 依你的欄位數量調整，900~1100 都可 */
+    }
+
+    /* 避免關鍵欄位被換行擠爛 */
+    th,
+    td {
+      white-space: nowrap;
+    }
+
+    /* 讓「名稱/編號」可以保留一點換行空間（選擇性） */
+    td:nth-child(2) {
+      white-space: normal;
+      max-width: 320px;   /* 視需求調整 */
+    }
+  }
+
+  /* 表頭在滾動時保持可見 */
+  .table thead th {
+    position: sticky;
+    top: 0;
+    // background: #fff; 
+    z-index: 1;
+  }
+}
    
 
   // ------------------------------------ 會員專屬優惠
+
+  #pills-exclusives{
+
+    font-family: "Noto Sans TC", sans-serif !important;
+
+      /* 標題 */
+      .h.h2, .h2 { 
+        font-size: clamp(26px, 2.6vw, 36px); 
+        line-height: 1.2; 
+      }
+      .h.h3, .h3 { 
+        font-size: clamp(22px, 2.2vw, 32px); 
+        line-height: 1.2; 
+      }
+      .h.h4, .h4 { 
+        font-size: clamp(18px, 1.8vw, 28px); 
+        line-height: 1.2; 
+      }
+      .h.h5, .h5 { 
+        font-size: clamp(16px, 1.8vw, 24px); 
+        line-height: 1.2; 
+      }
+      .h.h6, .h6 { 
+        font-size: clamp(14px, 1.8vw, 20px); 
+        line-height: 1.2; 
+      }
+      /* 文字 */
+      .p1 { 
+        font-size: clamp(16px, 1.6vw, 18px); 
+      }
+      .p2 { 
+        font-size: clamp(14px, 1.5vw, 16px); 
+      }
+      .p3 { 
+        font-size: clamp(12px, 1.4vw, 14px); 
+      }
+      .p4 { 
+        font-size: clamp(10px, 1.3vw, 12px); 
+      }
+
+      // .mb-12 {
+      //   margin-bottom: clamp(0.375rem, 0.5rem ,0.75rem) !important;
+      // }
+
+      p.card-text{
+        font-family: "Noto Sans TC", sans-serif !important;
+
+      }
+
+      h5.card-title, p.card-text{
+        margin-left: 0.25rem ;
+      }
+  }
+
+  .exclusive{
+    // font-size: clamp(14px, 1.6vw, 16px);
+    // line-height: 1.5;
+
+    /* 標題 */
+    .h.h2, .h2 { 
+      font-size: clamp(24px, 2.6vw, 36px); 
+      line-height: 1.2; 
+    }
+    .h.h4, .h4 { 
+      font-size: clamp(18px, 2.2vw, 28px); 
+      line-height: 1.2; 
+    }
+
+    /* 文字 */
+    .p2 { 
+      font-size: clamp(14px, 1.5vw, 16px); 
+    }
+    .p3 { 
+      font-size: clamp(12px, 1.4vw, 14px); 
+    }
+
+    .img-firework-1 {
+        max-width: clamp(70px, 70px, 80px);
+        height: clamp(70px, 70px, 80px);
+      }
+
+    .img-wave {
+        max-width: clamp(70px, 75px, 80px);
+        height: clamp(70px, 75px, 80px);
+      }
+
+    .btn-keep-sub{
+      margin-bottom: 200px;
+    }
+
+  }
+
+  @media (max-width:576px) {
+    .pt-200{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+  }
 
   .btn-keep-subscribe {
     border: none;
@@ -808,8 +1106,13 @@ p {
     object-fit: cover; /* 保持比例並裁切多餘 */
   }
 
-  
+  .img-open-box {
+      max-width: clamp(80px, 10vw,150px);
+      height: clamp(80px, 10vw,150px);
+      margin-right: clamp(20px, 50px,50px);
+  }
 
+  
   // ------------------------------------ 主題活動
 
   .theme-event {
@@ -841,31 +1144,45 @@ p {
       border-radius: 50%;
     }
 
+    @media (max-width:576px) {
+      .img-play {
+        position: absolute;
+        max-width: 100px;
+        height: 100px;
+        bottom: 10%;
+        right: 0%;
+        border-radius: 50%;
+      }
+
+      .img-feed {
+        position: absolute;
+        max-width: 90px;
+        height: 90px;
+        bottom: 7.5%;
+        left: 5%;
+        border-radius: 50%;
+      }
+
+      .card-title{
+        font-size: 1.125rem !important;
+      }
+      .card-text{
+        font-size: 0.875rem !important;
+      }
+
+      img.mb-6{
+        margin-bottom: 3px !important;
+      }
+
+    }
+
   }
-
-  // .title-lined {
-  //   display: inline-block;
-  //   position: relative;
-  // }
-
-  // .title-lined::after {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   top: 50%;
-  //   height: 2px;                /* 線條粗細 */
-  //   background: #0d6efd;        /* 線條顏色，可換成你的 $primary-500 */
-  //   z-index: -1;                /* 線條在文字下方 */
-  // }
-
-  // ----------------------------------------  圖片通用
-
 
   .img-shipping-cart {
     max-width: 120px;
     height: 100px;
     margin-right: -30px;
+    top:10%
   }
 
   .img-waiting-dog {
@@ -878,28 +1195,11 @@ p {
     transform: scaleX(-1);
   }
 
-
   .img-pet-toy,
   .img-pet-snack {
     max-width: 80px;
     height: 80px;
     transition: transform 0.2s ease-in-out;
-  }
-
-  .img-open-box {
-    max-width: 120px;
-    height: 120px;
-    margin-right: 50px;
-  }
-
-  .img-firework-1 {
-    max-width: 80px;
-    height: 80px;
-  }
-
-  .img-wave {
-    max-width: 90px;
-    height: 90px;
   }
 
   .img-hover-bigger {
@@ -909,6 +1209,7 @@ p {
   .theme-event-card:hover .img-hover-bigger {
     transform: scale(1.1);
   }
+
 }
 
 .mb-80 {
@@ -947,7 +1248,7 @@ p {
 .auto-show {
   animation: text-appear both;
   animation-timeline: view();
-  animation-range: entry 5% cover 100vh;
+  animation-range: entry 20% cover 100vh;
 }
 
 @keyframes text-appear {
@@ -964,7 +1265,7 @@ p {
 // 圖片緩顯
 .img-reveal {
   animation: image-reveal both;
-  animation-timeline: view(10% 5%);
+  animation-timeline: view(5% 2.5%);
 }
 
 @keyframes image-reveal {
