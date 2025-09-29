@@ -186,12 +186,12 @@
   right: 160px; /* 距離右邊界 160px */
 }
 
-/* 手機板 RWD */
+/* faq手機板 RWD */
 @media (max-width: 767px) {
   /* 卡片區 */
   .cards {
     grid-template-columns: 1fr; /* 單欄垂直排列 */
-    gap: 16px;
+    gap: 24px;
     padding: 0 16px; /* 左右保持 16px */
   }
 
