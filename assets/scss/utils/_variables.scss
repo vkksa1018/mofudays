@@ -1062,7 +1062,7 @@ $input-focus-bg: $input-bg !default;
 $input-focus-border-color: tint-color($component-active-bg, 50%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-// $input-focus-width: 2px !default;  // 2025/09/09 納森修改 "input 在 focus 下的 border粗度" 
+// $input-focus-width: 2px !default;  // 2025/09/09 納森修改 "input 在 focus 下的 border粗度"
 // $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $input-focus-box-shadow: none !default; //修改james
 $input-placeholder-color: $neutral-400 !default; //修改james
@@ -1298,7 +1298,7 @@ $form-validation-states: (
     "focus-box-shadow": 0 0 $input-btn-focus-blur $input-focus-width
       rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
     "border-color": var(--#{$prefix}form-invalid-border-color),
-    // "background-color" : $primary-200 // 2025/09/09 納森新增 
+    // "background-color" : $primary-200 // 2025/09/09 納森新增
   ),
 ) !default;
 // scss-docs-end form-validation-states

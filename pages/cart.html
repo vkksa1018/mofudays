@@ -13,22 +13,56 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <main class="cart py-11">
+    <main class="cart py-11 pt-80-sm pb-0-sm">
       <div class="container">
         <!-- 標題進度條 -->
-        <div class="title mb-6 px-110">
-          <h2 class="fw-bold mb-2 ls-5">購物車</h2>
+        <div
+          class="d-flex justify-content-between align-items-center d-block-sm px-110 px-24-sm mb-6 mb-24-sm"
+        >
+          <!-- 標題 -->
+          <div class="title py-5-5-sm mb-32-sm">
+            <h2 class="fw-bold mb-2 text-center-sm">購物車</h2>
+          </div>
+          <!-- 進度條 -->
+          <div class="step d-flex align-items-center d-none">
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_1.svg"
+                alt="step_1"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">購物車</p>
+            </div>
+            <div class="step-line disabled"></div>
+            <div class="step-item disabled">
+              <img
+                src="/assets/images/index/service_step_2.svg"
+                alt="step_2"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">訂單確認與結帳</p>
+            </div>
+            <div class="step-line disabled"></div>
+            <div class="step-item disabled">
+              <img
+                src="/assets/images/index/service_step_3.svg"
+                alt="step_3"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">完成訂閱</p>
+            </div>
+          </div>
         </div>
 
         <!-- 訂閱內容卡片 -->
-        <div class="card-bg py-9 px-110 mb-6">
+        <div class="card-bg py-9 px-110 px-12-sm mb-6 mb-0-sm">
           <div class="row-table">
-            <!-- 表格 -->
-            <div class="col-table-10">
-              <h5 class="mb-5 ls-5">訂閱內容</h5>
+            <!-- 訂閱內容表格 -->
+            <div class="col-table-10 mb-7">
+              <h5 class="mb-5 ls-5 text-center-sm">訂閱內容</h5>
 
-              <!-- 表格標題 -->
-              <div class="table-title-bg d-flex py-2 mb-2">
+              <!-- 表格標題列 -->
+              <div class="table-title-bg d-flex py-2 mb-2 d-none-sm">
                 <p class="col-table-2 text-center"></p>
                 <p class="col-table-3 text-center">品項</p>
                 <p class="col-table-1 text-center">單價</p>
@@ -37,8 +71,9 @@
                 <p class="col-table-1 text-center"></p>
               </div>
 
-              <!-- 表格第一列 -->
-              <div class="table-container-bg d-flex py-4 mb-2">
+              <!-- 表格網頁版 -->
+              <!-- 第一列 -->
+              <div class="table-container-bg d-flex py-4 mb-2 d-none-sm">
                 <!-- 圖片+品項 -->
                 <div class="col-table-5 d-flex ps-4">
                   <img
@@ -53,12 +88,14 @@
                     <p class="table-text fw-normal mb-1">互動小物 x 2</p>
                   </div>
                 </div>
+
                 <!-- 單價 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
                 >
                   $699
                 </div>
+
                 <!-- 數量 -->
                 <div class="col-table-2 d-flex align-items-center">
                   <div class="input-group px-4" style="height: 48px">
@@ -78,12 +115,14 @@
                     </button>
                   </div>
                 </div>
+
                 <!-- 小計 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
                 >
                   $2,097
                 </div>
+
                 <!-- 關閉 -->
                 <div
                   class="col-table-1 d-flex justify-content-center align-items-center"
@@ -96,8 +135,8 @@
                 </div>
               </div>
 
-              <!-- 表格第二列 -->
-              <div class="table-container-bg d-flex py-4 mb-2">
+              <!-- 第二列 -->
+              <div class="table-container-bg d-flex py-4 mb-2 d-none-sm">
                 <!-- 圖片+品項 -->
                 <div class="col-table-5 d-flex ps-4">
                   <img
@@ -119,8 +158,8 @@
                   $699
                 </div>
                 <!-- 數量 -->
-                <div class="col-table-2 px-4 d-flex align-items-center">
-                  <div class="input-group" style="height: 48px">
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
                     <button class="btn btn-quantity px-4 py-3" type="button">
                       －
                     </button>
@@ -155,8 +194,8 @@
                 </div>
               </div>
 
-              <!-- 表格第三列 -->
-              <div class="table-container-bg d-flex py-4 mb-7">
+              <!-- 第三列 -->
+              <div class="table-container-bg d-flex py-4 d-none-sm">
                 <!-- 圖片+品項 -->
                 <div class="col-table-5 d-flex ps-4">
                   <img
@@ -178,8 +217,8 @@
                   $699
                 </div>
                 <!-- 數量 -->
-                <div class="col-table-2 px-4 d-flex align-items-center">
-                  <div class="input-group" style="height: 48px">
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
                     <button class="btn btn-quantity px-4 py-3" type="button">
                       －
                     </button>
@@ -213,63 +252,349 @@
                   ></button>
                 </div>
               </div>
-            </div>
 
-            <!-- 選擇訂閱期數 -->
-            <div class="col-table-6">
-              <h5 class="mb-5 ls-5">選擇訂閱期數</h5>
-              <div class="d-flex gap-4">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-diet px-0 py-3 w-25"
-                >
-                  1 個月
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-diet px-0 py-3 w-25"
-                >
-                  3 個月
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-diet px-0 py-3 w-25"
-                >
-                  6 個月
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary btn-diet px-0 py-3 w-25"
-                >
-                  12 個月
-                </button>
+              <!-- 表格手機版 -->
+              <!-- 第一列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-16-sm"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="/assets/images/subscribe/product-img-01.png"
+                        alt="新手爸媽安心組"
+                        class="table-img rounded-4 me-5"
+                      />
+                      <div class="py-8-sm">
+                        <p class="table-title fw-bold mb-8-sm">
+                          新手爸媽安心組
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div class="d-flex flex-column align-items-center">
+                      <button
+                        type="button"
+                        class="btn-close mb-24-sm"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number fs-14-sm px-0"
+                          value="3"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">小計 $2,097</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 第二列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex mb-16-sm">
+                      <img
+                        src="/assets/images/subscribe/product-img-02.png"
+                        alt="青春汪能量補給包"
+                        class="img-fluid table-img rounded-4 me-5"
+                      />
+                      <div>
+                        <p class="table-title fw-bold mb-8-sm">
+                          青春汪能量補給包
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div
+                      class="d-flex flex-column justify-content-between align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group" style="height: 40px">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number px-0"
+                          value="2"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">$1,398</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 第三列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex mb-16-sm">
+                      <img
+                        src="/assets/images/subscribe/product-img-03.png"
+                        alt="牛氣補補能量盒"
+                        class="img-fluid table-img rounded-4 me-5"
+                      />
+                      <div>
+                        <p class="table-title fw-bold mb-8-sm">
+                          牛氣補補能量盒
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div
+                      class="d-flex flex-column justify-content-between align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group" style="height: 40px">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number px-0"
+                          value="1"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">$699</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- 訂單合計 -->
-            <div class="col-table-4">
-              <h5 class="mb-5 ls-5">訂單合計</h5>
-              <div class="total-bg px-5 py-9-5">
+            <!-- 選擇訂閱期數 -->
+            <div class="col-table-6 col-12-sm mb-56-sm">
+              <div class="px-16-sm">
+                <h5 class="mb-5 ls-5 text-center-sm">選擇訂閱期數</h5>
+                <div
+                  class="px-0 py-0 w-100 d-flex d-block-sm gap-4"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <!-- 1 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="one-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="one-month"
+                    style="height: 48px"
+                    >1 個月</label
+                  >
+
+                  <!-- 3 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="three-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="three-month"
+                    style="height: 48px"
+                    >3 個月</label
+                  >
+
+                  <!-- 6 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="six-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="six-month"
+                    style="height: 48px"
+                    >6 個月</label
+                  >
+
+                  <!-- 12 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="twelve-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 w-25 w-100-sm"
+                    for="twelve-month"
+                    style="height: 48px"
+                    >12 個月</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- 訂單合計網頁版 -->
+            <div class="col-table-4 d-none-sm">
+              <h5 class="mb-5 ls-5 text-center-sm">訂單合計</h5>
+              <div class="total-bg px-5 py-9-5" style="height: 48px">
                 <p class="total-text fw-bold text-end">
                   每月<span class="fs-24 fw-medium px-2">$4,194</span>
                 </p>
+              </div>
+            </div>
+
+            <!-- 訂單合計手機版 -->
+            <div class="col-12-sm d-none-min-sm mb-24-sm">
+              <div class="px-16-sm">
+                <div
+                  class="total-bg d-flex justify-content-between align-items-center px-5 py-4"
+                >
+                  <h6 class="ls-5">訂單合計</h6>
+                  <p class="total-text fw-bold text-end">
+                    每月<span class="fs-24 fw-medium px-2">$4,194</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 儲存按鈕手機版 -->
+          <div class="text-center d-none-min-sm px-5-5-sm">
+            <div class="row">
+              <div class="col-6-sm">
+                <a
+                  class="btn btn-primary rounded-pill btn-active-white ls-5 fs-18-sm fw-medium-sm px-38-sm"
+                  href="./pet-info.html"
+                  role="button"
+                  >繼續訂閱</a
+                >
+              </div>
+              <div class="col-6-sm">
+                <a
+                  class="btn btn-primary rounded-pill btn-active ls-5 fs-18-sm fw-medium-sm px-38-sm"
+                  href="./checkout.html"
+                  role="button"
+                  >確認結帳</a
+                >
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 儲存按鈕 -->
-      <div class="text-center">
+      <!-- 儲存按鈕網頁版 -->
+      <div class="text-center d-none-sm">
         <a
-          class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
-          href="/pages/pet-info.html"
+          class="btn btn-primary rounded-pill btn-active-white fs-18-sm fw-medium-sm ls-10-sm px-40 me-6 me-24-sm"
+          href="./pet-info.html"
           role="button"
           >繼續訂閱</a
         >
         <a
-          class="btn btn-primary rounded-pill btn-active px-40"
-          href="/pages/checkout.html"
+          class="btn btn-primary rounded-pill btn-active fs-18-sm fw-medium-sm ls-10-sm px-40"
+          href="./checkout.html"
           role="button"
           >確認結帳</a
         >
