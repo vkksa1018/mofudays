@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+    <script type="module" crossorigin src="/mofudays/assets/main-CSp2vPyx.js"></script>
+    <link rel="stylesheet" crossorigin href="/mofudays/assets/all-C8AUUYxK.css">
+  </head>
+  <body>
+    <header class="container" id="top">
+  <nav
+    class="navbar navbar-expand-lg bg-body-white border navbar shadow-sm py-5 px-7"
+  >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- 左邊：logo -->
+      <div>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="/mofudays/assets/maorihe_logo_defalut-CrImTCZZ.svg"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+      </div>
+
+      <!-- 右邊（手機）：list＋cart -->
+      <div class="d-lg-none d-sm-none d-flex align-items-center gap-4 ms-auto">
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu" class="nav-menu-icon"></i>
+        </button>
+
+        <a class="nav-link p-0 cart-btn" href="cart.html" aria-label="Cart">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+              class="nav-icon"
+            />
+            <circle
+              cx="80"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <circle
+              cx="184"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <path
+              d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- 右邊(桌機）：list＋cart -->
+      <div class="d-none d-sm-flex d-lg-flex ms-auto align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 最新消息 -->
+            <li class="nav-item me-6">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#newsModal"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+                >
+                  <path d="M15 18h-5" />
+                  <path d="M18 14h-8" />
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                  />
+                  <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+                >最新消息</a
+              >
+            </li>
+            <!-- 毛孩照護 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" href="blog.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+                >
+                  <path
+                    d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" /></svg
+                >毛孩照護</a
+              >
+            </li>
+            <!-- 會員下拉選單 -->
+            <li class="nav-item dropdown me-5 d-flex">
+              <img
+                src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+                alt="avatar"
+                class="rounded-circle nav-avatar"
+              />
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                使用者名稱<i
+                  data-lucide="chevron-down"
+                  class="caret-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu mt-5 text-center">
+                <li>
+                  <a class="dropdown-item" href="member.html">訂單管理</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">個人資料管裡</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">會員專屬活動</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">我的評價</a>
+                </li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </li>
+            <!-- 購物車 -->
+            <li class="nav-item d-none d-md-flex">
+              <a class="nav-link cart-btn" href="cart.html">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                    class="nav-icon"
+                  />
+                  <circle
+                    cx="80"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <circle
+                    cx="184"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <path
+                    d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機:offcanva -->
+  <div
+    class="offcanvas offcanvas-top offcanvas-mobile-full d-md-none"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+    data-bs-scroll="true"
+  >
+    <div
+      class="offcanvas-body d-flex flex-column align-items-center justify-content-between px-4 py-4"
+    >
+      <!-- 上半：主選單 -->
+      <nav class="w-100" aria-label="Mobile main">
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 mt-3 me-3 z-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <ul class="list-mb list-unstyled mb-4">
+          <li class="nav-item py-3 border-bottom text-center">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#newsModal"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+              >
+                <path d="M15 18h-5" />
+                <path d="M18 14h-8" />
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                />
+                <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+              >最新消息</a
+            >
+          </li>
+          <li class="nav-item text-center py-3">
+            <a class="nav-link" href="blog.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+              >
+                <path
+                  d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                />
+                <path d="M15 15h6" />
+                <path d="M18 12v6" /></svg
+              >毛孩照護</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 會員區塊（符合你的稿：大頭貼＋名稱＋功能清單） -->
+      <div class="w-100 text-center my-2">
+        <div
+          class="d-flex align-items-center justify-content-center gap-2 mb-md-3 py-2"
+        >
+          <img
+            src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+            alt="avatar"
+            class="rounded-circle"
+            style="width: 44px; height: 44px"
+          />
+          <div class="fw-medium">使用者名稱</div>
+        </div>
+        <ul class="list-unstyled mx-auto" style="max-width: 320px">
+          <li class="py-3">
+            <a class="nav-link" href="member.html">訂單管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">個人資料管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">會員專屬活動</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">我的評價</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link text-primary" href="#">登出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</header>
+ <nav class="announcement">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- 位置 1 - 較大空白 -->
+      <div class="col-3"></div>
+
+      <!-- 位置 2 - 公告訊息區 -->
+      <div class="col-4">
+        <div
+          id="announcementCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="mb-0">新註冊會員：首單現折$60</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">滿千免運優惠中！</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">訂閱禮盒，每月驚喜送到家</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 位置 3 - 小間距 -->
+      <div class="col-1"></div>
+
+      <!-- 位置 4 - 註冊按鈕 -->
+      <div class="col-2 text-center">
+        <a href="signup.html">
+          <button type="button" class="btn btn-signup py-1 px-2">
+            立即註冊
+          </button>
+        </a>
+      </div>
+
+      <!-- 位置 5 - 較大空白 -->
+      <div class="col-2"></div>
+    </div>
+  </div>
+</nav>
+    <section class="hero position-relative">
+      <div class="container py-11">
+        <div class="row justify-content-center g-5">
+          <div
+            class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center text-center"
+          >
+            <img
+              src="/mofudays/assets/01_hero_headline_desktop-Cyp1UsO2.svg"
+              alt="01_hero_headline_desktop"
+              class="hero-headline d-none d-md-block"
+            />
+            <img
+              src="/mofudays/assets/01_hero_headline_mobile-C1SRipU5.svg"
+              alt="01_hero_headline_mobile"
+              class="hero-headline-mobile d-block d-md-none"
+            />
+            <div class="custom-dashed border-dashed my-4 my-md-6"></div>
+            <h2 class="h5 text-brown-300 mb-4 mb-md-12 ls-10 hero-subtitle">
+              每月一盒小驚喜，<br
+                class="d-block d-sm-none"
+              />讓陪伴更輕鬆也更有温度
+            </h2>
+            <a
+              type="button"
+              class="btn rounded-pill btn-primary btn-subscribe hero-button"
+              href="./pet-info.html"
+              role="button"
+            >
+              立即訂閱
+            </a>
+          </div>
+          <div class="col-md-6 col-12 hero-image-col">
+            <img
+              src="/mofudays/assets/hero_img-C_ue4aU8.png"
+              class="img-fluid w-100"
+              alt="hero_img"
+            />
+          </div>
+        </div>
+      </div>
+      <img
+        src="data:image/svg+xml,%3csvg%20width='80'%20height='59'%20viewBox='0%200%2080%2059'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M70.8205%2014.8857C73.3826%2012.4296%2074.1622%208.66396%2072.961%204.88533C71.7662%200.813538%2068.0985%20-0.463238%2065.3383%200.142646C60.1309%200.41627%2057.9456%205.39363%2055.4665%209.74556C53.6135%2013.3157%2050.6489%2015.9151%2047.2113%2017.8305C42.7707%2020.2996%2038.2472%2022.5668%2033.6915%2024.847C31.698%2025.8438%2029.6467%2026.7428%2027.6852%2027.7787C23.9985%2029.7266%2020.0435%2031.5703%2015.8201%2031.6485C11.405%2031.7332%207.13671%2028.3585%203.0858%2031.3814C-2.80527%2035.779%200.664389%2044.789%207.43081%2044.7043'%20fill='%23FDD78C'/%3e%3cpath%20d='M8.98319%2043.0821C7.4625%2044.574%206.39552%2046.6912%206.17189%2048.3786C5.82047%2053.9944%209.77573%2057.4605%2014.67%2058.125C20.1777%2058.4833%2021.7559%2052.2484%2024.2414%2047.8965C25.6151%2045.486%2027.6596%2042.8215%2030.1323%2041.5836C31.7041%2040.8018%2033.2696%2040.0136%2034.8414%2039.2318C39.3204%2036.9907%2043.7993%2034.7561%2048.2783%2032.515C51.1599%2031.0752%2054.0416%2029.6353%2056.9296%2028.189C58.1436%2027.5831%2059.2045%2026.9839%2060.5399%2026.6711C63.6707%2025.9285%2066.5458%2026.3976%2069.5871%2027.1924C72.2324%2027.8764%2074.8903%2028.2151%2077.1905%2026.3844C82.9857%2021.7653%2079.0818%2012.7292%2072.1429%2013.2439'%20fill='%23FDD78C'/%3e%3cpath%20d='M7.23274%2044.8607L4.82391%2044.3525L2.41507%2042.8281L0.504479%2040.5479L0%2037.9094L0.172215%2035.4141L1.10536%2033.3555L2.84967%2031.5378L5.30311%2030.3064L8.6766%2030.2088L12.4594%2031.1403L15.6988%2031.5704L18.5484%2031.2642L21.8133%2030.3521L25.1104%2028.9514L45.614%2018.5796L49.3519%2016.3516L52.5594%2013.5958L55.147%2010.0583L57.2557%206.30572L58.9426%203.7583L61.5174%201.27625L65.2232%200.0774602L68.3795%200.0578964L71.6126%202.01236L72.9673%205.73885L73.3635%209.0615L72.8075%2011.6283L72.041%2013.1789L74.5584%2013.433L76.8265%2014.5535L78.6476%2016.6447L79.8615%2020.0196L79.28%2023.9089L75.9255%2027.3097L71.2548%2027.5182L67.1912%2026.606L63.166%2026.2477L59.4983%2026.9513L54.9745%2029.1924L32.043%2040.6521L27.6662%2043.2059L24.9441%2046.5025L22.5864%2050.8544L20.4971%2054.6982L17.9797%2057.2651L14.1653%2058.0077L11.1048%2057.05L8.35089%2055.0629L6.67054%2052.8153L6.05063%2049.5383L6.55542%2046.5155L7.23274%2044.8607Z'%20fill='%23FDD78C'/%3e%3c/svg%3e"
+        alt="bone"
+        class="decor bone d-none d-md-block"
+      />
+      <img
+        src="/mofudays/assets/hero_green_patten-Dxw4YmeU.svg"
+        alt="green_patten"
+        class="decor green_patten"
+      />
+      <img
+        src="/mofudays/assets/hero_yellow_patten-C4eYJFuP.svg"
+        alt="yellow_patten"
+        class="decor yellow_patten"
+      />
+    </section>
+    <section class="about position-relative bg-secondary-300">
+      <div class="container py-9">
+        <div class="row justify-content-center g-5">
+          <div class="col-5">
+            <img
+              src="/mofudays/assets/about_img-Dkl-KVpc.png"
+              alt="about"
+              class="img-fluid w-100"
+            />
+          </div>
+          <div
+            class="col-5 d-flex flex-column justify-content-center align-items-start"
+          >
+            <img
+              src="/mofudays/assets/02_about_headline_desktop-Dcb7qEdw.svg"
+              alt="02_about_headline_desktop.svg"
+              class="mb-4 about-headline-desktop"
+            />
+            <img
+              src="/mofudays/assets/02_about_headline_mobile-Cbd99P3-.svg"
+              alt="02_about_headline_mobile"
+              class="mb-4 about-headline-mobile"
+            />
+            <h3 class="p1">毛日和，靈感來自日文的「OO日和」</h3>
+            <h3 class="p1">意指最適合做某件事的好日子</h3>
+            <h3 class="p1">
+              我們相信，毛孩是家人，<br
+                class="mobile-br"
+              />每一天都該是他們的幸福日子
+            </h3>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/mofudays/assets/about_footprint_patten-UyL8d1A-.svg"
+        alt="footprint"
+        class="decor footprint"
+      />
+    </section>
+    <section class="service">
+      <div class="container py-9 py-md-11">
+        <img
+          src="/mofudays/assets/03_service_headline_desktop-B9i3rDU5.svg"
+          alt="03_service_headline"
+          class="mb-3 d-none d-md-block mx-auto"
+        />
+        <img
+          src="/mofudays/assets/03_service_headline_mobile-fsTM4yID.svg"
+          alt="03_service_headline_mobile"
+          class="mb-3 d-block d-md-none mx-auto"
+        />
+        <h3 class="mb-12 mb-md-6 text-center title-large text-primary-500">
+          與毛孩創造不一樣的回憶
+        </h3>
+        <div class="row">
+          <div class="service_card col-md-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="/mofudays/assets/service_01-Dhip5mWV.png"
+                alt="service_step_1"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M41.6665%208.33331H58.3332'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M50%2058.3333L62.5%2045.8333'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M49.9998%2091.6667C68.4093%2091.6667%2083.3332%2076.7428%2083.3332%2058.3333C83.3332%2039.9238%2068.4093%2025%2049.9998%2025C31.5903%2025%2016.6665%2039.9238%2016.6665%2058.3333C16.6665%2076.7428%2031.5903%2091.6667%2049.9998%2091.6667Z'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="time" />
+              </div>
+            </div>
+            <h4 class="title-medium">工作忙碌，難以備貨？</h4>
+            <div class="custom-dashed border-dashed my-2 my-md-4"></div>
+            <p class="p2">訂閱服務會依照您的需求</p>
+            <p class="p2">定期將精選好物送到家</p>
+            <p class="p2">省下採買時間、專心陪伴毛孩</p>
+          </div>
+          <div class="service_card col-md-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="/mofudays/assets/service_02-CquCROzi.png"
+                alt="service_step_2"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M43.7502%2012.5L33.3335%2037.5L50.0002%2091.6667L66.6668%2037.5L56.2502%2012.5'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M70.8334%2012.5C72.1271%2012.5%2073.4031%2012.8012%2074.5602%2013.3798C75.7173%2013.9583%2076.7239%2014.7984%2077.5001%2015.8333L90.0001%2032.5C91.0721%2033.9298%2091.6561%2035.6665%2091.6659%2037.4536C91.6756%2039.2406%2091.1106%2040.9835%2090.0542%2042.425L56.7626%2088.2C55.9907%2089.2728%2054.9748%2090.1467%2053.7986%2090.7495C52.6224%2091.3523%2051.3197%2091.6666%2049.998%2091.6666C48.6763%2091.6666%2047.3736%2091.3523%2046.1974%2090.7495C45.0212%2090.1467%2044.0053%2089.2728%2043.2334%2088.2L9.94175%2042.425C8.88596%2040.9831%208.32167%2039.24%208.33218%2037.4529C8.34268%2035.6658%208.92741%2033.9294%2010.0001%2032.5L22.4917%2015.8458C23.2675%2014.8074%2024.2748%2013.9643%2025.4336%2013.3835C26.5923%2012.8027%2027.8706%2012.5002%2029.1667%2012.5H70.8334Z'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.3335%2037.5H91.6668'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="gem" />
+              </div>
+            </div>
+            <h4 class="title-medium">產品過多，選擇困難？</h4>
+            <div class="custom-dashed border-dashed my-2 my-md-4"></div>
+            <p class="p2">替您嚴選高品質</p>
+            <p class="p2">兼具實用與趣味的毛孩用品</p>
+            <p class="p2">讓每次開箱都充滿驚喜與安心</p>
+          </div>
+          <div class="service_card col-md-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="/mofudays/assets/service_03-KA7d1hI8.png"
+                alt="service_step_3"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img src="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M83.3333%2033.3333H16.6667C14.3655%2033.3333%2012.5%2035.1988%2012.5%2037.5V45.8333C12.5%2048.1345%2014.3655%2050%2016.6667%2050H83.3333C85.6345%2050%2087.5%2048.1345%2087.5%2045.8333V37.5C87.5%2035.1988%2085.6345%2033.3333%2083.3333%2033.3333Z'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M50%2033.3333V87.5'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M79.1668%2050V79.1667C79.1668%2081.3768%2078.2889%2083.4964%2076.726%2085.0592C75.1632%2086.622%2073.0436%2087.5%2070.8335%2087.5H29.1668C26.9567%2087.5%2024.8371%2086.622%2023.2743%2085.0592C21.7115%2083.4964%2020.8335%2081.3768%2020.8335%2079.1667V50'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M31.2502%2033.3333C28.4875%2033.3333%2025.838%2032.2359%2023.8845%2030.2824C21.931%2028.3288%2020.8335%2025.6793%2020.8335%2022.9167C20.8335%2020.154%2021.931%2017.5045%2023.8845%2015.551C25.838%2013.5975%2028.4875%2012.5%2031.2502%2012.5C35.2697%2012.43%2039.2086%2014.3802%2042.5532%2018.0965C45.8979%2021.8127%2048.493%2027.1225%2050.0002%2033.3333C51.5073%2027.1225%2054.1025%2021.8127%2057.4471%2018.0965C60.7917%2014.3802%2064.7306%2012.43%2068.7502%2012.5C71.5128%2012.5%2074.1624%2013.5975%2076.1159%2015.551C78.0694%2017.5045%2079.1668%2020.154%2079.1668%2022.9167C79.1668%2025.6793%2078.0694%2028.3288%2076.1159%2030.2824C74.1624%2032.2359%2071.5128%2033.3333%2068.7502%2033.3333'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="gift" />
+              </div>
+            </div>
+            <h4 class="title-medium">一如既往，毫無驚喜？</h4>
+            <div class="custom-dashed border-dashed my-2 my-md-4"></div>
+            <p class="p2">每期提供不同主題與新品</p>
+            <p class="p2">幫助毛孩嘗試新鮮事物</p>
+            <p class="p2">創造更多共同的美好回憶</p>
+          </div>
+          <div class="service_card col-md-3 p-4">
+            <div class="image-wrapper mb-5 d-block mx-auto">
+              <img
+                src="/mofudays/assets/service_04-CBc4oSiD.png"
+                alt="service_step_4"
+                class="img-fluid w-100"
+              />
+              <div class="hover-icon">
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='100'%20height='100'%20viewBox='0%200%20100%20100'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.6665%2081.25V18.75C16.6665%2015.9873%2017.764%2013.3378%2019.7175%2011.3843C21.671%209.43078%2024.3205%208.33331%2027.0832%208.33331H79.1665C80.2716%208.33331%2081.3314%208.7723%2082.1128%209.5537C82.8942%2010.3351%2083.3332%2011.3949%2083.3332%2012.5V87.5C83.3332%2088.6051%2082.8942%2089.6649%2082.1128%2090.4463C81.3314%2091.2277%2080.2716%2091.6667%2079.1665%2091.6667H27.0832C24.3205%2091.6667%2021.671%2090.5692%2019.7175%2088.6157C17.764%2086.6622%2016.6665%2084.0127%2016.6665%2081.25ZM16.6665%2081.25C16.6665%2078.4873%2017.764%2075.8378%2019.7175%2073.8843C21.671%2071.9308%2024.3205%2070.8333%2027.0832%2070.8333H83.3332'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M35.9167%2040.8333C35.0401%2039.9194%2034.3578%2038.8374%2033.9109%2037.6525C33.4639%2036.4676%2033.2617%2035.2045%2033.3164%2033.9393C33.371%2032.6741%2033.6814%2031.4331%2034.2288%2030.2912C34.7762%2029.1493%2035.5493%2028.1301%2036.5015%2027.2952C37.4536%2026.4603%2038.565%2025.8269%2039.7686%2025.4332C40.9722%2025.0396%2042.2431%2024.8939%2043.5046%2025.005C44.7661%2025.116%2045.992%2025.4815%2047.1084%2026.0793C48.2247%2026.6771%2049.2084%2027.4949%2050%2028.4833C50.7955%2027.5052%2051.78%2026.6976%2052.8948%2026.1088C54.0096%2025.5199%2055.2316%2025.162%2056.4879%2025.0564C57.7442%2024.9507%2059.0089%2025.0996%2060.2063%2025.494C61.4038%2025.8884%2062.5094%2026.5202%2063.457%2027.3518C64.4046%2028.1833%2065.1747%2029.1975%2065.7214%2030.3335C66.268%2031.4695%2066.5799%2032.7042%2066.6384%2033.9635C66.6968%2035.2229%2066.5007%2036.4811%2066.0617%2037.6629C65.6227%2038.8448%2064.9498%2039.9259%2064.0834%2040.8417L53.1417%2052.7417C52.7514%2053.1911%2052.2691%2053.5515%2051.7274%2053.7985C51.1858%2054.0455%2050.5974%2054.1733%2050.0021%2054.1733C49.4068%2054.1733%2048.8185%2054.0455%2048.2768%2053.7985C47.7352%2053.5515%2047.2529%2053.1911%2046.8625%2052.7417L35.9167%2040.8333Z'%20stroke='black'%20stroke-width='8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                  alt="book-heart"
+                />
+              </div>
+            </div>
+            <h4 class="title-medium">多寵家庭，難以管理？</h4>
+            <div class="custom-dashed border-dashed my-2 my-md-4"></div>
+            <p class="p2">提供多樣化、可彈性調整的方案</p>
+            <p class="p2">滿足不同毛孩的需求</p>
+            <p class="p2">讓飼主更輕鬆管理每一位寶貝</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="process position-relative">
+      <div class="container py-9 py-md-11">
+        <img
+          src="/mofudays/assets/04_process_headline_desktop-aIPX7z_o.svg"
+          alt="process_headline"
+          class="mb-3 d-none d-md-block mx-auto"
+        />
+        <img
+          src="/mofudays/assets/04_process_headline_mobile-ColP4hAs.svg"
+          alt="process_headline_mobile"
+          class="mb-3 d-block d-md-none mx-auto"
+        />
+        <h3 class="mb-6 title-large text-center text-primary-500">
+          每月一盒讓他感受到你的心意
+        </h3>
+        <div class="process-steps">
+          <!-- 步驟1 -->
+          <div class="row d-flex justify-content-center mb-md-5">
+            <div
+              class="col-md-4 col-12 process-item image-item me-md-5 order-1 order-md-1"
+            >
+              <img src="/mofudays/assets/step_01-Cqmv3IRM.png" alt="step1" />
+            </div>
+            <div
+              class="col-md-4 col-12 process-item text-item order-2 order-md-2"
+            >
+              <div class="step-icon">
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_844)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M25.8026%2050.9153C24.9386%2050.9153%2024.5066%2050.4433%2024.5066%2049.4993V37.3793L22.7786%2038.5073C21.9786%2039.0513%2021.3546%2038.9553%2020.9066%2038.2193C20.4426%2037.4833%2020.6106%2036.8673%2021.4106%2036.3713L24.2906%2034.5713C24.5786%2034.3953%2024.8586%2034.2753%2025.1306%2034.2113C25.4026%2034.1313%2025.7146%2034.0913%2026.0666%2034.0913C26.7386%2034.0913%2027.0746%2034.5633%2027.0746%2035.5073V49.4993C27.0746%2050.4433%2026.6506%2050.9153%2025.8026%2050.9153Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_844'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                  alt="foot_step1"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">填資料！</h4>
+                <p>為毛孩填寫基本資訊</p>
+                <p>我們才能更了解牠的需求與喜好</p>
+              </div>
+            </div>
+          </div>
+          <!-- 步驟2 -->
+          <div class="row d-flex justify-content-center mb-md-5">
+            <div
+              class="col-md-4 col-12 process-item text-item me-md-5 order-2 order-md-1"
+            >
+              <div class="step-icon">
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_853)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M22.2701%2050.9153C21.3261%2050.9153%2020.8541%2050.6513%2020.8541%2050.1233C20.8541%2048.9713%2021.1501%2047.8513%2021.7421%2046.7633C22.3501%2045.6753%2023.3581%2044.4593%2024.7661%2043.1153C25.2621%2042.6353%2025.7341%2042.1553%2026.1821%2041.6753C26.6301%2041.1793%2026.9981%2040.6993%2027.2861%2040.2353C27.5741%2039.7553%2027.7261%2039.2993%2027.7421%2038.8673C27.7581%2038.0353%2027.5661%2037.4193%2027.1661%2037.0193C26.7821%2036.6193%2026.2301%2036.4193%2025.5101%2036.4193C24.5341%2036.4193%2023.9101%2036.9153%2023.6381%2037.9073C23.5101%2038.3393%2023.3421%2038.6753%2023.1341%2038.9153C22.9421%2039.1393%2022.6381%2039.2513%2022.2221%2039.2513C21.8221%2039.2513%2021.5021%2039.1153%2021.2621%2038.8433C21.0221%2038.5713%2020.9581%2038.2033%2021.0701%2037.7393C21.3261%2036.5553%2021.8461%2035.6353%2022.6301%2034.9793C23.4141%2034.3073%2024.3741%2033.9713%2025.5101%2033.9713C26.4381%2033.9713%2027.2621%2034.1633%2027.9821%2034.5473C28.7181%2034.9313%2029.2941%2035.4913%2029.7101%2036.2273C30.1261%2036.9633%2030.3181%2037.8673%2030.2861%2038.9393C30.2701%2039.6913%2030.0941%2040.3873%2029.7581%2041.0273C29.4221%2041.6673%2028.9741%2042.2913%2028.4141%2042.8993C27.8701%2043.4913%2027.2461%2044.1233%2026.5421%2044.7953C25.8061%2045.5153%2025.1501%2046.2033%2024.5741%2046.8593C24.0141%2047.5153%2023.6861%2048.0833%2023.5901%2048.5633H28.5821C29.5261%2048.5633%2029.9981%2048.9553%2029.9981%2049.7393C29.9981%2050.5233%2029.5261%2050.9153%2028.5821%2050.9153H22.2701Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_853'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                  alt="foot_step2"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">看推薦！</h4>
+                <p>根據毛孩資料，推薦最適合的驚喜盒</p>
+                <p>專屬於你們的每日幸福</p>
+              </div>
+            </div>
+            <div
+              class="col-md-4 col-12 process-item image-item order-1 order-md-2"
+            >
+              <img src="/mofudays/assets/step_02-o1yffB_X.png" alt="step2" />
+            </div>
+          </div>
+          <!-- 步驟3 -->
+          <div class="row d-flex justify-content-center mb-md-5">
+            <div
+              class="col-md-4 col-12 process-item image-item me-md-5 order-1 order-md-1"
+            >
+              <img src="/mofudays/assets/step_03-EiZjFYzF.png" alt="step3" />
+            </div>
+            <div
+              class="col-md-4 col-12 process-item text-item order-2 order-md-2"
+            >
+              <div class="step-icon">
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_861)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M24.4917%2051.1553C22.6677%2051.1553%2021.2997%2050.4273%2020.3877%2048.9713C20.1317%2048.5553%2020.0677%2048.1873%2020.1957%2047.8673C20.3237%2047.5473%2020.5717%2047.3313%2020.9397%2047.2193C21.3397%2047.0913%2021.6677%2047.0913%2021.9237%2047.2193C22.1797%2047.3473%2022.4597%2047.5713%2022.7637%2047.8913C22.9397%2048.1313%2023.1637%2048.3313%2023.4357%2048.4913C23.7237%2048.6353%2024.0597%2048.7073%2024.4437%2048.7073C25.2597%2048.7073%2025.9077%2048.5073%2026.3877%2048.1073C26.8677%2047.7073%2027.1077%2047.0353%2027.1077%2046.0913C27.1077%2045.2433%2026.8677%2044.5633%2026.3877%2044.0513C25.9077%2043.5393%2025.2197%2043.2833%2024.3237%2043.2833C23.5237%2043.2833%2023.1237%2042.8913%2023.1237%2042.1073C23.1237%2041.3233%2023.5237%2040.9313%2024.3237%2040.9313C25.1237%2040.9313%2025.7157%2040.6993%2026.0997%2040.2353C26.4837%2039.7553%2026.6757%2039.1713%2026.6757%2038.4833C26.6757%2037.6833%2026.4437%2037.1233%2025.9797%2036.8033C25.5317%2036.4673%2025.0197%2036.2993%2024.4437%2036.2993C24.1237%2036.2993%2023.8357%2036.3793%2023.5797%2036.5393C23.3397%2036.6993%2023.1317%2036.8913%2022.9557%2037.1153C22.6517%2037.4353%2022.3637%2037.6593%2022.0917%2037.7873C21.8357%2037.9153%2021.5157%2037.8993%2021.1317%2037.7393C20.7637%2037.5953%2020.5237%2037.3633%2020.4117%2037.0433C20.2997%2036.7073%2020.3877%2036.3473%2020.6757%2035.9633C21.1397%2035.2753%2021.6997%2034.7553%2022.3557%2034.4033C23.0277%2034.0353%2023.7397%2033.8513%2024.4917%2033.8513C25.4677%2033.8513%2026.3157%2034.0433%2027.0357%2034.4273C27.7717%2034.7953%2028.3397%2035.3153%2028.7397%2035.9873C29.1557%2036.6593%2029.3637%2037.4513%2029.3637%2038.3633C29.3637%2039.1953%2029.1397%2039.9473%2028.6917%2040.6193C28.2597%2041.2753%2027.7077%2041.7553%2027.0357%2042.0593C27.8357%2042.3633%2028.4837%2042.8833%2028.9797%2043.6193C29.4917%2044.3553%2029.7477%2045.2113%2029.7477%2046.1873C29.7477%2047.7073%2029.2837%2048.9153%2028.3557%2049.8113C27.4437%2050.7073%2026.1557%2051.1553%2024.4917%2051.1553Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_861'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                  alt="foot_step3"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">打包寄出！</h4>
+                <p>精選内容打包完畢</p>
+                <p>用心裝進每一份療癒與驚喜</p>
+              </div>
+            </div>
+          </div>
+          <!-- 步驟4 -->
+          <div class="row d-flex justify-content-center mb-9 mb-md-11">
+            <div
+              class="col-md-4 col-12 process-item text-item me-md-5 order-2 order-md-1"
+            >
+              <div class="step-icon">
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_869)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M27.1591%2050.9153C26.3591%2050.9153%2025.9591%2050.4433%2025.9591%2049.4993V47.2433H20.8231C19.8631%2047.2433%2019.3831%2046.9153%2019.3831%2046.2593C19.3831%2045.8913%2019.4231%2045.5713%2019.5031%2045.2993C19.5831%2045.0273%2019.7031%2044.7473%2019.8631%2044.4593L25.4311%2035.0033C25.6231%2034.6513%2025.8471%2034.4033%2026.1031%2034.2593C26.3751%2034.1153%2026.7111%2034.0433%2027.1111%2034.0433C27.9591%2034.0433%2028.3831%2034.5153%2028.3831%2035.4593V44.9873H29.3191C30.2631%2044.9873%2030.7351%2045.3633%2030.7351%2046.1153C30.7351%2046.8673%2030.3911%2047.2433%2029.7031%2047.2433H28.3831V49.4993C28.3831%2050.4433%2027.9751%2050.9153%2027.1591%2050.9153ZM21.9511%2044.9873H25.9591V38.1233L21.9511%2044.9873Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_869'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                  alt="foot_step4"
+                />
+              </div>
+              <div class="text-content ms-4">
+                <h4 class="title-medium">享受寵物盒！</h4>
+                <p>開箱專屬毛孩的幸福時光</p>
+                <p>從吃、玩到健康都被照顧到</p>
+              </div>
+            </div>
+            <div
+              class="col-md-4 col-12 process-item image-item order-1 order-md-2"
+            >
+              <img src="/mofudays/assets/step_01-Cqmv3IRM.png" alt="step1" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <img
+            src="/mofudays/assets/05_box_headline_desktop-BH0Q4ubX.svg"
+            alt="05_box_headline"
+            class="mb-6 d-none d-md-block mx-auto"
+          />
+          <img
+            src="/mofudays/assets/05_box_headline_mobile-9Fqfh1Uk.svg"
+            alt="05_box_headline_mobile"
+            class="mb-6 d-block d-md-none mx-auto"
+          />
+          <section class="product-section">
+            <div class="product-layout">
+              <!-- 第一張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="/mofudays/assets/box_01-Bt3mxr9R.png"
+                    alt="box1"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">零食 1～2 包</div>
+              </div>
+
+              <!-- 第一個連接 icon -->
+              <div class="connect-icon">
+                <div class="icon-circle"></div>
+              </div>
+
+              <!-- 第二張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="/mofudays/assets/box_02-Dh_4jqmz.png"
+                    alt="box2"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">玩具 1～2 個</div>
+              </div>
+
+              <!-- 第二個連接 icon -->
+              <div class="connect-icon">
+                <div class="icon-circle"></div>
+              </div>
+
+              <!-- 第三張卡片 -->
+              <div class="product-card">
+                <div class="card-background">
+                  <img
+                    src="/mofudays/assets/box_03-WbRAvbNU.png"
+                    alt="box3"
+                    class="product-image"
+                  />
+                </div>
+                <div class="card-text">專屬毛寵知識卡<br />1 套</div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <button
+          type="button"
+          class="btn rounded-pill btn-primary btn-subscribe px-160 d-flex mx-auto"
+        >
+          <a href="./pet-info.html">立即訂閱</a>
+        </button>
+        <img
+          src="/mofudays/assets/process_openbox_patten-UXWHXUGI.svg"
+          alt="openbox"
+          class="decor openbox"
+        />
+        <img
+          src="/mofudays/assets/pets_say-CIAiX4vh.png"
+          alt="pets_say"
+          class="decor petsay"
+        />
+      </div>
+    </section>
+    <section class="comment py-9 py-md-11">
+      <img
+        src="/mofudays/assets/06_comment_headline_desktop-C9-svoxq.svg"
+        alt="06_comment_headline_desktop"
+        class="mb-6 d-none d-md-block mx-auto"
+      />
+      <img
+        src="/mofudays/assets/06_comment_headline_mobile-BQwD_niP.svg"
+        alt="06_comment_headline_mobile"
+        class="mb-6 d-block d-md-none mx-auto"
+      />
+      <div class="container-fluid">
+        <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- 卡片1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="/mofudays/assets/comment_avatar_01-DKO0zfu8.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">Yuki·Shiba 媽媽</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">一打開毛日和，Shiba 就興奮地</p>
+                    <p class="p2">摇尾巴，超愛那個鴨肉條</p>
+                    <p></p>
+                  </div>
+                </div>
+                <!-- 卡片2 -->
+                <div class="col-12 col-md-3">
+                  <div class="review-card-pink pt-10 pb-12 text-center">
+                    <img
+                      src="/mofudays/assets/comment_avatar_02-CiRZ5SQj.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">豬皮的老母</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">每月開箱變成例行節目，現在猪</p>
+                    <p class="p2">皮聽到門鈴聲都自動坐好，等他</p>
+                    <p class="p2">自己的快遞</p>
+                  </div>
+                </div>
+                <!-- 卡片3 -->
+                <div class="col-12 col-md-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="/mofudays/assets/comment_avatar_03-LqwShupJ.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">雙寶狗媽</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">上個月開箱零食沒馬上給，結果</p>
+                    <p class="p2">阿寶氣到把盒子咬坡了，新盒子</p>
+                    <p class="p2">還没到，情緒已炸裂</p>
+                  </div>
+                </div>
+                <!-- 卡片4 -->
+                <div class="col-12 col-md-3">
+                  <div class="review-card-pink pt-10 pb-12 text-center">
+                    <img
+                      src="/mofudays/assets/comment_avatar_04-VnuvfOI4.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">賓三姊妹的奴才長官</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">最怕三隻同時挑嘴，結果這次三</p>
+                    <p class="p2">隻都搶同一條零食！這選品太會</p>
+                    <p class="p2">了吧</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 卡片5 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-3">
+                  <div class="review-card pt-10 pb-12 text-center">
+                    <img
+                      src="/mofudays/assets/comment_avatar_05-DKLTIuz_.png"
+                      class="rounded-circle mb-2 d-flex mx-auto"
+                      width="60"
+                      height="60"
+                    />
+                    <p class="p3">Momo 監工中</p>
+                    <div class="stars text-warning mb-2">
+                      &#9733; &#9733; &#9733; &#9733; &#9733;
+                    </div>
+                    <p class="p2">每次開箱都像搶銀行，我才剛拆</p>
+                    <p class="p2">一半，Momo 就已經開吃了...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 控制按鈕 -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#reviewCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#reviewCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <button
+      class="customer-service-btn"
+      type="button"
+      onclick="toggleCustomerService()"
+    >
+      <i class="fas fa-headset" id="service-icon"></i>
+      <span><i class="bi bi-chat-dots"></i>客服中心</span>
+    </button>
+    <div class="customer-service-chat py-12" id="customerServiceChat">
+      <div class="chat-header mb-4">
+        <div class="title-large">您好</div>
+        <div class="title-large">我們能提供什麼幫助？</div>
+      </div>
+      <div class="chat-body mx-12">
+        <a href="faq.html" class="chat-button">
+          常見問題
+          <i class="bi bi-file-earmark"></i>
+        </a>
+        <a href="#" class="chat-button">
+          傳訊息給我們
+          <i class="bi bi-envelope"></i>
+        </a>
+        <div class="chat-footer">
+          我們上班時間為週一到週五的 10:00 -
+          19:00，再請您耐心等候我們回來喔！謝謝
+        </div>
+      </div>
+    </div>
+
+    <!-- 最新消息 Modal -->
+    <div
+      class="modal fade"
+      id="newsModal"
+      tabindex="-1"
+      aria-labelledby="newsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered modal-xl">
+        <div class="modal-content rounded-4">
+          <!-- Modal header -->
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+
+            <!-- 標題區域 -->
+            <div>
+              <h5 class="modal-title fw-bold" id="newsModalLabel">NEWS</h5>
+              <p class="header-subtitle">汪汪來報：這個月的毛毛新鮮事！</p>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="custom-accordion py-8">
+              <div class="accordion" id="customAccordion">
+                <!-- 第一個口風琴項目 -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingOne">
+                    <div class="function-tag">功能更新</div>
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      全新訂閱頁面上線啦！操作更順暢，推薦更精準
+                    </button>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#customAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="content-text">
+                        我們的訂閱頁面全面升級囉！<br />
+                        填寫毛孩資料後，系統會更聰明地推薦合適方案。<br />
+                        還搭流程更清晰，畫面更美觀好操作～<br />
+                        快來體驗新版訂閱流程，一起為毛孩挑出最棒的驚喜盒！
+                      </div>
+                      <div class="date-tag">2025 / 08 / 25</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第二個口風琴項目 -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingTwo">
+                    <div class="function-tag">官方公告</div>
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      配送時間異動通知 因應颱風物流調整，敬請留意
+                    </button>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#customAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="content-text">
+                        受到颱風影響，部分地區配送時間可能延後 2～3 天。<br />我們會密切追蹤物流狀況，確保盒子安全送達。<br />造成不便敬請見諒，也感謝您的體諒與耐心等候。<br />若有急件或地址異動，歡迎隨時聯絡我們協助！
+                      </div>
+                      <div class="date-tag">2025 / 08 / 02</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 第三個口風琴項目 -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingThree">
+                    <div class="function-tag">回饋 / 參與活動</div>
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      月月開箱投稿募集！曬毛孩照片登上首頁
+                    </button>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#customAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="content-text">
+                        喜歡開箱的毛孩快舉爪！<br />只要拍下毛孩開箱的療癒瞬間，上傳分享就有機會登上首頁～<br />每月我們都會選出幾位人氣毛星人，送出專屬小禮。<br />別忘了標記
+                        @毛日和，讓更多人看到你家寶貝的魅力！
+                      </div>
+                      <div class="date-tag">2025 / 08 / 01</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 第四個口風琴項目 -->
+                <div class="accordion-item">
+                  <div class="accordion-header" id="headingFour">
+                    <div class="function-tag">產品與品牌合作</div>
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      全品牌快閃市集毛日和首次實體活動即將開跑！
+                    </button>
+                  </div>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#customAccordion"
+                  >
+                    <div class="accordion-body">
+                      <div class="content-text">
+                        毛日和要走出螢幕，和你們面對面見面啦！<br />我們將參加本月的寵物主題快閃市集，帶來限定互動與小禮包。<br />現場還有快閃抽獎、限量福袋、毛孩拍照區等你來玩～<br />活動地點與時間將於下週公布，敬請期待！
+                      </div>
+                      <div class="date-tag">2025 / 07 / 15</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+  <!-- footer info -->
+  <div class="footer-info">
+    <div class="container">
+      <div class="d-md-flex text-center text-md-start align-items-center">
+        <!-- footer-left -->
+        <div class="container">
+          <div
+            class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 mb-0">
+              <a href="index.html"
+                ><img
+                  src="/mofudays/assets/footer-logo-DNsVksMy.png"
+                  alt="logo"
+                  class="footer-logo"
+              /></a>
+            </div>
+            <div
+              class="d-inline-flex flex-column align-items-center align-items-md-start text-start gap-3 mx-auto footer-contact"
+            >
+              <div>
+                <p class="mb-md-4 d-none d-md-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    /></svg
+                  >02-27341788
+                </p>
+                <a
+                  href="mailto:ervice.maorihe@gmail.com"
+                  class="d-flex footer-link mb-4 d-none d-md-flex"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <p>service.maorihe@gmail.com</p>
+                </a>
+              </div>
+
+              <div class="mb-md-0 mb-32 d-flex gap-2">
+                <a href="#" class="btn social-btn" aria-current="page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-at-sign-icon lucide-at-sign"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+                ></a>
+              </div>
+
+              <div
+                class="d-inline-flex d-md-none flex-column align-items-start text-start gap-3 mx-auto footer-contact mb-40"
+              >
+                <p class="d-flex align-items-center gap-2 mb-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    />
+                  </svg>
+                  <span>02-27341788</span>
+                </p>
+                <a
+                  href="mailto:service.maorihe@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span>service.maorihe@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-right -->
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-4 gap-md-0"
+          >
+            <!-- resource card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  外部資源
+                </li>
+                <li class="py-2"><a href="#">寵物殯葬</a></li>
+                <li class="py-2"><a href="#">寵物醫療</a></li>
+                <li class="py-2"><a href="#">寵物保險</a></li>
+                <li class="py-2"><a href="#">浪浪援助</a></li>
+              </ul>
+            </div>
+            <!-- faq card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  常見問題
+                </li>
+                <li class="py-2"><a href="faq.html">FAQ</a></li>
+                <li class="py-2"><a href="faq.html">物流配送</a></li>
+                <li class="py-2"><a href="#">退換貨政策</a></li>
+                <li class="py-2"><a href="#">細則與條款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#top" class="footer-link">
+        <button type="button" class="btn btn-totop rounded-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"
+          >
+            <path
+              d="M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- copyright declaration -->
+  <div class="footer-copyright text-center">
+    <p>© Copyright 2025 MAORIHE. All Rights Reserved</p>
+  </div>
+</footer>
+
+    <script>
+      let isServiceOpen = false;
+
+      function toggleCustomerService() {
+        const chatWindow = document.getElementById("customerServiceChat");
+        const serviceIcon = document.getElementById("service-icon");
+
+        isServiceOpen = !isServiceOpen;
+
+        if (isServiceOpen) {
+          // 打開客服窗口
+          chatWindow.classList.add("show");
+          serviceIcon.className = "fas fa-times";
+        } else {
+          // 關閉客服窗口
+          chatWindow.classList.remove("show");
+          serviceIcon.className = "fas fa-comment";
+        }
+      }
+
+      // 點擊窗口外部關閉客服窗口
+      document.addEventListener("click", function (event) {
+        const chatWindow = document.getElementById("customerServiceChat");
+        const serviceBtn = document.querySelector(".customer-service-btn");
+
+        if (
+          isServiceOpen &&
+          !chatWindow.contains(event.target) &&
+          !serviceBtn.contains(event.target)
+        ) {
+          toggleCustomerService();
+        }
+      });
+    </script>
+  </body>
+</html>

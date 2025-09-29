@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>faq</title>
+    <script type="module" crossorigin src="/mofudays/assets/main-CSp2vPyx.js"></script>
+    <link rel="stylesheet" crossorigin href="/mofudays/assets/all-C8AUUYxK.css">
+  </head>
+  <body>
+    <header class="container" id="top">
+  <nav
+    class="navbar navbar-expand-lg bg-body-white border navbar shadow-sm py-5 px-7"
+  >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- 左邊：logo -->
+      <div>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="/mofudays/assets/maorihe_logo_defalut-CrImTCZZ.svg"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+      </div>
+
+      <!-- 右邊（手機）：list＋cart -->
+      <div class="d-lg-none d-sm-none d-flex align-items-center gap-4 ms-auto">
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu" class="nav-menu-icon"></i>
+        </button>
+
+        <a class="nav-link p-0 cart-btn" href="cart.html" aria-label="Cart">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+              class="nav-icon"
+            />
+            <circle
+              cx="80"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <circle
+              cx="184"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <path
+              d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- 右邊(桌機）：list＋cart -->
+      <div class="d-none d-sm-flex d-lg-flex ms-auto align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 最新消息 -->
+            <li class="nav-item me-6">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#newsModal"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+                >
+                  <path d="M15 18h-5" />
+                  <path d="M18 14h-8" />
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                  />
+                  <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+                >最新消息</a
+              >
+            </li>
+            <!-- 毛孩照護 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" href="blog.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+                >
+                  <path
+                    d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" /></svg
+                >毛孩照護</a
+              >
+            </li>
+            <!-- 會員下拉選單 -->
+            <li class="nav-item dropdown me-5 d-flex">
+              <img
+                src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+                alt="avatar"
+                class="rounded-circle nav-avatar"
+              />
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                使用者名稱<i
+                  data-lucide="chevron-down"
+                  class="caret-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu mt-5 text-center">
+                <li>
+                  <a class="dropdown-item" href="member.html">訂單管理</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">個人資料管裡</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">會員專屬活動</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">我的評價</a>
+                </li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </li>
+            <!-- 購物車 -->
+            <li class="nav-item d-none d-md-flex">
+              <a class="nav-link cart-btn" href="cart.html">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                    class="nav-icon"
+                  />
+                  <circle
+                    cx="80"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <circle
+                    cx="184"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <path
+                    d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機:offcanva -->
+  <div
+    class="offcanvas offcanvas-top offcanvas-mobile-full d-md-none"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+    data-bs-scroll="true"
+  >
+    <div
+      class="offcanvas-body d-flex flex-column align-items-center justify-content-between px-4 py-4"
+    >
+      <!-- 上半：主選單 -->
+      <nav class="w-100" aria-label="Mobile main">
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 mt-3 me-3 z-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <ul class="list-mb list-unstyled mb-4">
+          <li class="nav-item py-3 border-bottom text-center">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#newsModal"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+              >
+                <path d="M15 18h-5" />
+                <path d="M18 14h-8" />
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                />
+                <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+              >最新消息</a
+            >
+          </li>
+          <li class="nav-item text-center py-3">
+            <a class="nav-link" href="blog.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+              >
+                <path
+                  d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                />
+                <path d="M15 15h6" />
+                <path d="M18 12v6" /></svg
+              >毛孩照護</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 會員區塊（符合你的稿：大頭貼＋名稱＋功能清單） -->
+      <div class="w-100 text-center my-2">
+        <div
+          class="d-flex align-items-center justify-content-center gap-2 mb-md-3 py-2"
+        >
+          <img
+            src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+            alt="avatar"
+            class="rounded-circle"
+            style="width: 44px; height: 44px"
+          />
+          <div class="fw-medium">使用者名稱</div>
+        </div>
+        <ul class="list-unstyled mx-auto" style="max-width: 320px">
+          <li class="py-3">
+            <a class="nav-link" href="member.html">訂單管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">個人資料管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">會員專屬活動</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">我的評價</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link text-primary" href="#">登出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</header>
+    <div class="container py-9 py-md-11">
+      <section class="faq mb-5 mb-md-6">
+        <div class="d-flex justify-content-between flex-wrap faq-header">
+          <div class="faq-title mb-5 mb-md-0">
+            <h2 class="mb-2">FAQ</h2>
+            <p>常見問題， 解惑那些訂閱的大小事</p>
+          </div>
+          <ul class="faq-tabs d-flex align-items-end">
+            <li>
+              <div class="nav-link active" data-tab="subscribe">關於訂閱</div>
+            </li>
+            <li><div class="nav-link" data-tab="delivery">關於配送</div></li>
+            <li><div class="nav-link" data-tab="payment">付款與方案</div></li>
+            <li><div class="nav-link" data-tab="safety">內容與安全</div></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq-content py-9">
+        <!-- 關於訂閱 -->
+        <div id="subscribe" class="tab-content active">
+          <section class="cards">
+            <!-- card1 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">關於訂閱</div>
+              <div class="question-section">
+                <div class="question-text">
+                  💬<br />
+                  「毛日和」訂閱盒是什麼？<br />
+                  每月會收到什麼？
+                </div>
+              </div>
+              <div class="answer-section">
+                毛日和是專為毛孩設計的訂閱驚喜盒<br />
+                每月精選零食、保健品、玩具<br />
+                或生活用品，寄到你家門口<br />
+                內容會根據毛孩年齡與需求調整<br />
+                讓毛孩每個月都像過節一樣開心💝
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">訂閱方案</div>
+              <div class="question-section">
+                <div class="question-text">
+                  📦<br />訂閱方案有哪些？<br />可以選擇幾個月？
+                </div>
+              </div>
+              <div class="answer-section">
+                目前提供 1/3/6/12個月 的訂閱服務<br />
+                訂越久越划算！<br />
+                新手也可以從一盒試試看，沒有壓力～<br />
+                每個方案都能享有專屬驚喜內容喔！
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">訂閱問題</div>
+              <div class="question-section">
+                <div class="question-text">
+                  📦<br />
+                  訂閱後會自動續約嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                根據您選擇的期數會有自動扣款機制<br />
+                如果您想更換方案<br />也可以在帳號裡隨時刪除訂單！<br />
+                我們不綁約，只想讓照顧毛孩更輕鬆！
+              </div>
+            </div>
+            <!-- card4 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">訂閱盒內容</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🎯<br />
+                  盒子內容可以自己選嗎？<br />
+                  還是隨機搭配？
+                </div>
+              </div>
+              <div class="answer-section">
+                內容是由我們精選搭配的驚喜組合<br />
+                您只要提供毛孩基本資料與飲食偏好<br />
+                我們會照顧好牠的喜好❤️<br />
+                雖然不是完全自選，但每盒都很用心<br />
+                保證開箱時有驚喜也有安心！
+              </div>
+            </div>
+            <!-- card5 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">內容物搭配</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🐕<br />
+                  我家是老犬／幼犬<br />
+                  會搭配適合牠的內容嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                會的！我們會根據你填寫的<br />
+                毛孩年齡與狀況來調整內容<br />讓每隻毛孩都吃得安心、玩得開心🐾
+              </div>
+            </div>
+            <!-- card6 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">食材問題</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🐾<br />
+                  我家毛孩不吃某些食材<br />
+                  該怎麼辦？
+                </div>
+              </div>
+              <div class="answer-section">
+                訂閱時會有「飲食偏好」的填寫欄位<br />
+                我們會盡力避開過敏源或不適合的食材<br />
+                如果沒有您需要的選項<br />
+                亦可在客服聯繫我們<br />
+                讓毛孩每一口都能放心享受✨
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 關於配送 -->
+        <div id="delivery" class="tab-content">
+          <section class="cards">
+            <!-- card1 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">出貨時間</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🚚<br />
+                  每月什麼時候會出貨？<br />
+                  多久可以收到？
+                </div>
+              </div>
+              <div class="answer-section">
+                我們會在每月固定時間統一出貨，<br />
+                寄出後約 2～4 個工作天送達<br />
+                （依地區略有不同）。<br />
+                出貨時間會提前公告，<br />
+                也會寄 Email 通知您唷！
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">沒收到貨</div>
+              <div class="question-section">
+                <div class="question-text">
+                  📦<br />
+                  收到通知了但貨還沒到，<br />
+                  怎麼辦？
+                </div>
+              </div>
+              <div class="answer-section">
+                別擔心～可以先查看物流追蹤連結，<br />
+                如果超過 5 天尚未收到，<br />
+                有可能是物流延誤或地址資訊有誤，<br />
+                歡迎聯絡我們協助查詢 ^ ^
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">指定配送</div>
+              <div class="question-section">
+                <div class="question-text">
+                  ⏰<br />
+                  可以指定配送<br />
+                  日期或時間嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                目前無法指定確切時間，<br />
+                出貨後由宅配安排配送。<br />
+                建議您選擇工作日有人收件的地址，<br />
+                我們會持續努力優化配送體驗！
+              </div>
+            </div>
+            <!-- card4 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">配送地點</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🏡<br />
+                  可以寄到超商、<br />
+                  學校或公司地址嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                可以唷！只要地址清楚、有人可簽收即可。<br />
+                公司或學校也沒問題，<br />
+                記得加上單位名稱和分機。<br />
+                目前暫不支援超商店到店，敬請見諒。
+              </div>
+            </div>
+            <!-- card5 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">離島配送</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🗺️<br />
+                  有配送到<br />
+                  離島或海外嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                目前僅支援台灣本島地區配送，<br />
+                離島與海外的毛毛們請再等等我們～<br />
+                我們會努力拓展配送範圍！<br />
+                若有特殊需求也歡迎私訊客服討論！
+              </div>
+            </div>
+            <!-- card6 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">盒子有問題</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🎀<br />
+                  收到的內容物有誤或<br />
+                  盒子有損壞怎麼辦？
+                </div>
+              </div>
+              <div class="answer-section">
+                如果內容物有誤或包裝有損壞，<br />
+                請第一時間拍照聯繫我們。<br />
+                我們會盡快協助補寄或處理退換，<br />
+                讓毛孩不漏掉任何驚喜！<br />
+                我們希望每一盒都能完整抵達、<br />
+                讓您與毛孩安心開箱 💝
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 付款與方案 -->
+        <div id="payment" class="tab-content">
+          <section class="cards">
+            <!-- card1 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">訂閱流程</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🐾<br />
+                  訂閱流程是<br />
+                  怎麼進行的？
+                </div>
+              </div>
+              <div class="answer-section">
+                只要填寫毛孩資料，<br />
+                系統就會幫您自動配對合適的訂閱方案。<br />
+                您可以確認期數與訂閱盒說明後直接結帳，<br />
+                簡單幾步驟一次完成，訂閱無負擔！
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">訂閱方案</div>
+              <div class="question-section">
+                <div class="question-text">
+                  💡<br />
+                  可以自己選想訂<br />
+                  哪種盒子嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                系統會根據您填的資訊推薦<br />
+                最適合毛孩的盒子，<br />
+                如果想換主題，<br />
+                只要回到首頁再重新選一次即可！<br />
+                讓每位毛孩都能收到專屬驚喜🥳
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">續約問題</div>
+              <div class="question-section">
+                <div class="question-text">
+                  📅<br />
+                  可以修改訂單的<br />
+                  期數或內容嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                訂單成立後無法直接修改期數或內容，<br />
+                如想更換訂閱方案或期數，<br />
+                只要聯繫客服取消訂單後重新下單就可以！<br />
+                流程簡單好管理，讓您輕鬆照顧毛孩💛
+              </div>
+            </div>
+            <!-- card4 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">訂閱盒內容</div>
+              <div class="question-section">
+                <div class="question-text">
+                  📦<br />
+                  我想訂不同期數的盒子，<br />
+                  可以一次處理嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                目前一筆訂單只能選擇一種期數，<br />
+                如果您想訂兩種不同期數，<br />
+                請分兩次下單唷！<br />
+                這樣每份訂單都能被好好記錄、不會出錯，<br />
+                分開下單也方便您後續查詢與管理📋
+              </div>
+            </div>
+            <!-- card5 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">下錯訂單</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🐕<br />
+                  下錯訂單怎麼辦？<br />
+                  可以取消嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                可以的！訂單尚未出貨前都可以取消，<br />
+                只要聯繫客服取消即可。<br />
+                取消後若想重新選擇，<br />
+                也可以馬上再下新訂單😊
+              </div>
+            </div>
+            <!-- card6 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">食材問題</div>
+              <div class="question-section">
+                <div class="question-text">
+                  ❌<br />
+                  訂閱扣款後後悔了，<br />
+                  可以退款嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                若商品尚未出貨，可以申請退款；<br />
+                如已開始準備或出貨，將無法取消與退款。<br />
+                也希望您下訂前再確認一次唷～
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 內容與安全 -->
+        <div id="safety" class="tab-content">
+          <section class="cards">
+            <!-- card1 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">商品安全</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🧼<br />
+                  商品都是安全的嗎？<br />
+                  有經過檢驗嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                我們挑選的每樣產品都經過<br />
+                嚴格把關與挑選，<br />
+                包含食品皆來自合格廠商，<br />
+                並標示清楚來源與成分。<br />
+                讓每一次開箱都安心又暖心🥰
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">不喜歡內容</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🥩<br />
+                  我家毛孩會挑食，<br />
+                  內容不喜歡怎麼辦？
+                </div>
+              </div>
+              <div class="answer-section">
+                我們理解每隻毛孩都有自己的小脾氣～<br />
+                因此您可以在訂閱時填寫偏好，<br />
+                我們會儘量配對！<br />
+                如果還是不喜歡，也歡迎您提供回饋，<br />
+                幫助我們越選越好✨
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">保存期限</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🧊<br />
+                  食品有保存期限嗎？<br />
+                  怎麼保存比較好？
+                </div>
+              </div>
+              <div class="answer-section">
+                有的唷！<br />
+                所有食品皆有清楚的保存期限標示。<br />
+                收到後建議盡快食用，或放置陰涼處保存，<br />
+                零食類可冷藏、用品類請常溫保存。<br />
+                我們也會附上保存提醒小卡💡
+              </div>
+            </div>
+            <!-- card4 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">不合預期</div>
+              <div class="question-section">
+                <div class="question-text">
+                  💬<br />
+                  收到不適合毛孩的東西，<br />
+                  可以退換嗎？
+                </div>
+              </div>
+              <div class="answer-section">
+                若商品有明顯損壞或寄錯，<br />
+                我們會提供更換服務。<br />
+                但基於驚喜盒性質，<br />
+                一般情況下不提供退換。<br />
+                建議訂閱前填寫清楚偏好與注意事項唷！<br />
+                我們會盡力照顧好每隻毛孩的需求❤️
+              </div>
+            </div>
+            <!-- card5 -->
+            <div class="card-container theme-tertiary">
+              <div class="top-bubble">零食太多</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🐕<br />
+                  一次收到太多零食<br />
+                  吃不完怎麼辦？
+                </div>
+              </div>
+              <div class="answer-section">
+                我們每盒的份量都經過設計，<br />
+                不會太多太負擔。<br />
+                若真的吃不完，<br />
+                建議冷藏保存或與毛友分享～
+              </div>
+            </div>
+            <!-- card6 -->
+            <div class="card-container theme-primary">
+              <div class="top-bubble">訂閱盒內容</div>
+              <div class="question-section">
+                <div class="question-text">
+                  🎲<br />
+                  每次的內容物會<br />
+                  有哪些類型的商品？
+                </div>
+              </div>
+              <div class="answer-section">
+                每盒都包含零食、保健罐頭、<br />
+                生活小物或玩具等類型。<br />
+                我們會依訂閱方案&主題做搭配，<br />
+                讓毛孩每月都有不同體驗！<br />
+                實用又有趣 🐶🎁
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <img
+      src="/mofudays/assets/FAQ_footprint_patten-B3NQqiV4.svg"
+      alt="dog-paw"
+      class="dog-paw d-none d-lg-block"
+    />
+    <footer class="footer">
+  <!-- footer info -->
+  <div class="footer-info">
+    <div class="container">
+      <div class="d-md-flex text-center text-md-start align-items-center">
+        <!-- footer-left -->
+        <div class="container">
+          <div
+            class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 mb-0">
+              <a href="index.html"
+                ><img
+                  src="/mofudays/assets/footer-logo-DNsVksMy.png"
+                  alt="logo"
+                  class="footer-logo"
+              /></a>
+            </div>
+            <div
+              class="d-inline-flex flex-column align-items-center align-items-md-start text-start gap-3 mx-auto footer-contact"
+            >
+              <div>
+                <p class="mb-md-4 d-none d-md-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    /></svg
+                  >02-27341788
+                </p>
+                <a
+                  href="mailto:ervice.maorihe@gmail.com"
+                  class="d-flex footer-link mb-4 d-none d-md-flex"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <p>service.maorihe@gmail.com</p>
+                </a>
+              </div>
+
+              <div class="mb-md-0 mb-32 d-flex gap-2">
+                <a href="#" class="btn social-btn" aria-current="page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-at-sign-icon lucide-at-sign"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+                ></a>
+              </div>
+
+              <div
+                class="d-inline-flex d-md-none flex-column align-items-start text-start gap-3 mx-auto footer-contact mb-40"
+              >
+                <p class="d-flex align-items-center gap-2 mb-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    />
+                  </svg>
+                  <span>02-27341788</span>
+                </p>
+                <a
+                  href="mailto:service.maorihe@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span>service.maorihe@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-right -->
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-4 gap-md-0"
+          >
+            <!-- resource card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  外部資源
+                </li>
+                <li class="py-2"><a href="#">寵物殯葬</a></li>
+                <li class="py-2"><a href="#">寵物醫療</a></li>
+                <li class="py-2"><a href="#">寵物保險</a></li>
+                <li class="py-2"><a href="#">浪浪援助</a></li>
+              </ul>
+            </div>
+            <!-- faq card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  常見問題
+                </li>
+                <li class="py-2"><a href="faq.html">FAQ</a></li>
+                <li class="py-2"><a href="faq.html">物流配送</a></li>
+                <li class="py-2"><a href="#">退換貨政策</a></li>
+                <li class="py-2"><a href="#">細則與條款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#top" class="footer-link">
+        <button type="button" class="btn btn-totop rounded-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"
+          >
+            <path
+              d="M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- copyright declaration -->
+  <div class="footer-copyright text-center">
+    <p>© Copyright 2025 MAORIHE. All Rights Reserved</p>
+  </div>
+</footer>
+
+    <script>
+      // JS 控制 tab 切換
+      const tabs = document.querySelectorAll(".faq-tabs .nav-link");
+      const contents = document.querySelectorAll(".tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // 移除所有 active
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          // 加回點擊的 active
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

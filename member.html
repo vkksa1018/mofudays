@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" crossorigin href="/mofudays/assets/all-C8AUUYxK.css">
+  </head>
+  <body>
+    <header class="container" id="top">
+  <nav
+    class="navbar navbar-expand-lg bg-body-white border navbar shadow-sm py-5 px-7"
+  >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- 左邊：logo -->
+      <div>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="/mofudays/assets/maorihe_logo_defalut-CrImTCZZ.svg"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+      </div>
+
+      <!-- 右邊（手機）：list＋cart -->
+      <div class="d-lg-none d-sm-none d-flex align-items-center gap-4 ms-auto">
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu" class="nav-menu-icon"></i>
+        </button>
+
+        <a class="nav-link p-0 cart-btn" href="cart.html" aria-label="Cart">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+              class="nav-icon"
+            />
+            <circle
+              cx="80"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <circle
+              cx="184"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <path
+              d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- 右邊(桌機）：list＋cart -->
+      <div class="d-none d-sm-flex d-lg-flex ms-auto align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 最新消息 -->
+            <li class="nav-item me-6">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#newsModal"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+                >
+                  <path d="M15 18h-5" />
+                  <path d="M18 14h-8" />
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                  />
+                  <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+                >最新消息</a
+              >
+            </li>
+            <!-- 毛孩照護 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" href="blog.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+                >
+                  <path
+                    d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" /></svg
+                >毛孩照護</a
+              >
+            </li>
+            <!-- 會員下拉選單 -->
+            <li class="nav-item dropdown me-5 d-flex">
+              <img
+                src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+                alt="avatar"
+                class="rounded-circle nav-avatar"
+              />
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                使用者名稱<i
+                  data-lucide="chevron-down"
+                  class="caret-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu mt-5 text-center">
+                <li>
+                  <a class="dropdown-item" href="member.html">訂單管理</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">個人資料管裡</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">會員專屬活動</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">我的評價</a>
+                </li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </li>
+            <!-- 購物車 -->
+            <li class="nav-item d-none d-md-flex">
+              <a class="nav-link cart-btn" href="cart.html">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                    class="nav-icon"
+                  />
+                  <circle
+                    cx="80"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <circle
+                    cx="184"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <path
+                    d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機:offcanva -->
+  <div
+    class="offcanvas offcanvas-top offcanvas-mobile-full d-md-none"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+    data-bs-scroll="true"
+  >
+    <div
+      class="offcanvas-body d-flex flex-column align-items-center justify-content-between px-4 py-4"
+    >
+      <!-- 上半：主選單 -->
+      <nav class="w-100" aria-label="Mobile main">
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 mt-3 me-3 z-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <ul class="list-mb list-unstyled mb-4">
+          <li class="nav-item py-3 border-bottom text-center">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#newsModal"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+              >
+                <path d="M15 18h-5" />
+                <path d="M18 14h-8" />
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                />
+                <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+              >最新消息</a
+            >
+          </li>
+          <li class="nav-item text-center py-3">
+            <a class="nav-link" href="blog.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+              >
+                <path
+                  d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                />
+                <path d="M15 15h6" />
+                <path d="M18 12v6" /></svg
+              >毛孩照護</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 會員區塊（符合你的稿：大頭貼＋名稱＋功能清單） -->
+      <div class="w-100 text-center my-2">
+        <div
+          class="d-flex align-items-center justify-content-center gap-2 mb-md-3 py-2"
+        >
+          <img
+            src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+            alt="avatar"
+            class="rounded-circle"
+            style="width: 44px; height: 44px"
+          />
+          <div class="fw-medium">使用者名稱</div>
+        </div>
+        <ul class="list-unstyled mx-auto" style="max-width: 320px">
+          <li class="py-3">
+            <a class="nav-link" href="member.html">訂單管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">個人資料管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">會員專屬活動</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">我的評價</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link text-primary" href="#">登出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</header>
+    <main class="member-center position-relative mb-80">
+      <div class="container">
+        
+        <img src="data:image/png;base64,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" alt="黃色裝飾" class="position-absolute yellow-patten-1 z-3">
+        <img src="data:image/png;base64,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" alt="綠色裝飾" class="position-absolute green-patten-1 me-0 z-3">
+        
+        
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10  position-relative">
+            <div class="d-flex flex-column-reverse flex-lg-row align-items-center align-items-lg-end justify-content-center justify-content-lg-between gap-4 mt-16 mb-24">
+               <img src="data:image/png;base64,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"
+                    alt="三個小腳掌"
+                    class="foot-print" aria-hidden="true">
+              <ul
+                class="nav nav-pills d-flex align-items-end flex-fill ps-80"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member active rounded-pill"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="true"
+                  >
+                    <span class="icon-user-round-pen align-bottom"></span
+                    ><span class="ms-2">會員資料</span>
+                  </button>
+                </li>
+                <li class="nav-item me-16" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-orderlists-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-orderlists"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-orderlists"
+                    aria-selected="false"
+                  >
+                    <span class="icon-receipt-text align-bottom"></span
+                    ><span class="ms-2">訂單管理</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="btn button-outline-primary btn-member rounded-pill"
+                    id="pills-exclusives-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-exclusives"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-exclusives"
+                    aria-selected="false"
+                  >
+                    <span class="icon-ticket-check align-bottom"></span
+                    ><span class="ms-2">會員專屬活動</span>
+                  </button>
+                </li>
+              </ul>
+              <img src="/mofudays/assets/member_personal_1-CSdJ-YBI.png" alt="狗狗看著主人訂閱圖" class="member-img-tab flex-fill">
+            </div>
+            <div class="tab-content p-48 bg-yellow bg-radius py-40 px-55 position-relative" id="pills-tabContent">
+              
+              <!-- 會員資料 -->
+              <div
+                class="member-data tab-pane fade show active"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabindex="0"
+              >
+                <form class="needs-validation" novalidate>
+                  <div class="mb-40">
+
+                    <h2 class="h h2 text-primary-500 mt-16 mb-32 ">
+                      <span class="icon-user me-2"></span>會員資料
+                    </h2>
+
+                    <div  class="mb-56 ps-8 position-relative">
+                      <!-- <img src="../assets/images/member/hero_yellow_patten.png" alt="" class="position-absolute yellow-patten-2 z-3">
+                      <img src="../assets/images/member/hero_green_patten.png" alt="" class="position-absolute green-patten-2 z-3"> -->
+                      <label for="user-name" class="form-label p1">姓名</label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-name"
+                          placeholder="請輸入姓名"
+                          maxlength="20"
+                          required
+                        />
+                          <i class="icon icon-user-round-pen position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">
+                        姓名不得為空或是超過20個字!
+                      </div>
+                    </div>
+                    <div  class="mb-56 ps-8 position-relative">
+                      <label for="user-nick-name" class="form-label p1"
+                        >暱稱</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control pe-5"
+                          id="user-nick-name"
+                          placeholder="請輸入暱稱"
+                        />
+                        <i class="icon icon-file-user position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+                    </div>
+                    <div  class="mb-56 ps-8 position-relative ">
+                      <label for="birthday" class="form-label p1">生日</label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="birthday"
+                          placeholder="請輸入生日, 例如: 1991/10/09"
+                          required
+                        />
+                        <i class="icon icon-cake position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">
+                        請輸入正確年月日! 例如: 1991/10/09
+                      </div>
+                    </div>
+
+                    <div  class="mb-56 ps-8 position-relative">
+                      <label for="email" class="form-label p1">Email</label>
+                      <div class="input-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          placeholder="請輸入電子信箱"
+                          autocomplete="email"
+                          inputmode="email"
+                          required
+                        />
+                        <div class="icon icon-mail position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                      </div>
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">請輸入正確電子信箱!</div>
+                    </div>
+
+                    <div  class="mb-56 ps-8 position-relative">
+                      <label for="mobile" class="form-label p1">手機號碼</label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="mobile"
+                          placeholder="請輸入手機號碼"
+                          maxlength="10"
+                          required
+                        />
+                        <i class="icon icon-smartphone position-absolute top-50 end-0 translate-middle-y me-3 "></i>
+                      </div>
+                      <div class="valid-tooltip">正確!</div>
+                      <div class="invalid-tooltip">請輸入手機號碼!</div>
+                    </div>
+
+                    <div  class="mb-56 ps-8">
+                      <label for="address" class="form-label p1"
+                        >住家地址</label
+                      >
+                      <div id="address" class="row g-3 g-lg-4">
+                        <div class="col-md-3 position-relative">
+                          <select class="form-select" id="city" required>
+                            <option selected disabled value="">縣/市</option>
+                            <option>台北市</option>
+                            <option>台中市</option>
+                            <option>高雄市</option>
+                          </select>
+                          <div class="invalid-tooltip">請選擇縣/市!</div>
+                        </div>
+
+                        <div class="col-md-3 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="zip"
+                            placeholder="郵遞區號"
+                            required
+                          />
+                          <div class="invalid-tooltip">請輸入郵遞區號!</div>
+                        </div>
+
+                        <div class="col-md-6 position-relative">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="addres"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
+                          <div class="invalid-tooltip">請輸入地址!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="shipping-info mb-4 position-relative">
+                    <h2 class="h h2 text-primary-500 mb-32">
+                      <span class="icon-shopping-bag me-2"></span>送貨資料
+                    </h2>
+
+                    <img src="/mofudays/assets/member_shipping_cart-B7lA-zEI.png" alt="行進中的貨車圖" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-2">
+                    <img src="/mofudays/assets/about-bg-Bp0RH9Jx.png" alt="黃色底框" class="position-absolute img-shipping-cart img-shake top-0 end-0 z-1">
+                    <img src="/mofudays/assets/member_waiting_dog-vB5uX1KZ.png" alt="等待中的小狗狗" class="position-absolute img-waiting-dog transform-x img-shake top-1 end-1 z-1">
+
+                    <div  class="mb-3 ps-8">
+                      <label for="shipping-address" class="form-label p1"
+                        >送達地址</label
+                      >
+                      <div id="shipping-address" class="row g-3 g-lg-4">
+                        <div class="col-md-3 position-relative">
+                          <select
+                            class="form-select"
+                            id="shipping-city"
+                            required
+                          >
+                            <option selected disabled value="">縣/市</option>
+                            <option>台北市</option>
+                            <option>台中市</option>
+                            <option>高雄市</option>
+                          </select>
+                          <div class="invalid-tooltip">請選擇縣/市!</div>
+                        </div>
+
+                        <div class="col-md-3 position-relative">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="shipping-zip"
+                            placeholder="郵遞區號"
+                            required
+                          />
+                          <div class="invalid-tooltip">請輸入郵遞區號!</div>
+                        </div>
+
+                        <div class="col-md-6 position-relative">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="shipping-addr"
+                              placeholder="地址"
+                              required
+                            />
+                            <div class="icon icon-map-pin-house position-absolute top-50 end-0 translate-middle-y me-3 "></div>
+                          </div>
+                          <div class="invalid-tooltip">請輸入送達地址!</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-80">
+                    <button
+                        type="submit"
+                        class="btn btn-save rounded-pill align-bottom "
+                      >
+                        存檔
+                      </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- 訂單內容 -->
+              <div
+                  class="member-orderlist tab-pane fade mt-16"
+                  id="pills-orderlists"
+                  role="tabpanel"
+                  aria-labelledby="pills-orderlists-tab"
+                  tabindex="0"
+                >
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active p1 fw-500"
+                        id="all-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#all-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="all-orderlist-pane"
+                        aria-selected="true"
+                      >
+                        總覽
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link p1 fw-500"
+                        id="not-paid-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#not-paid-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="not-paid-orderlist-pane"
+                        aria-selected="false"
+                      >
+                        未結帳
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link p1 fw-500"
+                        id="paid-orderlist-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#paid-orderlist-pane"
+                        type="button"
+                        role="tab"
+                        aria-controls="paid-orderlist-pane"
+                        aria-selected="false"
+                      >
+                        已結帳
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div
+                      class="tab-pane fade show active orderlist-table-wrap"
+                      id="all-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="all-orderlist"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/10</td>
+                            <td><a href="">新手爸媽安心組</br><span class="order-number">訂單編號 #00003</span></a></td>
+                            <td>$699</td>
+                            <td>3</td>
+                            <td>$2097</td>
+                            <td>-</td>
+                            <td>待結帳</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/09</td>
+                            <td><a href="">青春汪能量補給包</br><span class="order-number">訂單編號 #00002</span></a></td>
+                            <td>$699</td>
+                            <td>2</td>
+                            <td>$1398</td>
+                            <td>2025/08/12</td>
+                            <td>運送中</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/03</td>
+                            <td><a href="">牛氣補補能量盒</br><span class="order-number">訂單編號 #00001</span></a></td>
+                            <td>$699</td>
+                            <td>1</td>
+                            <td>$1699</td>
+                            <td>2025/08/06</td>
+                            <td>2025/08/05已取貨</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                    <div
+                      class="tab-pane fade orderlist-table-wrap"
+                      id="not-paid-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="not-paid-orderlist-tab"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/10</td>
+                            <td><a href="">新手爸媽安心組</br><span class="order-number">訂單編號 #00003</span></a></td>
+                            <td>$699</td>
+                            <td>3</td>
+                            <td>$2097</td>
+                            <td>-</td>
+                            <td>待結帳</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="tab-pane fade orderlist-table-wrap"
+                      id="paid-orderlist-pane"
+                      role="tabpanel"
+                      aria-labelledby="paid-orderlist-tab"
+                      tabindex="0"
+                    >
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">購買時間</th>
+                            <th scope="col">名稱/編號</th>
+                            <th scope="col">單價</th>
+                            <th scope="col">數量</th>
+                            <th scope="col">總金額</th>
+                            <th scope="col">預計最晚出貨日</th>
+                            <th scope="col">訂單狀態</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td scope="row">2025/08/09</td>
+                            <td><a href="">青春汪能量補給包<br/><span class="order-number">訂單編號 #00002</span></a></td>
+                            <td>$699</td>
+                            <td>2</td>
+                            <td>$1398</td>
+                            <td>2025/08/12</td>
+                            <td>運送中</td>
+                          </tr>
+                          <tr>
+                            <td scope="row">2025/08/03</td>
+                            <td><a href="">牛氣補補能量盒<br/><span class="order-number">訂單編號 #00001</span></a></td>
+                            <td>$699</td>
+                            <td>1</td>
+                            <td>$1699</td>
+                            <td>2025/08/06</td>
+                            <td>已取貨(2025/08/05)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-end mt-48">
+                            <img src="/mofudays/assets/pet-toy-DnDD_y9v.png" alt="寵物玩具圖, 包含狗骨頭和兩個球" class="img-pet-toy img-shake">
+                            <img src="/mofudays/assets/pet_snack-DGGdTwdt.png" alt="寵物點心包" class="img-pet-snack img-shake">
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <div class="pagination justify-content-center align-bottom mt-16 mb-32">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </div>
+                  </nav>
+              </div>
+
+              <!-- 會員專屬活動 -->
+              <div
+                class="tab-pane fade theme-event"
+                id="pills-exclusives"
+                role="tabpanel"
+                aria-labelledby="pills-exclusives-tab"
+                tabindex="0"
+              >
+              <!-- 會員專屬優惠 - 毛寶貝開箱秀 -->
+              <div class="unbox mt-16 mb-132">
+                <img src="/mofudays/assets/member_open_box-DGvg0C3q.png" alt="毛寶貝開箱秀活動圖" class="position-absolute end-0 img-open-box img-shake">
+                <h2 class="h2 text-center unbox-title mb-12">毛寶貝開箱秀</h2>
+                <h4 class="h4 text-center text-secondary-500 mb-4">秀出你的小可愛!</h4>
+                <p class=" mb-36 text-center text-teritary-500 p2 fw-500">拍下寶貝開箱的照片或影片並投稿分享，即有機會獲得會員點數與專屬小禮物哦~</p>
+                <div class="row row-cols-1 row-cols-md-4 row-cols-sm-1 g-4 mb-24">
+                  <div id="petUnboxCarousel" class="carousel slide w-100" data-bs-ride="false" data-bs-interval="false" data-bs-wrap="true">
+                    <!-- 指示點（可選） -->
+                    <!-- <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="第 1 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="1" aria-label="第 2 頁"></button>
+                    </div> -->
+
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="第 1 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="1" aria-label="第 2 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="2" aria-label="第 3 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="3" aria-label="第 4 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="4" aria-label="第 5 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="5" aria-label="第 6 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="6" aria-label="第 7 頁"></button>
+                      <button type="button" data-bs-target="#petUnboxCarousel" data-bs-slide-to="7" aria-label="第 8 頁"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                      <!-- Slide 1 -->
+                      <div class="carousel-item active">
+                        <div class="row g-4">
+                          <!-- 卡片 1 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <!-- 正面 -->
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_shiba-CWMh13oT.png" class="card-img-top" alt="豆豆">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">豆豆</h5>
+                                      <p class="card-text mb-0 p2">柴犬 5 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <!-- 背面 -->
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">豆豆</h6>
+                                  <p class="card-text-back mb-0 p3">「豆豆一看到開箱盒就立刻湊上來，眼神超專注，好像在當檢查官！裡面有小零食、玩具，還有專屬牠的寵物小卡，完全是柴隊長認證過的驚喜組合！」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片 2 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_chihwahwa-DMuI__wW.png" class="card-img-top object-position-right-center" alt="Haru">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">Haru</h5>
+                                      <p class="card-text mb-0 p2">哈士娃 1 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw object-position-center">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">Haru</h6>
+                                  <p class="card-text-back mb-0 p3">「Haru 戴上 Angry Bird 毛帽的同時，也開心迎接自己的驚喜盒！一邊賣萌一邊拆，發現裡面有最愛的小零食、玩具，還有一張專屬小卡，整個活動瞬間變成牠的派對秀啦！」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片 3 -->
+                          <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_poodle-DOlymdlG.png" class="card-img-top" alt="可可">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">可可</h5>
+                                      <p class="card-text mb-0 p2">貴賓犬 2 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">可可</h6>
+                                  <p class="card-text-back mb-0 p3">「可可小小的身影蹲在盒子旁，乖巧地等著開箱。當看到裡面有牠愛的小零食、可愛玩具，還有獨一無二的專屬寵物小卡，眼神都閃閃發亮，彷彿在說：『這是專屬於我的幸福禮物呢 💖』」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片 4 -->
+                          <div class="col-12 col-sm-6 col-md-3 d-none d-md-block">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_shapper-m8R51E7x.png" class="card-img-top" alt="奶昔">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">奶昔</h5>
+                                      <p class="card-text mb-0 p2">邊境牧羊犬 2 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">奶昔</h6>
+                                  <p class="card-text-back mb-0 p3">「奶昔一如既往地衝在最前面，奔跑的樣子就像把整個草原都踩在腳下 🐾！開箱盒一打開，小零食和玩具立刻成了牠的新目標，而那張專屬的小卡更讓人忍不住想珍藏。這份滿滿的能量，就是牠收到禮物時最真實的笑容！」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- /.row -->
+                      </div><!-- /.carousel-item -->
+
+                      <!-- 第二頁卡片 -->
+                      <div class="carousel-item">
+                        <div class="row g-4">
+                          <!-- 卡片5 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_pug-D3QIqrfv.png" class="card-img-top" alt="布丁">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">布丁</h5>
+                                      <p class="card-text mb-0 p2">巴哥犬 2 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">布丁</h6>
+                                  <p class="card-text-back mb-0 p3">「布丁最愛湊熱鬧，這次看到開箱盒眼睛都亮了 ✨！小零食、玩具一樣都不能少，還有專屬小卡更是讓主人感動。牠滿足的表情彷彿在說：『這是屬於我的驚喜大禮包！』」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片六 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_mix-DuVt-qDF.png" class="card-img-top" alt="阿福">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">阿福</h5>
+                                      <p class="card-text mb-0 p2">米克斯 4 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">阿福</h6>
+                                  <p class="card-text-back mb-0 p3">「阿福是一看到開箱盒就立刻衝上來的急先鋒 ！小零食和玩具馬上就被牠盯上，專屬寵物小卡讓主人心裡暖呼呼。果然米克斯的快樂能量，連開箱都特別熱鬧！」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- 卡片七 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_bomei-DY-JaT-6.png" class="card-img-top" alt="雪球&雪寶">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">雪球 & 雪寶</h5>
+                                      <p class="card-text mb-0 p2">博美 3 歲 / 3歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">雪球(右) & 雪寶(左)</h6>
+                                  <p class="card-text-back mb-0 p3">「開箱的瞬間，奶油和棉花立刻湊上來，兩顆小雪球擠在一起，一起分享這份驚喜。小零食讓牠們搖著小尾巴，玩具變成了搶來搶去的快樂源泉！」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <!-- 卡片8 -->
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <div class="flip-card h-100">
+                              <div class="flip-inner">
+                                <div class="flip-face flip-front">
+                                  <div class="p-1">
+                                    <img src="/mofudays/assets/member_mix_1-Vgh00PJv.jpg" class="card-img-top" alt="皮蛋">
+                                  </div>
+                                  <div class="d-flex justify-content-between p-16">
+                                    <div>
+                                      <h5 class="card-title mb-1">皮蛋</h5>
+                                      <p class="card-text mb-0 p2">米克斯 7 歲</p>
+                                    </div>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANZSURBVHgBzVhdctowEN6VDMlb/doZaM1jJ2RKTlB6gpAThJwg6QkCN6AnCDlB0xOEnoB0QpJHPCUzfQxvTcHWdmXzI4gNgsBMvxdLlrT+JH27WhngPwLCBkHdtgvO7ikBVbnWR4QbkIM6vj3wbcZvlIzq3bX5UZp77WMwOMDCQX/ZeAEbAnVvywlENDwlnDOwgDUZ6nZK1L2v0O+2l9SuBJTTxqIQx2ABZ1kH1oFHzs4F66DMNYAgC/R414Th4IvN0kdkAPqGvVldgWxC8OdS21q6MkpmahARMQgSVDXBmX4CWqlGUDQmY51sm0DVuORxtUQQNvjd9Yh0OvQsuONT6jecQcH0lCQBE9GlfFes6nLwq1MViBeJ31KqvmSbdl3+RGprEDgeP/wJuUAcKRnW2KXfc41dW1yJ/IfLSTuxrlKmz31LS8g8815nU1sdx/FnDBY+6HoV1gHSm4WaiQWKraQ23ncOZtHHV8FNWgOibC4NetR9YG9SWmDelAh9lfni2cu+HdaL8EKpXBkKnojysVC8mbZHGmybtkx7VhFYGwmlLPOHXJkZtkzRRsEuI45ZqBWen5swmrWDVzBU7L77LT25ka4+cmM/WpFcrKsJmVjp4pCLLm/BT+EMG4vOlNEstWdUwBJMoLnorIrIUO/hPPb9GaSeKYPHTskh/AZzy20JP0A6yuaKL/SDcYTNdpNG6Zlgbu/EfBf3z7STt8QafSb0eZ6QYC2U0kZwpK3MEXHjaPkqIhquXtnoaDDJIAnP2oTcOYf1tiYJ3sjelIwStMD34WpcjrYHySoVsIW2Z66OyOT3WymBzQcp6uNKKDNl2ALMXCeKwBjgiT7QdEzQJHQQijzJiLDs9lY5yapAIT9NyraDVK/ztAHhJkLk9yIeVplevK/bIRLZH2WPlmnn7taImLAiM0oNtofnOC1d5Xbgw3bgj48c+9uBoh+wBXAsa43L1mQ4ODZhG0A5Cawr3ShV7/56/qbwSvjs1oVxZaUbZQhhHTYITsJrZn0lMvro0LkvbABRDp2b3hw01rr4h73bBoI4hTVh3qVMrHXxl/n9s3VXSI9LIqLxql8i0+QaLQ5RaoVA9ThLSMZG/s9oUrBDhxRGPwf0OebFGQD6KDk9wb/fbX4Y/QOw0GwOicO7nQAAAABJRU5ErkJggg==" alt="小腳印" class="img-single-paw">
+                                  </div>
+                                </div>
+                                <div class="flip-face flip-back d-flex flex-column justify-content-center align-items-center text-center p-16">
+                                  <h6 class="card-title-back mb-4 fw-700">皮蛋</h6>
+                                  <p class="card-text-back mb-0 p3">「皮蛋一臉專注地守在開箱盒旁，好像在等著主人說一聲『可以開動！』小零食讓牠眼睛一亮，玩具馬上就被叼走，而那張專屬寵物小卡更是讓人心裡滿滿感動!」</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 控制箭頭 -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">上一頁</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#petUnboxCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">下一頁</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 會員專屬活動 - 會員限定優惠 -->
+              <div class="exclusive mb-132">
+                
+                <div class="exclusive-content">
+
+                  <div class="auto-show">
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                      <img src="/mofudays/assets/member_wave-C3rgcxe1.png" alt="小扇子裝飾圖" class="img-wave me-16 img-shake img-reveal">
+                      <div class="">
+                        <h2 class="h2 exclusive-title text-center">會員限定優惠</h2>
+                        <h4 class="h4 text-center text-secondary-500">夏日感謝祭</h4>
+                        <h4 class="h4 text-center text-secondary-500 mb-4">會員專屬優惠活動</h4>
+                      </div>
+                      <img src="/mofudays/assets/member_firework-sENUT4bG.png" alt="煙火裝飾圖" class="img-firework-1 ml-16 img-shake img-reveal">
+                    </div>
+                    <p class="text-center text-teritary-500 fw-500 p2 mb-4">每一位支持「毛日和」的你，都是我們最想感謝的存在！</p>
+                    <!-- <p class="text-center text-teritary-500 fw-500 p2 ">即日起完成續訂就送限定折扣、還有機會免費獲得「夏季限定沁涼盒」邀請你和毛孩一起，享受專屬的療癒時光!</p> -->
+                  </div>
+                  
+                  <div class="card mb-3 card-hover p-20 auto-show">
+                    <div class="row g-0">
+                      <div class="col-md-5 order-2 order-md-1">
+                        <div class="card-body text-center pt-200 d-flex flex-column justify-content-center align-items-center">
+                          <h3 class="h4 card-title mb-4 fw-900">即日​起​​續訂​就​送​限定​折扣!</h3>
+                          <p class="card-text p3 mb-4 fw-500">還​有​機會免​費​獲​得​「夏季​限定​沁涼盒」<br/>​邀請​你​和​毛孩​一起​享受​專屬​的​療癒​時光!</p>
+                          <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary rounded-pill btn-keep-subscribe" type="button">立即續訂</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-7 order-1 order-md-2">
+                        <div class="img-wrap h-100">
+                            <img src="/mofudays/assets/member_summer_exclusive-Guf83Ed7.png" class="img-fluid rounded-start summer_exclusive" alt="夏日感謝祭活動圖">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 會員專屬活動 - 主題活動 -->
+               <div class="theme-event">
+                <div class="auto-show">
+                  <div class="position-relative">
+                      <img src="/mofudays/assets/Illustration-feed-CCHKGMzT.png" alt="飼料裝飾圖" class="img-feed img-shake img-reveal">
+                      <h2 class="h2 text-center mb-2 text-primary-500 mb-4 title-lined">主題活動</h2>
+                      <h4 class="h4 text-center text-secondary-500 mb-4">專屬你與毛孩的特別時光 !</h4>
+                      <img src="/mofudays/assets/member_play-BlYB8F6O.png" alt="主人與狗狗互動圖" class="img-play img-shake img-reveal">
+                  </div>
+                  <p class=" mb-36 text-center text-teritary-500 p2 fw-500">9月~10月的會員專屬毛孩派對開跑啦！一起熱血 Show 出愛、探索寵物心聲，還有驚喜福袋等你來拿！</p>
+                </div>
+               
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="/mofudays/assets/theme_event_1-ufRF5B6L.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="毛​​麻吉​捐血犬活​動圖">
+                      <div class="card-body">
+                        <h6 class="card-title h6 fw-700 mb-4 " >毛​​麻吉​捐血犬活​動來啦!</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/19 - 20</p>
+                        <p class="card-text p4">現​場將​提供​獸醫​健檢、​健康​講座、​免​費狂犬​病​疫苗、​抽好禮，​還有​限量​10​組免​費血檢​名​額！​一起​「Show出熱血」，​加入​捐血​犬行列​吧！​</p>
+                      </div>
+                      <a href="./member_activities_1.html" class="text-center"><button class="btn b2 btn-primary rounded-pill btn-reserve" type="button">查看詳情</button></a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="/mofudays/assets/theme_event_2-B1r25vpp.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="寵物溝通師活動圖">
+                      <div class="card-body flex-1">
+                        <h6 class="card-title h6 fw-700 mb-4">想更了解毛寶貝嗎?</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/26 - 27</p>
+                        <p class="card-text p4 mb-1">狗勾其實也常使用尾巴、耳朵等等肢體語言，來向我們傳遞各式各樣的訊息!</p>
+                        <p class="card-text p4">特別邀請狗兒行為諮詢師 PAPA 老師來分享，快來一起聽懂、看懂牠們到底在想甚麼吧！</p>
+                      </div>
+                      <a href="./member_activities_2.html" class="text-center"><button class="btn b2 btn-primary rounded-pill btn-reserve" type="button">查看詳情</button></a>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100 theme-event-card p-2 fade-up">
+                      <img src="/mofudays/assets/theme_event_3-CILiQczS.png" class="card-img-top mb-6 theme-event-card img-hover-bigger" alt="福袋交換日活動圖">
+                      <div class="card-body">
+                        <h6 class="card-title h6 fw-700 mb-4">會員限定福袋互換日!</h6>
+                        <p class="card-text p3 fw-700 mb-2">活動日期:  9/26 - 27</p>
+                        <p class="card-text p4 mb-1">這個月，我們將舉辦一次「毛孩福袋互換」，參加者將獲得一份隨機的驚喜福袋！</p>
+                        <p class="card-text p4 mb-4">裡面可能有別人家毛孩最愛的玩具或點心，也許會是你的寶貝的新歡！</p>
+                        <small class="fw-700">📌本次活動採會員限定登記制，每人限額登記一份。</small>
+                      </div>
+                      <a href="./member_activities_3.html" class="text-center"><button class="btn b2 btn-primary rounded-pill btn-reserve" type="button">查看詳情</button></a>
+                    </div>
+                  </div>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+  <!-- footer info -->
+  <div class="footer-info">
+    <div class="container">
+      <div class="d-md-flex text-center text-md-start align-items-center">
+        <!-- footer-left -->
+        <div class="container">
+          <div
+            class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 mb-0">
+              <a href="index.html"
+                ><img
+                  src="/mofudays/assets/footer-logo-DNsVksMy.png"
+                  alt="logo"
+                  class="footer-logo"
+              /></a>
+            </div>
+            <div
+              class="d-inline-flex flex-column align-items-center align-items-md-start text-start gap-3 mx-auto footer-contact"
+            >
+              <div>
+                <p class="mb-md-4 d-none d-md-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    /></svg
+                  >02-27341788
+                </p>
+                <a
+                  href="mailto:ervice.maorihe@gmail.com"
+                  class="d-flex footer-link mb-4 d-none d-md-flex"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <p>service.maorihe@gmail.com</p>
+                </a>
+              </div>
+
+              <div class="mb-md-0 mb-32 d-flex gap-2">
+                <a href="#" class="btn social-btn" aria-current="page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-at-sign-icon lucide-at-sign"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+                ></a>
+              </div>
+
+              <div
+                class="d-inline-flex d-md-none flex-column align-items-start text-start gap-3 mx-auto footer-contact mb-40"
+              >
+                <p class="d-flex align-items-center gap-2 mb-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    />
+                  </svg>
+                  <span>02-27341788</span>
+                </p>
+                <a
+                  href="mailto:service.maorihe@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span>service.maorihe@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-right -->
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-4 gap-md-0"
+          >
+            <!-- resource card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  外部資源
+                </li>
+                <li class="py-2"><a href="#">寵物殯葬</a></li>
+                <li class="py-2"><a href="#">寵物醫療</a></li>
+                <li class="py-2"><a href="#">寵物保險</a></li>
+                <li class="py-2"><a href="#">浪浪援助</a></li>
+              </ul>
+            </div>
+            <!-- faq card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  常見問題
+                </li>
+                <li class="py-2"><a href="faq.html">FAQ</a></li>
+                <li class="py-2"><a href="faq.html">物流配送</a></li>
+                <li class="py-2"><a href="#">退換貨政策</a></li>
+                <li class="py-2"><a href="#">細則與條款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#top" class="footer-link">
+        <button type="button" class="btn btn-totop rounded-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"
+          >
+            <path
+              d="M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- copyright declaration -->
+  <div class="footer-copyright text-center">
+    <p>© Copyright 2025 MAORIHE. All Rights Reserved</p>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      (function () {
+        const carouselEl = document.getElementById('petUnboxCarousel');
+        const innerEl = carouselEl.querySelector('.carousel-inner');
+        const indicatorsEl = carouselEl.querySelector('.carousel-indicators');
+
+        // 一次收集所有卡片（依原本順序），並在收集時拿掉 d-none 之類的顯示限制
+        const allCardCols = Array.from(
+          carouselEl.querySelectorAll('.carousel-item .row > div')
+        ).map(col => {
+          const clone = col.cloneNode(true);
+          clone.classList.remove('d-none');            // 去掉 d-none
+          clone.classList.remove('d-md-block');        // 防止小尺寸被隱藏
+          return clone;
+        });
+
+        // 依視窗寬度決定一頁幾張
+        function getGroupSize() {
+          const w = window.innerWidth;
+          if (w <= 576) return 1;        // 1 張/頁（手機）
+          if (w < 768) return 2;         // 2 張/頁（sm 區間）
+          return 4;                      // 4 張/頁（md+）
+        }
+
+        let lastGroupSize = null;
+        let bsInstance = null;
+
+        function rebuild() {
+          const groupSize = getGroupSize();
+          if (groupSize === lastGroupSize) return;      // 尺寸區間沒變就不重建
+          lastGroupSize = groupSize;
+
+          // 先關閉既有的 Carousel 實例，避免狀態混亂
+          if (bsInstance) {
+            bsInstance.dispose();
+            bsInstance = null;
+          }
+
+          // 清空內容與指示點
+          innerEl.innerHTML = '';
+          indicatorsEl.innerHTML = '';
+
+          // 依 groupSize 重新分組建立 .carousel-item
+          const total = allCardCols.length;
+          let slideIndex = 0;
+          for (let i = 0; i < total; i += groupSize) {
+            const itemEl = document.createElement('div');
+            itemEl.className = 'carousel-item' + (i === 0 ? ' active' : '');
+
+            const rowEl = document.createElement('div');
+            rowEl.className = 'row g-4';
+
+            for (let j = i; j < i + groupSize && j < total; j++) {
+              rowEl.appendChild(allCardCols[j].cloneNode(true));
+            }
+
+            itemEl.appendChild(rowEl);
+            innerEl.appendChild(itemEl);
+
+            // 指示點同步重建
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.setAttribute('data-bs-target', '#petUnboxCarousel');
+            btn.setAttribute('data-bs-slide-to', String(slideIndex));
+            btn.setAttribute('aria-label', `第 ${slideIndex + 1} 頁`);
+            if (slideIndex === 0) {
+              btn.classList.add('active');
+              btn.setAttribute('aria-current', 'true');
+            }
+            indicatorsEl.appendChild(btn);
+
+            slideIndex++;
+          }
+
+          // 重新啟動 Carousel（保留你原本的設定）
+          bsInstance = new bootstrap.Carousel(carouselEl, {
+            interval: false,
+            ride: false,
+            wrap: true
+          });
+        }
+
+        // 初次建立 + resize 時（加上簡單 debounce）
+        let t = null;
+        window.addEventListener('resize', () => {
+          clearTimeout(t);
+          t = setTimeout(rebuild, 60);
+        });
+
+        rebuild();
+      })();
+    </script>
+  </body>
+</html>

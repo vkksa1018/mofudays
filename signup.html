@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ZH-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入</title>
+  <script type="module" crossorigin src="/mofudays/assets/main-CSp2vPyx.js"></script>
+  <link rel="stylesheet" crossorigin href="/mofudays/assets/all-C8AUUYxK.css">
+</head>
+
+<body>
+    <header class="container" id="top">
+  <nav
+    class="navbar navbar-expand-lg bg-body-white border navbar shadow-sm py-5 px-7"
+  >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- 左邊：logo -->
+      <div>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="/mofudays/assets/maorihe_logo_defalut-CrImTCZZ.svg"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+      </div>
+
+      <!-- 右邊（手機）：list＋cart -->
+      <div class="mobile-menu d-flex align-items-center gap-4 ms-auto">
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu" class="nav-menu-icon"></i>
+        </button>
+
+        <a class="nav-link p-0 cart-btn" href="cart.html" aria-label="Cart">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+              class="nav-icon"
+            />
+            <circle
+              cx="80"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <circle
+              cx="184"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <path
+              d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- 右邊（桌機）：list＋cart -->
+      <div class="desktop-menu ms-auto align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 最新消息 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" aria-current="page" href="news.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+                >
+                  <path d="M15 18h-5" />
+                  <path d="M18 14h-8" />
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                  />
+                  <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+                >最新消息
+              </a>
+            </li>
+            <!-- 毛孩照護 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" href="blog.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+                >
+                  <path
+                    d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" /></svg
+                >毛孩照護</a
+              >
+            </li>
+            <!-- 會員登入 -->
+            <li class="nav-item me-5">
+              <a href="login.html"
+                ><button class="btn login-btn rounded-pill">登入會員</button></a
+              >
+            </li>
+            <!-- <a href="login.html"><button
+              type="button"
+              class="btn btn-outline-primary rounded-pill btn-login me-5"
+            >
+              登入會員
+            </button></a>
+             -->
+            <!-- 購物車 -->
+            <li class="nav-item">
+              <a class="nav-link cart-btn" href="cart.html">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                    class="nav-icon"
+                  />
+                  <circle
+                    cx="80"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <circle
+                    cx="184"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <path
+                    d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 手機:offcanva -->
+  <div
+    class="offcanvas offcanvas-top offcanvas-mobile-full d-md-none"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+    data-bs-scroll="true"
+  >
+    <div
+      class="offcanvas-body d-flex flex-column align-items-center justify-content-between px-4 py-4"
+    >
+      <!-- 上半：主選單 -->
+      <nav class="w-100" aria-label="Mobile main">
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 mt-3 me-3 z-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <ul class="list-mb list-unstyled mb-4">
+          <li class="nav-item py-3 border-bottom text-center">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#newsModal"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+              >
+                <path d="M15 18h-5" />
+                <path d="M18 14h-8" />
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                />
+                <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+              >最新消息</a
+            >
+          </li>
+          <li class="nav-item text-center py-3">
+            <a class="nav-link" href="blog.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+              >
+                <path
+                  d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                />
+                <path d="M15 15h6" />
+                <path d="M18 12v6" /></svg
+              >毛孩照護</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 登入按鈕 -->
+      <div class="w-100 text-center my-2">
+        <li class="nav-item">
+          <a href="login.html"
+            ><button class="btn login-btn rounded-pill">登入會員</button></a
+          >
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</header>
+    <main>
+    <nav class="announcement">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- 位置 1 - 較大空白 -->
+      <div class="col-3"></div>
+
+      <!-- 位置 2 - 公告訊息區 -->
+      <div class="col-4">
+        <div
+          id="announcementCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="mb-0">新註冊會員：首單現折$60</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">滿千免運優惠中！</p>
+            </div>
+            <div class="carousel-item">
+              <p class="mb-0">訂閱禮盒，每月驚喜送到家</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 位置 3 - 小間距 -->
+      <div class="col-1"></div>
+
+      <!-- 位置 4 - 註冊按鈕 -->
+      <div class="col-2 text-center">
+        <a href="signup.html">
+          <button type="button" class="btn btn-signup py-1 px-2">
+            立即註冊
+          </button>
+        </a>
+      </div>
+
+      <!-- 位置 5 - 較大空白 -->
+      <div class="col-2"></div>
+    </div>
+  </div>
+</nav>
+      <div class="container login-section py-9">
+        <div class="split-card overflow-hidden">
+          <div class="row g-0">
+            <!-- 輪播圖 -->
+            <section class="col-6 d-none p-0 d-md-block col-img">
+              <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active h-100" data-bs-interval="10000">
+                    <img src="/mofudays/assets/login-slider-01-CXgJle9A.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-01">
+                  </div>
+                  <div class="carousel-item h-100" data-bs-interval="2000">
+                    <img src="/mofudays/assets/login-slider-02-DBHqoLk_.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-02">
+                  </div>
+                  <div class="carousel-item h-100">
+                    <img src="/mofudays/assets/login-slider-03-U180-eCe.png" class="d-block w-100 h-100 carousel-img" alt="login-slider-03">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon d-none" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </section>
+            <!-- 登入表單 -->
+            <section class="col-12 col-md-6 p-0">
+              <div class="signup-form">
+                <form action="" class="needs-validation" novalidate>
+                  <div class="text-center mb-7">
+                    <h2 class="text-brown-500 mb-4">會員註冊</h2>
+                    <p class="text-brown-500">請填寫下方個人資料，以完成註冊流程!</p>
+                  </div>
+                  <!-- 姓名 -->
+                  <div class="mb-4 d-flex align-items-center">
+                    <label for="name" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">姓名<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="name" placeholder="輸入你的姓名" required> 
+                    </div>
+                  </div>
+                  <!-- 暱稱 -->
+                  <div class="mb-5 d-flex align-items-center">
+                    <label for="nickname" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">暱稱</label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="nickname" placeholder="輸入你的用戶暱稱">
+                    </div>
+                  </div>
+                
+                  <!-- 生日 -->
+                  <div class="mb-5 d-flex align-items-center">
+                     <label for="birthday" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">生日<sup class="inp-required">*</sup></label>
+                     <div class="w-100">
+                        <input type="date" class="form-control w-100" id="birthday" placeholder="西元年/月/日" required>
+                     </div>
+                  </div>
+                  <!-- 手機 -->
+                  <div class="mb-5 d-flex align-items-center">
+                    <label for="phone" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">手機<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                        <input type="tel" class="form-control w-100" id="phone" placeholder="輸入你的手機號碼" required>
+                    </div>
+                  </div>
+                <!-- 信箱 -->
+                 <div class="mb-5 d-flex align-items-center">
+                    <label for="email" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">電子信箱<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="email" placeholder="輸入你的信箱" required>
+                    </div>
+                  </div>
+                  <!-- 密碼 -->
+                 <div class="mb-5 d-flex align-items-center">
+                    <label for="password" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">密碼<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="password" class="form-control w-100" id="password" placeholder="輸入你的密碼" required>
+                    </div>
+                 </div>
+                 <!-- 確認密碼 -->
+                <div class="mb-5 d-flex align-items-center">
+                    <label for="password-confirm" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">確認密碼<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="password" class="form-control w-100" id="password-confirm" placeholder="再次輸入你的密碼" required>
+                    </div>
+                </div>
+                <!-- 地址 -->
+                <div class="mb-5 d-flex align-items-center mb-6">
+                    <label for="address" class="form-label flex-shrink-0 col-2 me-2 text-brown-500">地址<sup class="inp-required">*</sup></label>
+                    <div class="w-100">
+                      <input type="text" class="form-control w-100" id="address" placeholder="輸入你的通訊地址" required>
+                    </div>
+                </div>
+                <!-- 立即加入按鈕 -->
+                <div class="d-grid mb-9">
+                    <button class="btn btn-form-login w-100" type="submit">立即加入</button>
+                </div>
+                <!-- 註冊連結 -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <p class="mb-0 me-2 text-brown-300">已經是會員？</p>
+                    <a href="login.html"><button type="button" class="btn btn-form-signup fw-bold">立即登入</button></a>
+                </div>
+
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+  <!-- footer info -->
+  <div class="footer-info">
+    <div class="container">
+      <div class="d-md-flex text-center text-md-start align-items-center">
+        <!-- footer-left -->
+        <div class="container">
+          <div
+            class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 mb-0">
+              <a href="index.html"
+                ><img
+                  src="/mofudays/assets/footer-logo-DNsVksMy.png"
+                  alt="logo"
+                  class="footer-logo"
+              /></a>
+            </div>
+            <div
+              class="d-inline-flex flex-column align-items-center align-items-md-start text-start gap-3 mx-auto footer-contact"
+            >
+              <div>
+                <p class="mb-md-4 d-none d-md-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    /></svg
+                  >02-27341788
+                </p>
+                <a
+                  href="mailto:ervice.maorihe@gmail.com"
+                  class="d-flex footer-link mb-4 d-none d-md-flex"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <p>service.maorihe@gmail.com</p>
+                </a>
+              </div>
+
+              <div class="mb-md-0 mb-32 d-flex gap-2">
+                <a href="#" class="btn social-btn" aria-current="page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-at-sign-icon lucide-at-sign"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+                ></a>
+              </div>
+
+              <div
+                class="d-inline-flex d-md-none flex-column align-items-start text-start gap-3 mx-auto footer-contact mb-40"
+              >
+                <p class="d-flex align-items-center gap-2 mb-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    />
+                  </svg>
+                  <span>02-27341788</span>
+                </p>
+                <a
+                  href="mailto:service.maorihe@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span>service.maorihe@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-right -->
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-4 gap-md-0"
+          >
+            <!-- resource card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  外部資源
+                </li>
+                <li class="py-2"><a href="#">寵物殯葬</a></li>
+                <li class="py-2"><a href="#">寵物醫療</a></li>
+                <li class="py-2"><a href="#">寵物保險</a></li>
+                <li class="py-2"><a href="#">浪浪援助</a></li>
+              </ul>
+            </div>
+            <!-- faq card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  常見問題
+                </li>
+                <li class="py-2"><a href="faq.html">FAQ</a></li>
+                <li class="py-2"><a href="faq.html">物流配送</a></li>
+                <li class="py-2"><a href="#">退換貨政策</a></li>
+                <li class="py-2"><a href="#">細則與條款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#top" class="footer-link">
+        <button type="button" class="btn btn-totop rounded-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"
+          >
+            <path
+              d="M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- copyright declaration -->
+  <div class="footer-copyright text-center">
+    <p>© Copyright 2025 MAORIHE. All Rights Reserved</p>
+  </div>
+</footer>
+
+    <script>
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', (event) => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');  // 讓 .invalid-feedback 顯示
+        }, false);
+      });
+    })();
+    </script>
+  </body>
+</html>
+

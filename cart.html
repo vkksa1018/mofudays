@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>購物車</title>
+    <script type="module" crossorigin src="/mofudays/assets/main-CSp2vPyx.js"></script>
+    <link rel="stylesheet" crossorigin href="/mofudays/assets/all-C8AUUYxK.css">
+  </head>
+  <body>
+    <header class="container" id="top">
+  <nav
+    class="navbar navbar-expand-lg bg-body-white border navbar shadow-sm py-5 px-7"
+  >
+    <div class="container-fluid d-flex justify-content-between">
+      <!-- 左邊：logo -->
+      <div>
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="/mofudays/assets/maorihe_logo_defalut-CrImTCZZ.svg"
+            alt="logo"
+            class="nav-logo"
+        /></a>
+      </div>
+
+      <!-- 右邊（手機）：list＋cart -->
+      <div class="d-lg-none d-sm-none d-flex align-items-center gap-4 ms-auto">
+        <button
+          class="navbar-toggler p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation"
+        >
+          <i data-lucide="menu" class="nav-menu-icon"></i>
+        </button>
+
+        <a class="nav-link p-0 cart-btn" href="cart.html" aria-label="Cart">
+          <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="24" width="24" />
+            <path
+              d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+              class="nav-icon"
+            />
+            <circle
+              cx="80"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <circle
+              cx="184"
+              cy="204"
+              fill="none"
+              r="20"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+            <path
+              d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+              fill="none"
+              stroke="#fc762f"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="20"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <!-- 右邊(桌機）：list＋cart -->
+      <div class="d-none d-sm-flex d-lg-flex ms-auto align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- 最新消息 -->
+            <li class="nav-item me-6">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#newsModal"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+                >
+                  <path d="M15 18h-5" />
+                  <path d="M18 14h-8" />
+                  <path
+                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                  />
+                  <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+                >最新消息</a
+              >
+            </li>
+            <!-- 毛孩照護 -->
+            <li class="nav-item me-6">
+              <a class="nav-link" href="blog.html"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+                >
+                  <path
+                    d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                  />
+                  <path d="M15 15h6" />
+                  <path d="M18 12v6" /></svg
+                >毛孩照護</a
+              >
+            </li>
+            <!-- 會員下拉選單 -->
+            <li class="nav-item dropdown me-5 d-flex">
+              <img
+                src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+                alt="avatar"
+                class="rounded-circle nav-avatar"
+              />
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                使用者名稱<i
+                  data-lucide="chevron-down"
+                  class="caret-icon"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu mt-5 text-center">
+                <li>
+                  <a class="dropdown-item" href="member.html">訂單管理</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">個人資料管裡</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">會員專屬活動</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="member.html">我的評價</a>
+                </li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </li>
+            <!-- 購物車 -->
+            <li class="nav-item d-none d-md-flex">
+              <a class="nav-link cart-btn" href="cart.html">
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <rect fill="none" height="24" width="24" />
+                  <path
+                    d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                    class="nav-icon"
+                  />
+                  <circle
+                    cx="80"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <circle
+                    cx="184"
+                    cy="204"
+                    fill="none"
+                    r="20"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                  <path
+                    d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                    fill="none"
+                    stroke="#fc762f"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="20"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機:offcanva -->
+  <div
+    class="offcanvas offcanvas-top offcanvas-mobile-full d-md-none"
+    tabindex="-1"
+    id="mobileMenu"
+    aria-labelledby="mobileMenuLabel"
+    data-bs-scroll="true"
+  >
+    <div
+      class="offcanvas-body d-flex flex-column align-items-center justify-content-between px-4 py-4"
+    >
+      <!-- 上半：主選單 -->
+      <nav class="w-100" aria-label="Mobile main">
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 mt-3 me-3 z-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+        <ul class="list-mb list-unstyled mb-4">
+          <li class="nav-item py-3 border-bottom text-center">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#newsModal"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-newspaper-icon lucide-newspaper align-bottom me-2 nav-icon"
+              >
+                <path d="M15 18h-5" />
+                <path d="M18 14h-8" />
+                <path
+                  d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"
+                />
+                <rect width="8" height="4" x="10" y="6" rx="1" /></svg
+              >最新消息</a
+            >
+          </li>
+          <li class="nav-item text-center py-3">
+            <a class="nav-link" href="blog.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-heart-plus-icon lucide-heart-plus align-bottom me-2 nav-icon"
+              >
+                <path
+                  d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49"
+                />
+                <path d="M15 15h6" />
+                <path d="M18 12v6" /></svg
+              >毛孩照護</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 會員區塊（符合你的稿：大頭貼＋名稱＋功能清單） -->
+      <div class="w-100 text-center my-2">
+        <div
+          class="d-flex align-items-center justify-content-center gap-2 mb-md-3 py-2"
+        >
+          <img
+            src="/mofudays/assets/avatar_defalut-CaAVEqDm.png"
+            alt="avatar"
+            class="rounded-circle"
+            style="width: 44px; height: 44px"
+          />
+          <div class="fw-medium">使用者名稱</div>
+        </div>
+        <ul class="list-unstyled mx-auto" style="max-width: 320px">
+          <li class="py-3">
+            <a class="nav-link" href="member.html">訂單管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">個人資料管理</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">會員專屬活動</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link" href="member.html">我的評價</a>
+          </li>
+          <li class="py-3 border-top">
+            <a class="nav-link text-primary" href="#">登出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</header>
+
+    <main class="cart py-11 pt-80-sm pb-0-sm">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div
+          class="d-flex justify-content-between align-items-center d-block-sm px-110 px-24-sm mb-6 mb-24-sm"
+        >
+          <!-- 標題 -->
+          <div class="title py-5-5-sm mb-32-sm">
+            <h2 class="fw-bold mb-2 text-center-sm">購物車</h2>
+          </div>
+          <!-- 進度條 -->
+          <div class="step d-flex align-items-center d-none">
+            <div class="step-item">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_844)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M25.8026%2050.9153C24.9386%2050.9153%2024.5066%2050.4433%2024.5066%2049.4993V37.3793L22.7786%2038.5073C21.9786%2039.0513%2021.3546%2038.9553%2020.9066%2038.2193C20.4426%2037.4833%2020.6106%2036.8673%2021.4106%2036.3713L24.2906%2034.5713C24.5786%2034.3953%2024.8586%2034.2753%2025.1306%2034.2113C25.4026%2034.1313%2025.7146%2034.0913%2026.0666%2034.0913C26.7386%2034.0913%2027.0746%2034.5633%2027.0746%2035.5073V49.4993C27.0746%2050.4433%2026.6506%2050.9153%2025.8026%2050.9153Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_844'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                alt="step_1"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">購物車</p>
+            </div>
+            <div class="step-line disabled"></div>
+            <div class="step-item disabled">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_853)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M22.2701%2050.9153C21.3261%2050.9153%2020.8541%2050.6513%2020.8541%2050.1233C20.8541%2048.9713%2021.1501%2047.8513%2021.7421%2046.7633C22.3501%2045.6753%2023.3581%2044.4593%2024.7661%2043.1153C25.2621%2042.6353%2025.7341%2042.1553%2026.1821%2041.6753C26.6301%2041.1793%2026.9981%2040.6993%2027.2861%2040.2353C27.5741%2039.7553%2027.7261%2039.2993%2027.7421%2038.8673C27.7581%2038.0353%2027.5661%2037.4193%2027.1661%2037.0193C26.7821%2036.6193%2026.2301%2036.4193%2025.5101%2036.4193C24.5341%2036.4193%2023.9101%2036.9153%2023.6381%2037.9073C23.5101%2038.3393%2023.3421%2038.6753%2023.1341%2038.9153C22.9421%2039.1393%2022.6381%2039.2513%2022.2221%2039.2513C21.8221%2039.2513%2021.5021%2039.1153%2021.2621%2038.8433C21.0221%2038.5713%2020.9581%2038.2033%2021.0701%2037.7393C21.3261%2036.5553%2021.8461%2035.6353%2022.6301%2034.9793C23.4141%2034.3073%2024.3741%2033.9713%2025.5101%2033.9713C26.4381%2033.9713%2027.2621%2034.1633%2027.9821%2034.5473C28.7181%2034.9313%2029.2941%2035.4913%2029.7101%2036.2273C30.1261%2036.9633%2030.3181%2037.8673%2030.2861%2038.9393C30.2701%2039.6913%2030.0941%2040.3873%2029.7581%2041.0273C29.4221%2041.6673%2028.9741%2042.2913%2028.4141%2042.8993C27.8701%2043.4913%2027.2461%2044.1233%2026.5421%2044.7953C25.8061%2045.5153%2025.1501%2046.2033%2024.5741%2046.8593C24.0141%2047.5153%2023.6861%2048.0833%2023.5901%2048.5633H28.5821C29.5261%2048.5633%2029.9981%2048.9553%2029.9981%2049.7393C29.9981%2050.5233%2029.5261%2050.9153%2028.5821%2050.9153H22.2701Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_853'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                alt="step_2"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">訂單確認與結帳</p>
+            </div>
+            <div class="step-line disabled"></div>
+            <div class="step-item disabled">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='64'%20height='64'%20viewBox='0%200%2064%2064'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_151_861)'%3e%3cpath%20d='M45.5728%2040.9155C45.5728%2029.8698%2036.6185%2020.9155%2025.5728%2020.9155C14.5271%2020.9155%205.57275%2029.8698%205.57275%2040.9155C5.57275%2051.9612%2014.5271%2060.9155%2025.5728%2060.9155C36.6185%2060.9155%2045.5728%2051.9612%2045.5728%2040.9155Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M28.2836%2015.1581C26.0328%2016.5484%2021.9386%2016.6158%2019.3588%2012.897C16.7791%209.17816%2018.4319%206.84619%2019.7202%204.94535C22.1433%202.17483%2027.1554%201.69575%2029.7352%205.41459C31.5644%208.65519%2031.2089%2012.9165%2028.2836%2015.1581Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M46.5927%2021.3291C44.3419%2022.7194%2040.2477%2022.7868%2037.6679%2019.068C35.0882%2015.3492%2036.741%2013.0172%2038.0293%2011.1164C40.4524%208.34585%2045.4645%207.86677%2048.0443%2011.5856C49.8735%2014.8262%2049.518%2019.0875%2046.5927%2021.3291Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M59.1391%2036.0708C56.8883%2037.4612%2052.7941%2037.5286%2050.2143%2033.8097C47.6346%2030.0909%2049.2874%2027.7589%2050.5757%2025.8581C52.9988%2023.0875%2058.0109%2022.6085%2060.5907%2026.3273C62.4199%2029.5679%2062.0644%2033.8292%2059.1391%2036.0708Z'%20fill='%23FBBD3F'/%3e%3cpath%20d='M12.9682%2022.1342C10.7174%2023.5245%206.62318%2023.5919%204.04343%2019.8731C1.46368%2016.1542%203.11649%2013.8223%204.40482%2011.9214C6.82786%209.1509%2011.84%208.67182%2014.4198%2012.3907C16.249%2015.6313%2015.8935%2019.8926%2012.9682%2022.1342Z'%20fill='%23FBBD3F'/%3e%3c/g%3e%3cpath%20d='M24.4917%2051.1553C22.6677%2051.1553%2021.2997%2050.4273%2020.3877%2048.9713C20.1317%2048.5553%2020.0677%2048.1873%2020.1957%2047.8673C20.3237%2047.5473%2020.5717%2047.3313%2020.9397%2047.2193C21.3397%2047.0913%2021.6677%2047.0913%2021.9237%2047.2193C22.1797%2047.3473%2022.4597%2047.5713%2022.7637%2047.8913C22.9397%2048.1313%2023.1637%2048.3313%2023.4357%2048.4913C23.7237%2048.6353%2024.0597%2048.7073%2024.4437%2048.7073C25.2597%2048.7073%2025.9077%2048.5073%2026.3877%2048.1073C26.8677%2047.7073%2027.1077%2047.0353%2027.1077%2046.0913C27.1077%2045.2433%2026.8677%2044.5633%2026.3877%2044.0513C25.9077%2043.5393%2025.2197%2043.2833%2024.3237%2043.2833C23.5237%2043.2833%2023.1237%2042.8913%2023.1237%2042.1073C23.1237%2041.3233%2023.5237%2040.9313%2024.3237%2040.9313C25.1237%2040.9313%2025.7157%2040.6993%2026.0997%2040.2353C26.4837%2039.7553%2026.6757%2039.1713%2026.6757%2038.4833C26.6757%2037.6833%2026.4437%2037.1233%2025.9797%2036.8033C25.5317%2036.4673%2025.0197%2036.2993%2024.4437%2036.2993C24.1237%2036.2993%2023.8357%2036.3793%2023.5797%2036.5393C23.3397%2036.6993%2023.1317%2036.8913%2022.9557%2037.1153C22.6517%2037.4353%2022.3637%2037.6593%2022.0917%2037.7873C21.8357%2037.9153%2021.5157%2037.8993%2021.1317%2037.7393C20.7637%2037.5953%2020.5237%2037.3633%2020.4117%2037.0433C20.2997%2036.7073%2020.3877%2036.3473%2020.6757%2035.9633C21.1397%2035.2753%2021.6997%2034.7553%2022.3557%2034.4033C23.0277%2034.0353%2023.7397%2033.8513%2024.4917%2033.8513C25.4677%2033.8513%2026.3157%2034.0433%2027.0357%2034.4273C27.7717%2034.7953%2028.3397%2035.3153%2028.7397%2035.9873C29.1557%2036.6593%2029.3637%2037.4513%2029.3637%2038.3633C29.3637%2039.1953%2029.1397%2039.9473%2028.6917%2040.6193C28.2597%2041.2753%2027.7077%2041.7553%2027.0357%2042.0593C27.8357%2042.3633%2028.4837%2042.8833%2028.9797%2043.6193C29.4917%2044.3553%2029.7477%2045.2113%2029.7477%2046.1873C29.7477%2047.7073%2029.2837%2048.9153%2028.3557%2049.8113C27.4437%2050.7073%2026.1557%2051.1553%2024.4917%2051.1553Z'%20fill='%23534741'/%3e%3cdefs%3e%3cclipPath%20id='clip0_151_861'%3e%3crect%20width='60'%20height='59'%20fill='white'%20transform='translate(2.5%202.00024)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                alt="step_3"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">完成訂閱</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 訂閱內容卡片 -->
+        <div class="card-bg py-9 px-110 px-12-sm mb-6 mb-0-sm">
+          <div class="row-table">
+            <!-- 訂閱內容表格 -->
+            <div class="col-table-10 mb-7">
+              <h5 class="mb-5 ls-5 text-center-sm">訂閱內容</h5>
+
+              <!-- 表格標題列 -->
+              <div class="table-title-bg d-flex py-2 mb-2 d-none-sm">
+                <p class="col-table-2 text-center"></p>
+                <p class="col-table-3 text-center">品項</p>
+                <p class="col-table-1 text-center">單價</p>
+                <p class="col-table-2 text-center">數量</p>
+                <p class="col-table-1 text-center">小計</p>
+                <p class="col-table-1 text-center"></p>
+              </div>
+
+              <!-- 表格網頁版 -->
+              <!-- 第一列 -->
+              <div class="table-container-bg d-flex py-4 mb-2 d-none-sm">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/mofudays/assets/product-img-01-B_rp9leg.png"
+                    alt="新手爸媽安心組"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">新手爸媽安心組</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+
+                <!-- 數量 -->
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="3"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $2,097
+                </div>
+
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- 第二列 -->
+              <div class="table-container-bg d-flex py-4 mb-2 d-none-sm">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/mofudays/assets/product-img-02-CQq_I_fV.png"
+                    alt="青春汪能量補給包"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">青春汪能量補給包</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="2"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $1,398
+                </div>
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- 第三列 -->
+              <div class="table-container-bg d-flex py-4 d-none-sm">
+                <!-- 圖片+品項 -->
+                <div class="col-table-5 d-flex ps-4">
+                  <img
+                    src="/mofudays/assets/product-img-03-Bb0jbu5n.png"
+                    alt="青春汪能量補給包"
+                    class="img-fluid table-img rounded-4 me-5"
+                  />
+                  <div>
+                    <p class="table-title fw-bold mb-4">牛氣補補能量盒</p>
+                    <p class="table-text fw-normal mb-1">零食 x 3</p>
+                    <p class="table-text fw-normal mb-1">保健罐頭 x 2</p>
+                    <p class="table-text fw-normal mb-1">互動小物 x 2</p>
+                  </div>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div class="col-table-2 d-flex align-items-center">
+                  <div class="input-group px-4" style="height: 48px">
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      －
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center input-number px-0"
+                      value="1"
+                      readonly
+                      tabindex="-1"
+                      aria-label="Example text with two button addons"
+                    />
+                    <button class="btn btn-quantity px-4 py-3" type="button">
+                      ＋
+                    </button>
+                  </div>
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 關閉 -->
+                <div
+                  class="col-table-1 d-flex justify-content-center align-items-center"
+                >
+                  <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              </div>
+
+              <!-- 表格手機版 -->
+              <!-- 第一列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-16-sm"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="/mofudays/assets/product-img-01-B_rp9leg.png"
+                        alt="新手爸媽安心組"
+                        class="table-img rounded-4 me-5"
+                      />
+                      <div class="py-8-sm">
+                        <p class="table-title fw-bold mb-8-sm">
+                          新手爸媽安心組
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div class="d-flex flex-column align-items-center">
+                      <button
+                        type="button"
+                        class="btn-close mb-24-sm"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number fs-14-sm px-0"
+                          value="3"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">小計 $2,097</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 第二列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex mb-16-sm">
+                      <img
+                        src="/mofudays/assets/product-img-02-CQq_I_fV.png"
+                        alt="青春汪能量補給包"
+                        class="img-fluid table-img rounded-4 me-5"
+                      />
+                      <div>
+                        <p class="table-title fw-bold mb-8-sm">
+                          青春汪能量補給包
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div
+                      class="d-flex flex-column justify-content-between align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group" style="height: 40px">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number px-0"
+                          value="2"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">$1,398</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 第三列 -->
+              <div class="px-16-sm">
+                <div class="table-container-bg p-16-sm mb-8-sm d-none-min-sm">
+                  <!-- 圖片+品項+關閉+單價 -->
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- 圖片+品項 -->
+                    <div class="d-flex mb-16-sm">
+                      <img
+                        src="/mofudays/assets/product-img-03-Bb0jbu5n.png"
+                        alt="牛氣補補能量盒"
+                        class="img-fluid table-img rounded-4 me-5"
+                      />
+                      <div>
+                        <p class="table-title fw-bold mb-8-sm">
+                          牛氣補補能量盒
+                        </p>
+                        <p class="table-text fw-normal">零食 x 3</p>
+                        <p class="table-text fw-normal">保健罐頭 x 2</p>
+                        <p class="table-text fw-normal">互動小物 x 2</p>
+                      </div>
+                    </div>
+
+                    <!-- 關閉+單價 -->
+                    <div
+                      class="d-flex flex-column justify-content-between align-items-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                      ></button>
+                      <p class="text-center text-brown-300">$699</p>
+                    </div>
+                  </div>
+
+                  <!-- 數量+小計 -->
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center w-40-sm">
+                      <div class="input-group" style="height: 40px">
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          －
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center input-number px-0"
+                          value="1"
+                          readonly
+                          tabindex="-1"
+                          aria-label="Example text with two button addons"
+                        />
+                        <button
+                          class="btn btn-quantity px-3 py-3"
+                          type="button"
+                        >
+                          ＋
+                        </button>
+                      </div>
+                    </div>
+                    <p class="text-center">$699</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 選擇訂閱期數 -->
+            <div class="col-table-6 col-12-sm mb-56-sm">
+              <div class="px-16-sm">
+                <h5 class="mb-5 ls-5 text-center-sm">選擇訂閱期數</h5>
+                <div
+                  class="px-0 py-0 w-100 d-flex d-block-sm gap-4"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <!-- 1 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="one-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="one-month"
+                    style="height: 48px"
+                    >1 個月</label
+                  >
+
+                  <!-- 3 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="three-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="three-month"
+                    style="height: 48px"
+                    >3 個月</label
+                  >
+
+                  <!-- 6 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="six-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 mb-8-sm w-25 w-100-sm"
+                    for="six-month"
+                    style="height: 48px"
+                    >6 個月</label
+                  >
+
+                  <!-- 12 個月 -->
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="subscription-period"
+                    id="twelve-month"
+                    autocomplete="off"
+                  />
+                  <label
+                    class="btn btn-primary btn-diet px-0 py-3 w-25 w-100-sm"
+                    for="twelve-month"
+                    style="height: 48px"
+                    >12 個月</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- 訂單合計網頁版 -->
+            <div class="col-table-4 d-none-sm">
+              <h5 class="mb-5 ls-5 text-center-sm">訂單合計</h5>
+              <div class="total-bg px-5 py-9-5" style="height: 48px">
+                <p class="total-text fw-bold text-end">
+                  每月<span class="fs-24 fw-medium px-2">$4,194</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- 訂單合計手機版 -->
+            <div class="col-12-sm d-none-min-sm mb-24-sm">
+              <div class="px-16-sm">
+                <div
+                  class="total-bg d-flex justify-content-between align-items-center px-5 py-4"
+                >
+                  <h6 class="ls-5">訂單合計</h6>
+                  <p class="total-text fw-bold text-end">
+                    每月<span class="fs-24 fw-medium px-2">$4,194</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 儲存按鈕手機版 -->
+          <div class="text-center d-none-min-sm px-5-5-sm">
+            <div class="row">
+              <div class="col-6-sm">
+                <a
+                  class="btn btn-primary rounded-pill btn-active-white ls-5 fs-18-sm fw-medium-sm px-38-sm"
+                  href="./pet-info.html"
+                  role="button"
+                  >繼續訂閱</a
+                >
+              </div>
+              <div class="col-6-sm">
+                <a
+                  class="btn btn-primary rounded-pill btn-active ls-5 fs-18-sm fw-medium-sm px-38-sm"
+                  href="./checkout.html"
+                  role="button"
+                  >確認結帳</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 儲存按鈕網頁版 -->
+      <div class="text-center d-none-sm">
+        <a
+          class="btn btn-primary rounded-pill btn-active-white fs-18-sm fw-medium-sm ls-10-sm px-40 me-6 me-24-sm"
+          href="./pet-info.html"
+          role="button"
+          >繼續訂閱</a
+        >
+        <a
+          class="btn btn-primary rounded-pill btn-active fs-18-sm fw-medium-sm ls-10-sm px-40"
+          href="./checkout.html"
+          role="button"
+          >確認結帳</a
+        >
+      </div>
+    </main>
+
+    <footer class="footer">
+  <!-- footer info -->
+  <div class="footer-info">
+    <div class="container">
+      <div class="d-md-flex text-center text-md-start align-items-center">
+        <!-- footer-left -->
+        <div class="container">
+          <div
+            class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-center gap-3"
+          >
+            <div class="d-flex align-items-center gap-2 mb-0">
+              <a href="index.html"
+                ><img
+                  src="/mofudays/assets/footer-logo-DNsVksMy.png"
+                  alt="logo"
+                  class="footer-logo"
+              /></a>
+            </div>
+            <div
+              class="d-inline-flex flex-column align-items-center align-items-md-start text-start gap-3 mx-auto footer-contact"
+            >
+              <div>
+                <p class="mb-md-4 d-none d-md-flex">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    /></svg
+                  >02-27341788
+                </p>
+                <a
+                  href="mailto:ervice.maorihe@gmail.com"
+                  class="d-flex footer-link mb-4 d-none d-md-flex"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <p>service.maorihe@gmail.com</p>
+                </a>
+              </div>
+
+              <div class="mb-md-0 mb-32 d-flex gap-2">
+                <a href="#" class="btn social-btn" aria-current="page"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-facebook-icon lucide-facebook"
+                  >
+                    <path
+                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                    /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-instagram-icon lucide-instagram"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+                ></a>
+                <a href="#" class="btn social-btn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-at-sign-icon lucide-at-sign"
+                  >
+                    <circle cx="12" cy="12" r="4" />
+                    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg
+                ></a>
+              </div>
+
+              <div
+                class="d-inline-flex d-md-none flex-column align-items-start text-start gap-3 mx-auto footer-contact mb-40"
+              >
+                <p class="d-flex align-items-center gap-2 mb-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-message-circle-icon lucide-message-circle me-4 ms-2"
+                  >
+                    <path
+                      d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+                    />
+                  </svg>
+                  <span>02-27341788</span>
+                </p>
+                <a
+                  href="mailto:service.maorihe@gmail.com"
+                  class="d-flex align-items-center gap-2 footer-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail-icon lucide-mail me-4 ms-2"
+                  >
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                  </svg>
+                  <span>service.maorihe@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer-right -->
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-4 gap-md-0"
+          >
+            <!-- resource card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  外部資源
+                </li>
+                <li class="py-2"><a href="#">寵物殯葬</a></li>
+                <li class="py-2"><a href="#">寵物醫療</a></li>
+                <li class="py-2"><a href="#">寵物保險</a></li>
+                <li class="py-2"><a href="#">浪浪援助</a></li>
+              </ul>
+            </div>
+            <!-- faq card -->
+            <div class="col-4">
+              <ul class="footer-list text-center">
+                <li class="zen-maru-gothic-regular py-2 border-bottom mb-3">
+                  常見問題
+                </li>
+                <li class="py-2"><a href="faq.html">FAQ</a></li>
+                <li class="py-2"><a href="faq.html">物流配送</a></li>
+                <li class="py-2"><a href="#">退換貨政策</a></li>
+                <li class="py-2"><a href="#">細則與條款</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#top" class="footer-link">
+        <button type="button" class="btn btn-totop rounded-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-big-up-icon lucide-arrow-big-up"
+          >
+            <path
+              d="M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+        </button>
+      </a>
+    </div>
+  </div>
+  <!-- copyright declaration -->
+  <div class="footer-copyright text-center">
+    <p>© Copyright 2025 MAORIHE. All Rights Reserved</p>
+  </div>
+</footer>
+
+  </body>
+</html>
