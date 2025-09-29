@@ -2,10 +2,19 @@
   letter-spacing: 0.05em;
 }
 
+.form-select:focus {
+  box-shadow: none;
+} // 0925 vivian 新增
+
 input:focus {
   border-width: 2px;
+  border-color: $primary-500 !important; // 0912 vivian 新增
 }
 
 select:focus {
   border-width: 2px;
+}
+
+.form-control {
+  padding: 12px 24px; // 0912 vivian 新增
 }

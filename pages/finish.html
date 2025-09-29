@@ -13,7 +13,7 @@
   <body>
     <%- include('./layout/header'); -%>
 
-    <main class="checkout py-11">
+    <main class="finish py-11">
       <div class="container">
         <!-- 標題進度條 -->
         <div
@@ -21,7 +21,8 @@
         >
           <!-- 標題 -->
           <div class="title">
-            <h2 class="fw-bold mb-2 ls-5">訂單確認</h2>
+            <h2 class="fw-bold mb-2 ls-5">訂閱成功！</h2>
+            <h2 class="fw-bold mb-2 ls-5">謝謝你成為毛日和的夥伴</h2>
           </div>
 
           <!-- 進度條 -->
@@ -43,8 +44,8 @@
               />
               <p class="text-center fs-14">訂單確認與結帳</p>
             </div>
-            <div class="step-line disabled"></div>
-            <div class="step-item disabled">
+            <div class="step-line"></div>
+            <div class="step-item">
               <img
                 src="/assets/images/index/service_step_3.svg"
                 alt="step_3"
@@ -55,13 +56,23 @@
           </div>
         </div>
 
-        <!-- 訂單明細卡片 -->
+        <!-- 訂單內容卡片 -->
         <div class="card-bg py-9 px-110 mb-6">
+          <!-- 感謝訂閱文字 -->
+          <div class="mb-6">
+            <p class="text-brown-300 mb-1">
+              親愛的客戶您好，您的訂單我們已經收到，感謝您訂閱毛日盒!
+            </p>
+            <p class="text-brown-300">
+              以下為您的訂購明細，記得拍下毛孩開箱照片與大家分享唷🥳
+            </p>
+          </div>
+
           <!-- 訂單明細 -->
           <div class="row-table mb-6">
             <!-- 表格 -->
             <div class="col-table-10">
-              <h5 class="mb-5 ls-5">訂單明細</h5>
+              <h5 class="mb-5 ls-5">訂單編號 #00001</h5>
 
               <!-- 表格標題 -->
               <div class="table-title-bg d-flex py-2 mb-2">
@@ -192,130 +203,42 @@
             </div>
           </div>
 
-          <!-- 結帳資訊 -->
-          <div class="row-table">
-            <div class="col-table-10">
-              <h5 class="mb-5 ls-5">結帳資訊</h5>
+          <!-- 說明文字 -->
+          <p class="text-center">
+            您可到<a href="./member.html" class="text-primary-500">訂單查詢</a
+            >查看訂購紀錄，如有任何問題或其他意見，歡迎<a
+              href="./contact.html"
+              class="text-primary-500"
+              >聯繫我們</a
+            >，謝謝!
+          </p>
 
-              <!-- 個人資訊 -->
-              <div class="personal-info">
-                <div class="table-title-bg px-5 py-2 mb-2">
-                  <p>輸入你的個人資訊</p>
-                </div>
-                <div class="mb-5 row g-2">
-                  <div class="col-6">
-                    <input
-                      type="name"
-                      class="form-control"
-                      id="checkout-name"
-                      placeholder="姓名"
-                    />
-                  </div>
-                  <div class="col-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="checkout-address"
-                      placeholder="地址"
-                    />
-                  </div>
-                  <div class="col-6">
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="checkout-tel"
-                      placeholder="電話"
-                    />
-                  </div>
-                  <div class="col-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="checkout-email"
-                      placeholder="電子郵件"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <!-- 付款方式 -->
-              <div class="payment-method">
-                <div class="table-title-bg px-5 py-2 mb-2">
-                  <p>選擇付款方式</p>
-                </div>
-
-                <div
-                  role="group"
-                  aria-label="Basic radio toggle button group"
-                  class="mb-5 row g-2"
-                >
-                  <!-- 信用卡 -->
-                  <div class="me-2 col-3">
-                    <input
-                      type="radio"
-                      class="btn-check w-100"
-                      name="payment-method"
-                      id="credit-card"
-                      autocomplete="off"
-                    />
-                    <label
-                      class="btn btn-primary btn-diet px-0 py-3 w-100"
-                      for="credit-card"
-                      >信用卡</label
-                    >
-                  </div>
-
-                  <!-- LINE PAY -->
-                  <div class="col-3">
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="payment-method"
-                      id="LINE-PAY"
-                      autocomplete="off"
-                    />
-                    <label
-                      class="btn btn-primary btn-diet px-0 py-3 w-100"
-                      for="LINE-PAY"
-                      >LINE Pay</label
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <!-- 訂單備註 -->
-              <div class="payment-method">
-                <div class="table-title-bg px-5 py-2 mb-2">
-                  <p>訂單備註</p>
-                </div>
-
-                <div class="form-floating">
-                  <textarea
-                    class="form-control px-3 py-5"
-                    placeholder="備註"
-                    id="checkout-remark"
-                    style="height: 100px"
-                  ></textarea>
-                  <label for="checkout-remark ps-3">備註</label>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- 定位圖 -->
+          <img
+            src="/assets/images/subscribe/Illustration-finish.png"
+            alt="完成訂閱插畫"
+            class="finish-illustration"
+          />
+          <img
+            src="/assets/images/subscribe/Illustration-balloon.png"
+            alt="氣球插畫"
+            class="balloon-illustration"
+          />
         </div>
 
         <!-- 儲存按鈕 -->
         <div class="text-center">
           <a
             class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
-            href="./cart.html"
+            href="./index.html"
             role="button"
-            >回上一步</a
+            >返回首頁</a
           >
           <a
             class="btn btn-primary rounded-pill btn-active px-40"
-            href="./finish.html"
+            href="./pet-info.html"
             role="button"
-            >確認付款</a
+            >新增訂單</a
           >
         </div>
       </div>
