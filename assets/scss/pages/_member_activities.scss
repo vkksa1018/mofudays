@@ -1,4 +1,415 @@
+.member-activity-1{
+  /* === 單一斷點設定：手機 < 768px、電腦 >= 768px === */
+  $bp-desktop: 768px;
+  @mixin desktop-up { 
+    @media (min-width: $bp-desktop) { 
+      @content; 
+    } 
+  }
+
+  /* === 共用區塊 === */
+  .section-spacer { 
+    padding: 60px 0 !important; 
+    @include desktop-up { 
+      padding: 80px 0 !important; 
+    } 
+  }
+
+  .hand-write-font {
+    font-family: "Zen Maru Gothic";
+  }
+
+  .h.h1, .h1 { 
+    font-size: clamp(28px, 2.2vw, 40px); 
+    font-weight: 800;
+    line-height: 1.2; 
+    letter-spacing: 0.05em;
+  }
+
+  .h2 { 
+    font-size: clamp(24px, 1.9vw, 36px); 
+    font-weight: 600;
+    line-height: 1.2; 
+  }
+  .h3 { 
+    font-size: clamp(20px, 1.6vw, 32px) !important; 
+    font-weight: 500;
+    line-height: 1.2; 
+  }
+  .h4 { 
+    font-size: clamp(16px, 1.3vw, 28px) !important; 
+    font-weight: 500;
+    line-height: 1.2; 
+  }
+
+  .dot-lined-bottom{
+    border-bottom: 1px dot #E2DDDA;
+  }
+
+  /* 文字 */
+  .p1 { 
+    font-size: clamp(16px, 1.6vw, 18px) !important; 
+  }
+  .p2 { 
+    font-size: clamp(14px, 1.5vw, 16px) !important; 
+  }
+  .p3 { 
+    font-size: clamp(12px, 1.4vw, 14px) !important; 
+  }
+  .p4 { 
+    font-size: clamp(10px, 1.3vw, 12px) !important; 
+  }
+
+  .fw-500{
+    font-weight: 500;
+  }
+
+  .fw-700{
+    font-weight: 700;
+  }
+
+  .mt-32{
+    margin-top: 2rem !important;
+  }
+
+  .mb-8{
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mb-12{
+    margin-bottom: 0.75rem !important;
+  }
+
+  .mb-16{
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-20{
+    margin-bottom: 1.25rem !important;
+  }
+
+  .mb-24{
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-28{
+    margin-bottom: 1.75rem !important;
+  }
+
+  .mb-32{
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-80{
+    margin-bottom: 80px !important;
+  }
+
+  .ps-4{
+    padding-left: 0.25rem;
+  }
+
+  .hero-banner {
+    position: relative;
+    background: $secondary-200;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .hero-img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    border-radius: 1rem;
+  }
+
+  .bg-orange{
+    background-color: $tertiary-300;
+  }
+
+  .section-spacer.activity-describe {
+    margin-bottom: 3.5rem;
+  }
+
+
+  /* 亮點圓卡 */
+
+  .feature-circle {
+    width: clamp(200px, 20vw, 280px); 
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 2px dashed #E5E7EB;
+    background: #FAFAFA;
+    display: grid;
+    place-items: center;
+    // margin-inline: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  .feature-title {
+    font-size: clamp(1.5rem, 2vw + 0.75rem, 2rem);
+    font-weight: 600; 
+    color: $brown-500;
+  }
+  .feature-text{
+    font-size: clamp(1rem, 0.8vw + 0.5rem, 1.125rem);
+    font-weight: 500; 
+  }
+
+  @media (max-width: 767px) {
+    .activity-describe .col {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  /* 活動流程 */
+  .timeline {
+    color:$brown-500;
+    position: relative;
+    margin: 0;
+    padding-left: 1.5rem;
+    margin-left: 2rem;
+    list-style: none;
+    border-left: 2px solid $brown-500;  
+    li {
+      position: relative;
+      padding: .5rem 0 .5rem 1rem;
+      font-size: 1.25rem;
+    }
+    li::before {
+      content: "";
+      position: absolute;
+      left: -10px; top: .9rem;
+      width: .9rem; height: .9rem;
+      border-radius: 50%;
+      background: $primary-500; 
+      border: 2px solid $white;
+      box-shadow: 0 0 0 2px $brown-500;  // 直接用 SASS 變數
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      position: relative;
+      margin: 0 auto;            /* 自己置中 */
+      padding: 0;                /* 拿掉左邊縮排 */
+      list-style: none;
+      border-left: 0;            /* 不用左側線 */
+
+      /* 置中的垂直線 */
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: $brown-500;
+        transform: translateX(-50%);
+        z-index: 0;              /* 放在文字下層 */
+      }
+
+      li {
+        position: relative;
+        /* 讓每個項目「從中線右邊開始」，避免文字壓到中線 */
+        padding: .75rem 0 .75rem calc(50% + 1.25rem);
+        margin: 0;
+        font-size: 1.125rem;
+        text-align: left;        /* 文字左對齊 */
+      }
+
+      /* 小圓點對準中線 */
+      li::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 1rem;               /* 視覺微調 */
+        transform: translateX(-50%);
+        width: .9rem; 
+        height: .9rem;
+        border-radius: 50%;
+        background: $primary-500;
+        border: 2px solid $white;
+        box-shadow: 0 0 0 2px $brown-500;
+        z-index: 1;              /* 點在中線上方 */
+      }
+    }
+  }
+
+  /* CTA  */
+  .cta-wrap {
+    background: $primary-100;
+    border: 1px solid $primary-500;
+    border-radius: 1rem;
+    color:$brown-500;
+  }
+  .cta-badge {
+    position: absolute; 
+    right: -6px; 
+    top: -25px;
+    background: $tertiary-500; 
+    color: #fff;
+    font-size: .875rem;
+    padding: .375rem .5rem;
+    border-radius: 999px;
+    transform: rotate(-8deg);
+    white-space: nowrap;
+  }
+
+  .cta-warning{
+    color:$brown-300;
+  }
+
+  .btn-lg {
+    border: none;
+    color: $white;
+  }
+
+  .btn-lg:hover {
+    border: none;
+    background-color: #fbbd3f;
+    color: $white;
+  }
+
+  .btn-lg:active {
+    border: none;
+    color: $white !important;
+  }
+
+  @media (max-width: 767px) {
+    .cta-wrap { 
+      padding: 20px !important; 
+    }
+
+    .cta-wrap .row { 
+      row-gap: 16px; 
+    }
+
+    .cta-wrap .text-md-end { 
+      text-align: center !important; 
+    }
+
+    /* 按鈕滿寬，拇指好點 */
+    .cta-wrap .btn-lg {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      border-radius: 14px;
+    }
+
+    .cta-wrap .position-relative { 
+      display: inline-block; 
+    }
+
+    .cta-badge {
+      position: absolute;
+      right: -35px;
+      top: -25px;
+      transform: rotate(-8deg);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .cta-warning { 
+      margin-top: 12px; 
+      font-size: .95rem; 
+    }
+    .cta-wrap .ps-4 { 
+      padding-left: 0 !important; 
+    }
+  }
+
+  /* FAQ */
+  .accordion-button{
+    background-color: $primary-500;
+    border: none;
+    color: $white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .accordion-button:hover {
+    border: none;
+    background-color: $secondary-400;
+    color: $white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .accordion-button:active {
+    border: none;
+    color: $white !important;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .accordion-button::after {
+    /* 移除 Bootstrap 預設 SVG */
+    background-image: none !important;
+
+    /* 自訂白色箭頭 */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+
+    /* 其他樣式保持預設 */
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    transition: transform .2s ease-in-out;
+  }
+
+  .accordion-collapse{
+    background-color: $primary-100 !important;
+    border: 0 !important;                 /* 取消上邊框 */
+    font-size: 1.25rem;
+    color: $brown-500;
+  }
+  .accordion-body{
+    background-color: $primary-100 !important;
+    box-shadow: none !important;          /* 去掉那條 1px 內陰影線 */
+    border-radius: 0.75rem !important; // 統一設定你要的圓角
+  }
+
+  .accordion-heeder {
+    box-shadow: none !important;          /* 去掉那條 1px 內陰影線 */
+  }
+
+  .accordion-item {
+    background-color: $primary-100 !important;  /* 與 body 同色 */
+    border-radius: 0.75rem !important; // 統一設定你要的圓角
+    overflow: hidden !important;       // 把內層角切掉，避免顏色差
+    box-shadow: none !important;          /* 去掉那條 1px 內陰影線 */
+  }
+  
+  /* 打開時：button 下圓角消除 */
+  .accordion-button:not(.collapsed) {
+    box-shadow: none !important;          /* 去掉那條 1px 內陰影線 */
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  /* 打開時：body 上圓角消除 */
+  .accordion-button:not(.collapsed) ~ .accordion-collapse .accordion-body {
+    box-shadow: none !important;          /* 去掉那條 1px 內陰影線 */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+}
+
 // ----------------------------------------  動畫
+
+.img-hover-bigger {
+  transition: transform 0.5s ease-in-out;
+}
+
+.feature-circle .img-hover-bigger:hover {
+  transform: scale(1.2);
+}
 
 // 抖動動畫
 .img-shake:hover{

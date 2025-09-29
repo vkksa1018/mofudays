@@ -48,10 +48,6 @@ p {
 }
 
 .member-center {
-
-  .hand-write-font{
-    font-family: 'Amatic SC' !important;
-  }
   
   .tab-content{
     display: block !important;
@@ -105,7 +101,7 @@ p {
   }
 
   .h3 {
-    font-size: 2rem;
+    font-size: 2rem ;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
@@ -1035,7 +1031,7 @@ p {
 
   }
 
-  @media (max-width:576px) {
+  @media (max-width:768px) {
     .pt-200{
       padding-top: 2rem;
       padding-bottom: 2rem;
@@ -1069,7 +1065,7 @@ p {
   .btn-reserve {
     border: none;
     color: $white;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem !important;
     margin: 0.875rem 2rem;
   }
 
@@ -1078,13 +1074,13 @@ p {
     border: none;
     background-color: #fbbd3f;
     color: $white;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem !important;
   }
 
   .btn-reserve:active {
     border: none;
     color: $white !important;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem !important;
   }
 
   /* 1) 卡片裁角 */
@@ -1144,7 +1140,7 @@ p {
       border-radius: 50%;
     }
 
-    @media (max-width:576px) {
+    @media (max-width:768px) {
       .img-play {
         position: absolute;
         max-width: 100px;
