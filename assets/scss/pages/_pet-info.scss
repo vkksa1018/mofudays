@@ -1,52 +1,62 @@
 // 元件文字
-.pet-info span {
-  font-size: 0.875rem;
-  color: $primary-500;
-}
-.title p {
-  font-size: 1.125rem;
-  color: $primary-500;
-  letter-spacing: 0.03em;
-}
-.item-title {
-  font-size: 1.125rem;
-  letter-spacing: 0.03em;
-}
-.item-text {
-  font-size: 0.875rem;
-  color: $brown-300;
-}
-.btn-check:checked + .btn-diet svg path {
-  stroke: $primary-500;
-}
+.pet-info {
+  span {
+    font-size: 0.875rem;
+    color: $primary-500;
+  }
+  .title p {
+    font-size: 1.125rem;
+    color: $primary-500;
+    letter-spacing: 0.03em;
+  }
+  .item-title {
+    font-size: 1.125rem;
+    letter-spacing: 0.03em;
+  }
+  .item-text {
+    font-size: 0.875rem;
+    color: $brown-300;
+  }
+  .btn-check:checked + .btn-diet svg path {
+    stroke: $primary-500;
+  }
+  @media (max-width: 576px) {
+    .item-title {
+      font-size: 1rem;
+    }
+  }
 
-// 元件-卡片
-.input-number {
-  color: $brown-500;
-}
-.health-img {
-  width: 120px;
-  height: auto;
-}
-.diet .btn {
-  width: 204px;
-}
+  // 元件-卡片
+  .input-number {
+    color: $brown-500;
+  }
+  .health-img {
+    width: 120px;
+    height: auto;
+  }
+  .diet .btn {
+    width: 204px;
+  }
+  .card-grid {
+    grid-template-columns: 168px 168px 168px 1fr;
+  }
 
-// 定位圖
-.card-bg {
-  position: relative;
-}
-.dog-illustration {
-  position: absolute;
-  bottom: -164px;
-  left: -184px;
-  width: 480px;
-  height: 480px;
-}
-.feed-illustration {
-  position: absolute;
-  top: -57px;
-  right: -72px;
-  width: 280px;
-  height: 245px;
+  // 定位圖
+  .card-bg {
+    position: relative;
+  }
+  .dog-illustration {
+    position: absolute;
+    bottom: -164px;
+    left: -184px;
+    width: 480px;
+    height: 480px;
+  }
+  .feed-illustration {
+    position: absolute;
+    top: -57px;
+    right: -72px;
+    width: 280px;
+    height: 245px;
+  }
 }

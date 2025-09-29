@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lucide-static@latest/font/lucide.css"
+    />
+    <title>訂單確認</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="finish py-11">
+      <div class="container">
+        <!-- 標題進度條 -->
+        <div
+          class="d-flex justify-content-between align-items-center mb-6 px-110"
+        >
+          <!-- 標題 -->
+          <div class="title">
+            <h2 class="fw-bold mb-2 ls-5">訂閱成功！</h2>
+            <h2 class="fw-bold mb-2 ls-5">謝謝你成為毛日和的夥伴</h2>
+          </div>
+
+          <!-- 進度條 -->
+          <div class="step d-flex align-items-center">
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_1.svg"
+                alt="step_1"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">購物車</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_2.svg"
+                alt="step_2"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">訂單確認與結帳</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_3.svg"
+                alt="step_3"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">完成訂閱</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 訂單內容卡片 -->
+        <div class="card-bg py-9 px-110 mb-6">
+          <!-- 感謝訂閱文字 -->
+          <div class="mb-6">
+            <p class="text-brown-300 mb-1">
+              親愛的客戶您好，您的訂單我們已經收到，感謝您訂閱毛日盒!
+            </p>
+            <p class="text-brown-300">
+              以下為您的訂購明細，記得拍下毛孩開箱照片與大家分享唷🥳
+            </p>
+          </div>
+
+          <!-- 訂單明細 -->
+          <div class="row-table mb-6">
+            <!-- 表格 -->
+            <div class="col-table-10">
+              <h5 class="mb-5 ls-5">訂單編號 #00001</h5>
+
+              <!-- 表格標題 -->
+              <div class="table-title-bg d-flex py-2 mb-2">
+                <p class="col-table-1-5 text-center">訂閱期數</p>
+                <p class="col-table-4 text-center">品項</p>
+                <p class="col-table-1-5 text-center">單價</p>
+                <p class="col-table-1-5 text-center">數量</p>
+                <p class="col-table-1-5 text-center">小計</p>
+              </div>
+
+              <!-- 表格第一列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">新手爸媽安心組</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $2,097
+                </div>
+              </div>
+
+              <!-- 表格第二列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">青春汪能量補給包</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  2
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $1,398
+                </div>
+              </div>
+
+              <!-- 表格第三列 -->
+              <div class="table-container-bg d-flex py-4 mb-2">
+                <!-- 訂閱期數 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  3
+                </div>
+                <!-- 品項 -->
+                <div class="col-table-4 ps-4">
+                  <p class="table-title fw-bold mb-2">牛氣補補能量盒</p>
+                  <p class="table-text fw-normal">
+                    零食 x 3 + 保健罐頭 x 2 + 互動小物 x 2
+                  </p>
+                </div>
+                <!-- 單價 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+                <!-- 數量 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  1
+                </div>
+                <!-- 小計 -->
+                <div
+                  class="col-table-1-5 d-flex justify-content-center align-items-center"
+                >
+                  $699
+                </div>
+              </div>
+            </div>
+
+            <!-- 訂單合計 -->
+            <div class="col-table-10">
+              <div class="total-bg d-flex align-items-center py-9-5 pe-4">
+                <p class="col-table-1-5 text-center">訂單合計</p>
+                <p class="col-table-4 text-center"></p>
+                <p class="col-table-1-5 text-center"></p>
+                <p class="col-table-1-5 text-center"></p>
+                <p class="col-table-1-5 total-text fw-bold text-center">
+                  每月<span class="fs-24 fw-medium ps-2">$4,194</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 說明文字 -->
+          <p class="text-center">
+            您可到<a href="./member.html" class="text-primary-500">訂單查詢</a
+            >查看訂購紀錄，如有任何問題或其他意見，歡迎<a
+              href="./contact.html"
+              class="text-primary-500"
+              >聯繫我們</a
+            >，謝謝!
+          </p>
+
+          <!-- 定位圖 -->
+          <img
+            src="/assets/images/subscribe/Illustration-finish.png"
+            alt="完成訂閱插畫"
+            class="finish-illustration"
+          />
+          <img
+            src="/assets/images/subscribe/Illustration-balloon.png"
+            alt="氣球插畫"
+            class="balloon-illustration"
+          />
+        </div>
+
+        <!-- 儲存按鈕 -->
+        <div class="text-center">
+          <a
+            class="btn btn-primary rounded-pill btn-active-white px-40 me-6"
+            href="./index.html"
+            role="button"
+            >返回首頁</a
+          >
+          <a
+            class="btn btn-primary rounded-pill btn-active px-40"
+            href="./pet-info.html"
+            role="button"
+            >新增訂單</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

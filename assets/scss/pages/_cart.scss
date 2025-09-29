@@ -27,6 +27,19 @@
   width: 16px;
   height: 16px;
 }
+@media (max-width: 576px) {
+  .table-title {
+    font-size: 0.875rem;
+  }
+  .table-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .table-text {
+    font-size: 0.75rem;
+  }
+}
 
 // 文字
 .total-text {
@@ -34,4 +47,12 @@
   font-size: 1.125rem;
   line-height: 1.2;
   letter-spacing: 0.03em;
+}
+
+//元件
+@media (max-width: 576px) {
+  .btn-quantity {
+    font-size: 16px;
+    line-height: 0.8;
+  }
 }

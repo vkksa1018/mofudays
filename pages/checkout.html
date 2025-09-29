@@ -16,8 +16,43 @@
     <main class="checkout py-11">
       <div class="container">
         <!-- 標題進度條 -->
-        <div class="title mb-6 px-110">
-          <h2 class="fw-bold mb-2 ls-5">訂單確認</h2>
+        <div
+          class="d-flex justify-content-between align-items-center mb-6 px-110"
+        >
+          <!-- 標題 -->
+          <div class="title">
+            <h2 class="fw-bold mb-2 ls-5">訂單確認</h2>
+          </div>
+
+          <!-- 進度條 -->
+          <div class="step d-flex align-items-center">
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_1.svg"
+                alt="step_1"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">購物車</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item">
+              <img
+                src="/assets/images/index/service_step_2.svg"
+                alt="step_2"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">訂單確認與結帳</p>
+            </div>
+            <div class="step-line disabled"></div>
+            <div class="step-item disabled">
+              <img
+                src="/assets/images/index/service_step_3.svg"
+                alt="step_3"
+                class="mx-auto d-block px-5 mb-2"
+              />
+              <p class="text-center fs-14">完成訂閱</p>
+            </div>
+          </div>
         </div>
 
         <!-- 訂單明細卡片 -->
@@ -167,31 +202,39 @@
                 <div class="table-title-bg px-5 py-2 mb-2">
                   <p>輸入你的個人資訊</p>
                 </div>
-                <div class="d-flex flex-wrap mb-5">
-                  <input
-                    type="name"
-                    class="form-control w-50"
-                    id="checkout-name"
-                    placeholder="姓名"
-                  />
-                  <input
-                    type="text"
-                    class="form-control w-50"
-                    id="checkout-address"
-                    placeholder="地址"
-                  />
-                  <input
-                    type="tel"
-                    class="form-control w-50"
-                    id="checkout-tel"
-                    placeholder="電話"
-                  />
-                  <input
-                    type="email"
-                    class="form-control w-50"
-                    id="checkout-email"
-                    placeholder="電子郵件"
-                  />
+                <div class="mb-5 row g-2">
+                  <div class="col-6">
+                    <input
+                      type="name"
+                      class="form-control"
+                      id="checkout-name"
+                      placeholder="姓名"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="checkout-address"
+                      placeholder="地址"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="checkout-tel"
+                      placeholder="電話"
+                    />
+                  </div>
+                  <div class="col-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="checkout-email"
+                      placeholder="電子郵件"
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -204,37 +247,39 @@
                 <div
                   role="group"
                   aria-label="Basic radio toggle button group"
-                  class="mb-5"
+                  class="mb-5 row g-2"
                 >
                   <!-- 信用卡 -->
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="payment-method"
-                    id="credit-card"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="btn btn-primary btn-diet px-0 py-3 w-25"
-                    for="credit-card"
-                    style="height: 48px"
-                    >信用卡</label
-                  >
+                  <div class="me-2 col-3">
+                    <input
+                      type="radio"
+                      class="btn-check w-100"
+                      name="payment-method"
+                      id="credit-card"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-primary btn-diet px-0 py-3 w-100"
+                      for="credit-card"
+                      >信用卡</label
+                    >
+                  </div>
 
                   <!-- LINE PAY -->
-                  <input
-                    type="radio"
-                    class="btn-check"
-                    name="payment-method"
-                    id="LINE-PAY"
-                    autocomplete="off"
-                  />
-                  <label
-                    class="btn btn-primary btn-diet px-0 py-3 w-25"
-                    for="LINE-PAY"
-                    style="height: 48px"
-                    >LINE Pay</label
-                  >
+                  <div class="col-3">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="payment-method"
+                      id="LINE-PAY"
+                      autocomplete="off"
+                    />
+                    <label
+                      class="btn btn-primary btn-diet px-0 py-3 w-100"
+                      for="LINE-PAY"
+                      >LINE Pay</label
+                    >
+                  </div>
                 </div>
               </div>
 
@@ -246,12 +291,12 @@
 
                 <div class="form-floating">
                   <textarea
-                    class="form-control"
+                    class="form-control px-3 py-5"
                     placeholder="備註"
                     id="checkout-remark"
                     style="height: 100px"
                   ></textarea>
-                  <label for="checkout-remark">備註</label>
+                  <label for="checkout-remark ps-3">備註</label>
                 </div>
               </div>
             </div>
@@ -268,7 +313,7 @@
           >
           <a
             class="btn btn-primary rounded-pill btn-active px-40"
-            href="/pages/cart.html"
+            href="./finish.html"
             role="button"
             >確認付款</a
           >
