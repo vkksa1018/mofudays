@@ -1,15 +1,29 @@
 .announcement .container {
   background-color: $tertiary-500;
   color: white;
-  padding-top: 9.5px;
-  padding-bottom: 9.5px;
-  border-radius: 8px; /* 新增圓角 */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+}
+
+/* 手機版額外的 padding-x */
+@media (max-width: 767px) {
+  .announcement .container {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+}
+
+.announcement .carousel-inner p {
+  letter-spacing: 0.1em; /* 或其他你想要的數值 */
 }
 
 .btn-signup {
   background-color: white;
   color: $tertiary-500;
   border-radius: 8px; /* 按鈕也加上圓角保持一致性 */
+  padding: 4px 8px !important;
+  letter-spacing: 0.1em;
 }
 
 .btn-signup:hover {
