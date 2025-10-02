@@ -975,27 +975,108 @@ body::before {
   margin-bottom: 0;
 }
 
-/* 響應式設計 */
-@media (max-width: 768px) {
+/* 最新消息rwd */
+@media (max-width: 767px) {
+  /* 針對 modal-dialog 做全寬優化 */
+  .modal-dialog {
+    margin: 0;
+    max-height: 100vh;
+  }
+
+  .modal-content {
+    border-radius: 0; /* 手機上通常移除大圓角 */
+  }
+
+  /* 調整 Modal 頭部 - 標題置中 */
+  .modal-header {
+    padding: 24px 20px 16px;
+    flex-direction: column;
+    align-items: center; /* 水平置中 */
+    text-align: center; /* 文字置中 */
+    position: relative;
+  }
+
+  .modal-header .btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .modal-title,
+  .header-subtitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* 移除左右 padding */
+  .modal-body {
+    padding: 0 0 24px 0; /* 只保留底部 padding */
+    max-height: calc(100vh - 120px);
+    overflow-x: hidden; /* 防止橫向滾動 */
+  }
+
+  /* 移除 accordion 的 padding */
   .custom-accordion {
-    margin-left: 60px;
+    margin-left: 0;
+    padding: 0;
   }
 
+  .accordion-item {
+    margin-bottom: 16px;
+  }
+
+  /* 讓 accordion-header 成為 flex 容器，橘色按鈕和標題連在一起 */
+  .accordion-header {
+    display: flex;
+    align-items: stretch; /* 讓子元素高度一致 */
+    justify-content: flex-start;
+    position: relative;
+    gap: 0; /* 移除間隙 */
+  }
+
+  /* 橘色按鈕 - 固定在左側 */
   .function-tag {
-    left: -60px;
-    font-size: 12px;
-    padding: 6px 12px;
+    position: relative; /* 改為 relative，讓它在正常文檔流中 */
+    left: 0;
+    margin-left: 0;
+    width: 90px; /* 縮小寬度 */
+    font-size: 11px;
+    padding: 8px 4px;
+    border-radius: 20px 0 0 20px; /* 左側圓角 */
+    box-shadow: 0 1px 4px rgba(255, 108, 26, 0.3);
+    flex-shrink: 0; /* 防止被壓縮 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* 標題按鈕 - 與橘色按鈕連在一起 */
   .accordion-button {
-    padding: 12px 16px;
-    font-size: 14px;
+    margin-left: 0; /* 移除左邊距 */
+    padding: 8px 12px;
+    font-size: 13px;
+    white-space: normal; /* 允許文字換行 */
+    text-align: left;
+    border-radius: 0 20px 20px 0 !important; /* 右側圓角 */
+    flex: 1; /* 佔據剩餘空間 */
   }
 
+  /* 內文區域 - 全寬顯示 */
   .accordion-body {
-    padding: 16px;
-    padding-left: 60px;
-    margin-left: -44px;
+    margin-left: 0;
+    padding: 16px 12px; /* 左右少量 padding 避免貼邊 */
+    border-radius: 0 0 20px 20px; /* 只保留底部圓角 */
+  }
+
+  .content-text {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .date-tag {
+    font-size: 11px;
+    margin-top: 12px;
   }
 }
 
