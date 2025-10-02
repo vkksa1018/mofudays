@@ -164,13 +164,6 @@
     background-color: #ffde6e;
   }
 
-  .text-blue{
-    color:#547bff;
-  }
-  .text-red{
-    color:#ff547b;
-  }
-
   .section-spacer.activity-describe {
     margin-bottom: 3.5rem;
   }
@@ -185,8 +178,6 @@
     width: clamp(200px, 20vw, 240px); 
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    // border: 2px dashed #E5E7EB;
-    // background: #FAFAFA;
     display: grid;
     place-items: center;
     // margin-inline: auto;
