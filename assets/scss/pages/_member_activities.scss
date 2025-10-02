@@ -43,7 +43,7 @@
   }
 
   .dot-lined-bottom{
-    border-bottom: 1px dot #E2DDDA;
+    border-bottom: 3px dashed #E2DDDA;
   }
 
   /* 文字 */
@@ -66,6 +66,15 @@
 
   .fw-700{
     font-weight: 700;
+  }
+
+  .my-40{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .mt-20{
+    margin-top: 1.5rem !important;
   }
 
   .mt-32{
@@ -100,8 +109,16 @@
     margin-bottom: 2rem !important;
   }
 
+  .mb-40{
+    margin-bottom: 5rem !important;
+  }
+
   .mb-80{
     margin-bottom: 80px !important;
+  }
+
+  .me-4{
+    margin-right: 4px;
   }
 
   .ps-4{
@@ -114,6 +131,19 @@
     border-radius: 1rem;
     overflow: hidden;
   }
+  .hero-banner-1 {
+    position: relative;
+    background: $tertiary-500;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .hero-banner-2 {
+    position: relative;
+    background: $primary-500;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
   .hero-img {
     width: 100%;
     aspect-ratio: 16/9;
@@ -126,19 +156,28 @@
     background-color: $tertiary-300;
   }
 
+  .bg-orange-1{
+    background-color: $primary-500;
+  }
+
+  .bg-yellow{
+    background-color: #ffde6e;
+  }
+
   .section-spacer.activity-describe {
     margin-bottom: 3.5rem;
+  }
+  .bottom-lined{
+    border-bottom: 3px dotted #E2DDDA;
   }
 
 
   /* 亮點圓卡 */
 
   .feature-circle {
-    width: clamp(200px, 20vw, 280px); 
+    width: clamp(200px, 20vw, 240px); 
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    border: 2px dashed #E5E7EB;
-    background: #FAFAFA;
     display: grid;
     place-items: center;
     // margin-inline: auto;
@@ -151,7 +190,7 @@
     }
   }
   .feature-title {
-    font-size: clamp(1.5rem, 2vw + 0.75rem, 2rem);
+    font-size: clamp(1.5rem, 1.5vw + 0.75rem, 2rem);
     font-weight: 600; 
     color: $brown-500;
   }
@@ -160,9 +199,30 @@
     font-weight: 500; 
   }
 
+  .step-section-title{
+    font-weight: 700;
+  }
+
+  .step-title {
+    font-size: clamp(1.25rem, 1.5vw + 0.75rem, 1.75rem);
+    font-weight: 600; 
+    color: $brown-500;
+    margin-bottom: 1rem;
+  }
+  .step-text{
+    font-weight: 500; 
+    color: $primary-500;
+  }
+
   @media (max-width: 767px) {
     .activity-describe .col {
       margin-bottom: 1.5rem;
+    }
+    .step-title {
+      margin-bottom: 0.5rem;
+    }
+    .step-text{
+      font-size: 1rem;
     }
   }
 
@@ -247,6 +307,18 @@
     border-radius: 1rem;
     color:$brown-500;
   }
+
+  .cta-wrap-2 {
+    background: $secondary-100;
+    border: 1px solid $secondary-300;
+    border-radius: 1rem;
+    color:$brown-500;
+  }
+
+  .cta-wrap-3 {
+    color:$brown-500;
+  }
+
   .cta-badge {
     position: absolute; 
     right: -6px; 
@@ -399,6 +471,24 @@
     border-top-right-radius: 0 !important;
   }
 
+  /* 活動2：講師介紹（左右式） */
+  .speaker-card {
+    color: $white;
+    border-radius: 16px;
+    padding: 16px;
+    @include desktop-up { 
+      padding: 24px; 
+    }
+  }
+  .speaker-avatar {
+    width: 300px !important; 
+    aspect-ratio: 1/1; 
+    border-radius: 9999px;
+    object-fit: cover; 
+    display: block; 
+    margin-inline: auto;
+  }
+
 }
 
 // ----------------------------------------  動畫
@@ -407,9 +497,11 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.feature-circle .img-hover-bigger:hover {
+.img-hover-bigger:hover {
   transform: scale(1.2);
 }
+
+
 
 // 抖動動畫
 .img-shake:hover{
@@ -429,9 +521,15 @@
 
 // 文字漸入
 .auto-show{
-  animation: text-appear both;
+  animation: text-appear 3s ease-out both;
   animation-timeline: view();
   animation-range: entry 5% cover 100vh;
+}
+
+.auto-show-1{
+  animation: text-appear 4s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50vh;
 }
 
 @keyframes text-appear{
@@ -449,6 +547,11 @@
 .img-reveal{
   animation: image-reveal both;
   animation-timeline: view(10% 5%);
+}
+
+.img-reveal-1{
+  animation: image-reveal both;
+  animation-timeline: view(15% 0%);
 }
 
 @keyframes image-reveal{
@@ -473,6 +576,13 @@
   animation-timeline:view();
   animation-range:entry 20% cover 40%;
 }
+
+.fade-up-1{
+  animation: fadeUp both;
+  animation-timeline:view();
+  animation-range:entry 50% cover 30%;
+}
+
 
 @keyframes fadeUp{
     from{
